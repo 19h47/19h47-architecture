@@ -14,11 +14,11 @@
 	 */
 	&-container {
 		@extend %position-xs-relative;
+		@include margin( top 0 right auto bottom 0 left auto );
 		@include padding( 
 			right $grid-gutter-width
 			left $grid-gutter-width
 		);
-		@include margin( top 0 right auto bottom 0 left auto );
 		
 		max-width: $container-width;
 	}
