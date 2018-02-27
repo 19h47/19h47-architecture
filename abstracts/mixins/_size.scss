@@ -1,0 +1,12 @@
+/**
+ * Mixin helping defining both `width` and `height` simultaneously.
+ *
+ * @access public
+ * @param   {Length}    $width - Element’s `width`
+ * @param   {Length}    $height [$width] - Element’s `height`
+ * @author Hugo Giraudel
+ */
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}

@@ -1,0 +1,73 @@
+/**
+ * Coming soon
+ *
+ * @uses .Coming-soon
+ */
+.Coming-soon {
+	
+	/**
+	 * Site container
+	 *
+	 * @uses .Coming-soon .Site-container
+	 */
+	.Site-container {
+		@include padding( top 40px bottom 40px );
+	}
+
+
+	h1 {
+		@extend %font-weight-bold;
+		@include font( 38, 58.52 );
+	}
+
+	h2 {}
+
+	/**
+	 * Header
+	 *
+	 * @uses .Coming-soon__header
+	 */
+	&__header {
+		@include from( 'hd' ) {
+			@include margin( top 260px );
+		}
+	}
+
+
+	/**
+	 * Background
+	 *
+	 * @uses .Coming-soon__background
+	 */
+	&__background {
+		transform: translate3d( -50%, 0, 0);
+		position: relative;
+		left: 50%;
+	}
+
+
+	/**
+	 * Catchphrase
+	 *
+	 * @uses .Coming-soon__catchphrase
+	 */
+	&__catchphrase {
+		@extend %display-xs-block;
+		@include margin( right auto left auto );
+	}
+
+
+	/**
+	 * Product
+	 *
+	 * @uses .Coming-soon__product
+	 */
+	&__product {
+		@extend %display-xs-block, %display-hd-inline;
+		@include margin( top 30px right auto bottom 30px left auto );
+
+		@include from( 'hd' ) {
+			@include margin( top 0 bottom 0 );
+		}
+	}
+}

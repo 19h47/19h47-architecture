@@ -1,0 +1,25 @@
+/**
+ * Posiitons
+ *
+ * Construct each position property found in $positions with
+ * a placeholder and a utility class
+ *
+ * @author Jérémy Levron <jeremylevron@19h47.fr>
+ */
+$positions: 'relative' 'absolute';
+@each $breakpoint in $slicer-breakpoint-names {
+    @include from( $breakpoint ) {
+		@each $position in $positions {
+
+			// Placeholder
+			%position-#{ unquote( $breakpoint ) }-#{ unquote( $position ) } {
+				position: #{ unquote( $position ) };
+			}
+
+			// .position-{ $position }
+			.position-#{ unquote( $breakpoint ) }-#{ unquote( $position ) } {
+				@extend %position-#{ unquote( $breakpoint ) }-#{ unquote( $position ) };
+			}
+		}
+	}
+}

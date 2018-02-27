@@ -1,0 +1,57 @@
+/**
+ * Position
+ * 
+ * @see http://hugogiraudel.com/2014/05/19/new-offsets-sass-mixin/
+ */
+@mixin position( $position, $args: () ) {
+
+    $offsets: top right bottom left;
+    position: $position;
+  
+    @each $offset in $offsets {
+        // Doing the magic trick
+        // All this code happens inside the loop
+        $index: index( $args, $offset );
+
+        // If offset is found in the list
+        @if $index {
+
+            // If it is found at last position
+            @if $index == length( $args ) {
+                #{$offset}: 0;
+            }
+
+            // If it is followed by a value
+            @else {
+                $next: nth( $args, $index + 1 );
+
+                // If the next value is value length
+                @if is-valid-length( $next ) {
+                    #{$offset}: $next;
+                }
+
+                // If the next value is another offset
+                @else if index( $offsets, $next ) {
+                    #{$offset}: 0;
+                }
+
+                // If it is invalid
+                @else {
+                    @warn "Invalid value `#{$next}` for offset `#{$offset}`.";
+                }
+            }
+        }
+    }
+}
+
+@mixin absolute( $args: () ) {
+    @include position( absolute, $args );
+}
+ 
+@mixin fixed( $args: () ) {
+    @include position( fixed, $args );
+}
+ 
+@mixin relative( $args: () ) {
+    @include position( relative, $args );
+}

@@ -1,0 +1,90 @@
+/**
+ * Get color
+ *
+ * Retrieve color from $color-variations map
+ *
+ * @access  public
+ * @author Jérémy Levron <jeremylevron@19h47.fr>
+ */
+@function get_the_color( $keys... ) {
+
+    $map: $color-variations;
+    $color-base: map-get( $map, nth( $keys, 1 ) );
+    $result: null;
+
+    @if length( $keys ) == 1 {
+
+        $result: $color-base;
+    }
+
+    @if length( $keys ) == 2 {
+
+        $color-key: nth( $keys, 1 );
+        $color-value: nth( $keys, 2 );
+
+        $result: map-get( $color-base, $color-value );
+    }
+
+    @return $result;
+}
+
+
+/**
+ * The color
+ *
+ * @param  arglist      $keys
+ * @return function     get_the_color()
+ * @author Jérémy Levron <jeremylevron@19h47.fr>
+ */
+@function the_color( $keys... ) {
+    @return get_the_color( $keys... );
+}
+
+
+/**
+ * Get color list
+ *
+ * @access  public
+ * @param   $label
+ * @return  $list
+ * @author Jérémy Levron <jeremylevron@19h47.fr>
+ */
+@function get_color_list( $label ) {
+    @each $list in $color-variations {
+
+        @if nth( $list, 1 ) == $label {
+
+            @return $list;
+        }
+    }
+    @return null;
+}
+
+
+
+/**
+ * Slightly lighten a color
+ *
+ * @access  public
+ * @param   Color   $color          color to tint
+ * @param   Number  $percentage     percentage of `$color` in returned color
+ * @see     https://css-tricks.com/snippets/sass/tint-shade-functions/
+ * @return  Color
+ */
+@function tint($color, $percentage ) {
+    @return mix( white, $color, $percentage );
+}
+
+
+/**
+ * Slightly darken a color
+ *
+ * @access  public
+ * @param   Color   $color          color to shade
+ * @param   Number  $percentage     percentage of `$color` in returned color
+ * @see     https://css-tricks.com/snippets/sass/tint-shade-functions/
+ * @return  Color
+ */
+@function shade($color, $percentage ) {
+    @return mix( black, $color, $percentage );
+}
