@@ -6,9 +6,11 @@
   "scripts": {
     "build-task:scss-compile": "./bin/scss-compile",
     "build-task:autoprefixer": "./bin/autoprefixer",
+    "build-task:compressed": "./bin/compressed",
     "sass:build": "./bin/build",
     "sass:watch": "./bin/watch",
-    "dev": "./bin/dev"
+    "dev": "./bin/dev",
+    "prod": "./bin/prod"
   },
   "keywords": [
     "node",

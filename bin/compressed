@@ -1,0 +1,1 @@
+node-sass-chokidar public/css/main.css public/css/main.min.css --output-style compressed

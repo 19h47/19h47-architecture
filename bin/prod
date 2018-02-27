@@ -1,0 +1,1 @@
+npm-run-all -s sass:build build-task:autoprefixer build-task:compressed
