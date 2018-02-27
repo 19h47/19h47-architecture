@@ -1,0 +1,17 @@
+Thumbs.db
+npm-debug.log
+/node_modules/
+/dist/
+/src/ai/
+/src/psd/
+/src/jpg/
+/src/pdf/
+/src/content/
+/src/mockup/
+/src/prototype/
+/src/prototypes/
+/vendor/
+sftp-config.json.dev
+sftp-config.json.prod
+sftp-config.json
+*.sublime-workspace
