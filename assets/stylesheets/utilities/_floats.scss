@@ -1,0 +1,24 @@
+/**
+ * Floats
+ *
+ * Construct each float position found in $floats with
+ * a placeholder and a utility class
+ */
+$floats: 'left' 'right' 'none';
+@each $float in $floats {
+
+	// Placeholder
+	%float-#{ unquote( $float ) } {
+		float: #{ unquote( $float ) };
+	}
+
+	// .float-{ $float }
+	.float-#{ unquote( $float ) } {
+		@extend %float-#{ unquote( $float ) };
+	}
+
+	// .{ $float }
+	.#{ unquote( $float ) } {
+		@extend %float-#{ unquote( $float ) };
+	}
+}
