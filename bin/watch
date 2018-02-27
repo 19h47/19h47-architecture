@@ -1,0 +1,1 @@
+chokidar 'assets/stylesheets/**/*.scss' -c 'npm run sass:build'

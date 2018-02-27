@@ -1,0 +1,33 @@
+/**
+ * Base
+ */
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+
+    line-height: ( ( $base-line-height / $base-font-size ) * 1em );
+}
+
+a, 
+button {
+    cursor: pointer;
+    outline: none;
+}
+
+a {
+    color: currentColor;
+    text-decoration: none;
+}
+
+p {
+    @include margin (
+        top ( ( $base-line-height / $base-font-size ) * 1em )
+        bottom ( ( ( $base-line-height / $base-font-size ) / 2 ) * 1em )
+    );
+
+    font-size: 1em;
+    line-height: ( ( $base-line-height / $base-font-size ) * 1em );
+}

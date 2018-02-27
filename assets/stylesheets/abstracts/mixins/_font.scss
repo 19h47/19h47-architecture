@@ -1,0 +1,16 @@
+/**
+ * Font mixin
+ * 
+ * @param   int     $font-size      Unitless font size  (mostly from .psd)
+ * @param   int     $line-height Unitless line height   (mostly from .psd)
+ */
+@mixin font( $font-size, $line-height, $letter-spacing: '' ) {
+    font: {
+        size: ( $font-size * 1px );
+    }
+    line-height: ( $line-height / $font-size );
+
+    @if $letter-spacing != '' {
+        @include letter-spacing( $letter-spacing );
+    }
+}

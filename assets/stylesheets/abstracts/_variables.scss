@@ -1,0 +1,199 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+/**
+ * Color variation
+ *
+ * Each colors used in the theme.
+ * 
+ * @uses get_color( $key, $value ) to retrieve color value
+ * @type nested map
+ * @see http://erskinedesign.com/blog/friendlier-colour-names-sass-maps/
+ * @see http://www.colorhexa.com/ to pickup color name
+ */
+$color-variations: (
+	black: #000000,
+	white: #ffffff,
+
+	gray: (
+		very-dark: #242424,
+	),
+
+	orange: (
+		very-dark: #1c1b19,
+		light-grayish: #f5f3ee,
+	),
+
+	/**
+	 * Brand colors
+	 *
+	 * @see https://brandcolors.net/
+	 */
+	social: (
+		facebook: #3b5998, 
+		twitter: #1da1f2,
+		google-plus: #dd4b39,
+		linkedin: #0077b5,
+		mail: #000000,
+	)
+);
+
+
+/**
+ * Font
+ *
+ * A map containing all information about fonts
+ *
+ * @type map
+ */
+$font: (
+
+
+	/**
+	 * Font
+	 *
+	 * All fonts families found in the site are listed here
+	 *
+	 * @uses map-get( $font, $key ) to retrieve font value from map
+	 * @type map
+	 */
+	families: (
+		body: ( 'Source Code Pro', sans-serif ),
+		title: ( 'Minion', serif ),
+	),
+
+
+	/**
+	 * Font weights
+	 *
+	 * Each font weight used in the theme.
+	 *
+	 * @uses map-get( $font, weights ) to retrieve font weight value
+	 * @type map
+	 */
+	weights: (
+		extralight: 100,
+		light: 200,
+		book: 300,
+		regular: 400,
+		medium: 500,
+		semibold: 600,
+		bold: 700,
+		extrabold: 800,
+		extrablack: 900
+	),
+
+
+	/**
+	 * Font styles
+	 *
+	 * Each font style used in the theme.
+	 *
+	 * @uses map-get( $font, styles ) to retrieve font style value
+	 * @type list
+	 */
+	styles: 'italic',
+
+);
+
+
+/**
+ * Base
+ */
+$base-font-size: 15;
+$base-font-size-px: $base-font-size * 1px;
+$base-line-height: 19;
+
+
+
+// Layout ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+$grid-columns: 12;
+
+
+/**
+ * Gutter width
+ * 
+ * Overall grid gutter size from Bootstrap
+ * 
+ * @see http://stackoverflow.com/a/28193872/5091221
+ */
+$grid-gutter-width-unitless: 30;
+$grid-gutter-width: ( $grid-gutter-width-unitless * 1px );
+
+
+/**
+ * Outer gutter width
+ *
+ * (Most of the time it's the size of a gutter divide by 2.)
+ * Useful for the container.
+ */
+$grid-outer-gutter-width-unitless: 100;
+$grid-outer-gutter-width: $grid-outer-gutter-width-unitless * 1px;
+
+
+/**
+ * Prototype width
+ *
+ * From .psd obviously
+ */
+$psd-width-unitless: 1440;
+$psd-width: $psd-width-unitless * 1px;
+
+
+/**
+ * Container width without grid outer gutter width
+ * 
+ * Width keep from .psd
+ */
+$container-width-without-outer-gutter-unitless: 1200;
+$container-width: $container-width-without-outer-gutter-unitless * 1px;
+
+
+/**
+ * Container width
+ * 
+ * Width keep from .psd (grid + outer gutter * 2 )
+ */
+$container-width-unitless: $container-width-without-outer-gutter-unitless + ( $grid-outer-gutter-width-unitless * 2 );
+$container-width: $container-width-unitless * 1px;
+
+
+/**
+ * Transitions
+ *
+ * @uses map-get( $transitions, $key ) to retrieve directory value from map
+ * @type map
+ * @see http://easings.net/
+ */
+$transitions: (
+	ease: .3s ease,
+);
+
+/**
+ * Directories
+ *
+ * Each directories used in this theme.
+ * 
+ * @uses map-get( $directories, $key ) to retrieve directory value from map
+ * @type map
+ */
+$directories:
+(
+	fonts: "../../fonts/",
+	img: "../../img/",
+	svg: "../../public/img/svg/",
+	jpg: "../../img/jpg/",
+	png: "../../public/img/png/",
+	gif: "../../img/gif/",
+);
+
+
+/**
+ * Breakpoint slicer
+ *
+ * @see https://github.com/lolmaus/breakpoint-slicer
+ */
+$slicer-breakpoints: 0 768px 992px 1200px 1400px;
+$slicer-breakpoint-names: 'xs' 'sm' 'md' 'lg' 'hd';
+$slicer-anti-overlap-corrections: -1px;

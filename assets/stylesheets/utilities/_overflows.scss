@@ -1,0 +1,64 @@
+/**
+ * Overflows
+ *
+ * Construct each overflow found in $overflow-values with
+ * a placeholder and a utility class
+ */
+$overflow-values: 'hidden' 'scroll';
+@each $overflow-value in $overflow-values {
+
+	// Placeholder
+	%overflow-#{ unquote( $overflow-value ) } {
+		overflow: #{ unquote( $overflow-value ) };
+	}
+	%overflow-x-#{ unquote( $overflow-value ) } {
+		overflow-x: #{ unquote( $overflow-value ) };
+	}
+	%overflow-y-#{ unquote( $overflow-value ) } {
+		overflow-y: #{ unquote( $overflow-value ) };
+	}
+
+	// Utility class
+    .overflow-#{ unquote( $overflow-value ) } {
+        @extend %overflow-#{ unquote( $overflow-value ) };
+    }
+    .overflow-x-#{ unquote( $overflow-value ) } {
+        @extend %overflow-x-#{ unquote( $overflow-value ) };
+    }
+    .overflow-y-#{ unquote( $overflow-value ) } {
+        @extend %overflow-y-#{ unquote( $overflow-value ) };
+    }
+}
+
+// Loop through each breakpoint
+@each $breakpoint in $slicer-breakpoint-names {
+
+    // Create breakpoint "from" statement
+    @include from( $breakpoint ) {
+		
+		@each $overflow-value in $overflow-values {
+
+			// Placeholder
+			%overflow-#{ $breakpoint }-#{ unquote( $overflow-value ) } {
+				overflow: #{ unquote( $overflow-value ) };
+			}
+			%overflow-x-#{ $breakpoint }-#{ unquote( $overflow-value ) } {
+				overflow-x: #{ unquote( $overflow-value ) };
+			}
+			%overflow-y-#{ $breakpoint }-#{ unquote( $overflow-value ) } {
+				overflow-y: #{ unquote( $overflow-value ) };
+			}
+
+			// Utility class
+		    .overflow-#{ $breakpoint }-#{ unquote( $overflow-value ) } {
+		        @extend %overflow-#{ $breakpoint }-#{ unquote( $overflow-value ) };
+		    }
+		    .overflow-x-#{ unquote( $overflow-value ) } {
+		        @extend %overflow-x-#{ $breakpoint }-#{ unquote( $overflow-value ) };
+		    }
+		    .overflow-y-#{ unquote( $overflow-value ) } {
+		        @extend %overflow-y-#{ $breakpoint }-#{ unquote( $overflow-value ) };
+		    }
+		}
+	}
+}

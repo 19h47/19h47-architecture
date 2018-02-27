@@ -1,0 +1,79 @@
+/**
+ * Margins classes
+ *
+ * @author Jérémy Levron <jeremylevron@19h47.fr>
+ */
+$margin-properties: 'top' 'right' 'bottom' 'left';
+
+// Loop through each breakpoint
+@each $breakpoint in $slicer-breakpoint-names {
+
+    // Create breakpoint "from" statement
+    @include from( $breakpoint ) {
+
+        /**
+         * Margin 0 auto
+         */
+        %margin-#{ unquote( $breakpoint ) }-0-auto { margin: 0 auto; }
+
+        .margin-#{ unquote( $breakpoint ) }-0-auto {
+            @extend %margin-#{ unquote( $breakpoint ) }-0-auto;
+        }
+
+
+        /**
+         * Margin auto
+         */
+        %margin-#{ unquote( $breakpoint ) }-x-auto {
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .margin-#{ unquote( $breakpoint ) }-x-auto {
+            @extend %margin-#{ unquote( $breakpoint ) }-x-auto;
+        }
+
+        %margin-#{ unquote( $breakpoint ) }-y-auto {
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+
+        .margin-#{ unquote( $breakpoint ) }-y-auto {
+            @extend %margin-#{ unquote( $breakpoint ) }-y-auto;
+        }
+
+        %margin-#{ unquote( $breakpoint ) }-x-0 {
+            margin-right: 0;
+            margin-left: 0;
+        }
+
+        .margin-#{ unquote( $breakpoint ) }-x-0 {
+            @extend %margin-#{ unquote( $breakpoint ) }-x-0;
+        }
+
+        %margin-#{ unquote( $breakpoint ) }-y-0 {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .margin-#{ unquote( $breakpoint ) }-y-0 {
+            @extend %margin-#{ unquote( $breakpoint ) }-y-0;
+        }
+
+
+        // For each property find in $margin-properties
+        @each $margin-property in $margin-properties {
+
+            /**
+             * Margin auto
+             */
+            %margin-#{ unquote( $breakpoint ) }-#{ $margin-property }-auto {
+                margin-#{ $margin-property }: auto;
+            }
+
+            .margin-#{ unquote( $breakpoint ) }-#{ $margin-property }-auto {
+                @extend %margin-#{ unquote( $breakpoint ) }-#{ $margin-property }-auto;
+            }
+        }
+    }
+}

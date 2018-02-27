@@ -1,0 +1,39 @@
+/**
+ * Font styles
+ *
+ * Constructor class for each font styles found in map-get( $font, styles )
+ *
+ * @param 	$style 	name of style font in map map-get( $font, styles )
+ * @author Jérémy Levron <jeremylevron@19h47.fr>
+ */
+@each $style in map-get( $font, styles ) {
+
+	%font-style-#{ $style } {
+		font-style: unquote( $style );
+	}
+
+    .font-style-#{ $style } {
+        @extend %font-style-#{ $style };
+    }
+}
+
+
+/**
+ * Font weight
+ *
+ * Constructor class for each font weight found in map-get( $font, weights )
+ *
+ * @param $weight-name    	name of weight
+ * @param $weight-value   	value of weight
+ * @author Jérémy Levron <jeremylevron@19h47.fr>
+ */
+@each $weight-name, $weight-value in map-get( $font, weights ) {
+
+ 	%font-weight-#{ $weight-name } {
+     	font-weight: #{ $weight-value };
+ 	}
+
+ 	.font-weight-#{ $weight-name } {
+     	@extend %font-weight-#{ $weight-name };
+ 	}
+}

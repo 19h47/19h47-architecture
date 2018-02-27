@@ -1,0 +1,36 @@
+{
+  "name": "Architecture",
+  "version": "1.0.0",
+  "description": "Architecture",
+  "main": "index.js",
+  "scripts": {
+    "build-task:scss-compile": "./bin/scss-compile",
+    "build-task:autoprefixer": "./bin/autoprefixer",
+    "sass:build": "./bin/build",
+    "sass:watch": "./bin/watch",
+    "dev": "./bin/dev"
+  },
+  "keywords": [
+    "node",
+    "sass",
+    "scss",
+    "npm"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/19h47/Architecture.git"
+  },
+  "author": "Jérémy Levron <jeremylevron@19h47.fr> [19h47.fr]",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^7.1.2",
+    "bootstrap-sass": "^3.3.7",
+    "breakpoint-sass": "^2.7.1",
+    "breakpoint-slicer": "^2.0.0",
+    "chokidar-cli": "^1.2.0",
+    "node-sass-chokidar": "0.0.3",
+    "npm-run-all": "^4.0.2",
+    "postcss-cli": "^4.1.0",
+    "ress": "^1.2.2"
+  }
+}
