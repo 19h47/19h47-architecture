@@ -7,4 +7,4 @@
 - [Breakpoint slicer](https://github.com/lolmaus/breakpoint-slicer)
 - [Ress](https://github.com/filipelinhares/ress), a modern CSS reset
 
-![Architecture]()
+![Architecture](architecture.png)
