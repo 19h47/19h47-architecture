@@ -1,5 +1,7 @@
 # Architecture
 
+An opinionated SCSS architecture based on [Hugo Giraudel](https://github.com/HugoGiraudel)'s work.
+
 ## Dependencies
 
 - [Bootstrap](https://github.com/twbs/bootstrap-sass)
