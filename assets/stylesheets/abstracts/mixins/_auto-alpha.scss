@@ -1,0 +1,15 @@
+/**
+ * Set opacity and visibility properties in one time, like GSAP.
+ *
+ * @param $value 0|1
+ * @author Julien Vasseur <julien@poigneedemainvirile.com>
+ */
+@mixin autoAlpha( $value ) {
+    @if $value == 0 {
+        opacity: 0;
+        visibility: hidden;
+    } @elseif $value == 1 {
+        opacity: 1;
+        visibility: visible;
+    }
+}
