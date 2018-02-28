@@ -26,3 +26,7 @@ Autoprefixer and compressed
 ```
 npm run prod
 ```
+
+## References
+
+- [Sass Guidelines](https://sass-guidelin.es/#architecture)
