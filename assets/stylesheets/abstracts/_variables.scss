@@ -106,20 +106,30 @@ $base-font-size-px: $base-font-size * 1px;
 $base-line-height: 19;
 
 
-
-// Layout ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+/**
+ * Grid columns number
+ *
+ * Number of columns in the grid, it override `$grid-columns` from
+ * bootstrap-sass. It means, if you wish, that you can instantiate a grid of 8,
+ * for example.
+ *
+ * @see https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_variables.scss#L329
+ */
 $grid-columns: 12;
 
 
 /**
  * Gutter width
- * 
- * Overall grid gutter size from Bootstrap
- * 
+ *
+ * Padding between columns. Gets divided in half for the left and right, it
+ * overide `$grid-gutter-width` from bootstrap-sass
+ *
  * @see http://stackoverflow.com/a/28193872/5091221
+ * @see https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_variables.scss#L331
  */
 $grid-gutter-width-unitless: 30;
 $grid-gutter-width: ( $grid-gutter-width-unitless * 1px );
+
 
 
 /**
@@ -135,7 +145,7 @@ $grid-outer-gutter-width: $grid-outer-gutter-width-unitless * 1px;
 /**
  * Prototype width
  *
- * From .psd obviously
+ * From Photoshop, Sketch, Illustrator, Paint maybe? 😝
  */
 $prototype-width-unitless: 1440;
 $prototype-width: $prototype-width-unitless * 1px;
@@ -143,8 +153,8 @@ $prototype-width: $prototype-width-unitless * 1px;
 
 /**
  * Container width without grid outer gutter width
- * 
- * Width keep from .psd
+ *
+ * Width keep from prototype
  */
 $container-width-without-outer-gutter-unitless: 1200;
 $container-width: $container-width-without-outer-gutter-unitless * 1px;
@@ -152,8 +162,8 @@ $container-width: $container-width-without-outer-gutter-unitless * 1px;
 
 /**
  * Container width
- * 
- * Width keep from .psd (grid + outer gutter * 2 )
+ *
+ * Width keep from prototype (grid + outer gutter * 2 )
  */
 $container-width-unitless: $container-width-without-outer-gutter-unitless + ( $grid-outer-gutter-width-unitless * 2 );
 $container-width: $container-width-unitless * 1px;
@@ -165,18 +175,21 @@ $container-width: $container-width-unitless * 1px;
  * @uses map-get( $transitions, $key ) to retrieve directory value from map
  * @type map
  * @see http://easings.net/
+ * @author Jérémy Levron <levronjeremy@19h47.fr>
  */
 $transitions: (
 	ease: .3s ease,
 );
 
+
 /**
  * Directories
  *
  * Each directories used in this theme.
- * 
- * @uses map-get( $directories, $key ) to retrieve directory value from map
- * @type map
+ *
+ * @uses 	map-get( $directories, $key ) to retrieve directory value
+ * @type 	map
+ * @author 	Jérémy Levron levronjeremy@19h47.fr
  */
 $directories:
 (
@@ -197,3 +210,23 @@ $directories:
 $slicer-breakpoints: 0 768px 992px 1200px 1400px;
 $slicer-breakpoint-names: 'xs' 'sm' 'md' 'lg' 'hd';
 $slicer-anti-overlap-corrections: -1px;
+
+
+/**
+ * State classes
+ *
+ * Each state class used in this theme.
+ *
+ * @uses map-get( $state-classes, $key ) to retrieve class value
+ * @type map
+ * @author Jérémy Levron levronjeremy@19h47.fr
+ */
+$state-classes: (
+	menu-open: menu--is-open,
+	search-open: search--is-open,
+	panel-open: panel--is-open,
+	panel-loading: panel--is-loading,
+	map-open: map--is-open,
+	form-open: form--is-open,
+	submenu-open: submenu--is-open,
+);
