@@ -6,7 +6,7 @@ An opinionated SCSS architecture based on [Hugo Giraudel](https://github.com/Hug
 
 ## Dependencies
 
-- [Bootstrap](https://github.com/twbs/bootstrap-sass), we only load the grid for convenience
+- [Bootstrap](https://github.com/twbs/bootstrap-sass), we only load the grid for convenience (see the [bootstrap-custom](https://github.com/19h47/architecture/blob/master/assets/stylesheets/vendors/_bootstrap-custom.scss)  file)
 - [Breakpoint](https://github.com/at-import/breakpoint)
 - [Breakpoint slicer](https://github.com/lolmaus/breakpoint-slicer)
 - [Ress](https://github.com/filipelinhares/ress), a modern CSS reset
