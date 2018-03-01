@@ -1,0 +1,54 @@
+/**
+ * Placeholder position
+ *
+ * @uses    @extend %Position-{$proprerty}
+ * @author  Jérémy Levron levronjeremy@19h47.fr
+ */
+%Position {
+
+    /**
+     * Absolute
+     *
+     * Set element to position absolute, top 0, right 0, bottom 0, left 0
+     *
+     * @uses @extend %Position-absolute
+     */
+    &-absolute-center {
+    	@include absolute( top 0 right 0 bottom 0 left 0 );
+    }
+
+
+
+    /**
+     * Absolute
+     *
+     * Set element to position fixed, top 0, right 0, bottom 0, left 0
+     *
+     * @uses @extend %Position-fixed
+     */
+    &-fixed-center {
+    	@include fixed( top 0 right 0 bottom 0 left 0 );
+    }
+}
+
+
+/**
+ * Placeholder pointer events
+ *
+ * @uses    @extend %Pointer-events-{ $property }
+ * @author  Levron Jérémy <levronjeremy@19h47.fr>
+ */
+$pointer-events-values: none auto;
+@each $value in $pointer-events-values {
+    %Pointer-events {
+
+        /**
+         * Pointer events #{ $value }
+         *
+         * @uses %Pointer-events-#{ $value }
+         */
+        &-#{ $value } {
+            pointer-events: #{ $value };
+        }
+    }
+}
