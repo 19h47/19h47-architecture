@@ -4,6 +4,7 @@
  * @author Jérémy Levron <jeremylevron@19h47.fr>
  */
 $margin-properties: 'top' 'right' 'bottom' 'left';
+$margin-values: '24' '48' '72';
 
 // Loop through each breakpoint
 @each $breakpoint in $slicer-breakpoint-names {
@@ -60,6 +61,22 @@ $margin-properties: 'top' 'right' 'bottom' 'left';
             @extend %margin-#{ unquote( $breakpoint ) }-y-0;
         }
 
+        %margin-#{ unquote( $breakpoint ) }-0 {
+            margin: 0;
+        }
+
+        .margin-#{ unquote( $breakpoint ) }-0 {
+            @extend %margin-#{ unquote( $breakpoint ) }-0;
+        }
+
+        %margin-#{ unquote( $breakpoint ) }-bottom-0 {
+            margin: 0;
+        }
+
+        .margin-#{ unquote( $breakpoint ) }-bottom-0 {
+            @extend %margin-#{ unquote( $breakpoint ) }-bottom-0;
+        }
+
 
         // For each property find in $margin-properties
         @each $margin-property in $margin-properties {
@@ -73,6 +90,16 @@ $margin-properties: 'top' 'right' 'bottom' 'left';
 
             .margin-#{ unquote( $breakpoint ) }-#{ $margin-property }-auto {
                 @extend %margin-#{ unquote( $breakpoint ) }-#{ $margin-property }-auto;
+            }
+
+            @each $margin-value in $margin-values {
+                %margin-#{ unquote( $breakpoint ) }-#{ $margin-property }-#{ unquote( $margin-value ) } {
+                    margin-#{ $margin-property }: #{ $margin-value }px;
+                }
+
+                .margin-#{ unquote( $breakpoint ) }-#{ $margin-property }-#{ unquote( $margin-value ) } {
+                    @extend %margin-#{ unquote( $breakpoint ) }-#{ $margin-property }-#{ unquote( $margin-value ) };
+                }
             }
         }
     }
