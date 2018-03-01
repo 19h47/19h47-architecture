@@ -36,7 +36,7 @@
  * Placeholder pointer events
  *
  * @uses    @extend %Pointer-events-{ $property }
- * @author  Jérémy Levron <<jeremylevron@19h47.fr>>
+ * @author  Jérémy Levron <jeremylevron@19h47.fr>
  */
 $pointer-events-values: none auto;
 @each $value in $pointer-events-values {
