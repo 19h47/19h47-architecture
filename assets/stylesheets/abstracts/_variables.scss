@@ -6,7 +6,7 @@
  * Color variation
  *
  * Each colors used in the theme.
- * 
+ *
  * @uses get_color( $key, $value ) to retrieve color value
  * @type nested map
  * @see http://erskinedesign.com/blog/friendlier-colour-names-sass-maps/
@@ -31,7 +31,7 @@ $color-variations: (
 	 * @see https://brandcolors.net/
 	 */
 	social: (
-		facebook: #3b5998, 
+		facebook: #3b5998,
 		twitter: #1da1f2,
 		google-plus: #dd4b39,
 		linkedin: #0077b5,
@@ -175,7 +175,7 @@ $container-width: $container-width-unitless * 1px;
  * @uses map-get( $transitions, $key ) to retrieve directory value from map
  * @type map
  * @see http://easings.net/
- * @author Jérémy Levron <levronjeremy@19h47.fr>
+ * @author Jérémy Levron <<jeremylevron@19h47.fr>>
  */
 $transitions: (
 	ease: .3s ease,
@@ -189,7 +189,7 @@ $transitions: (
  *
  * @uses 	map-get( $directories, $key ) to retrieve directory value
  * @type 	map
- * @author 	Jérémy Levron levronjeremy@19h47.fr
+ * @author 	Jérémy Levron <jeremylevron@19h47.fr>
  */
 $directories:
 (
@@ -219,7 +219,7 @@ $slicer-anti-overlap-corrections: -1px;
  *
  * @uses map-get( $state-classes, $key ) to retrieve class value
  * @type map
- * @author Jérémy Levron levronjeremy@19h47.fr
+ * @author Jérémy Levron <jeremylevron@19h47.fr>
  */
 $state-classes: (
 	menu-open: menu--is-open,

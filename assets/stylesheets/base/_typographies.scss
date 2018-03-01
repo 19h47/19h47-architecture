@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    
+
 
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
@@ -35,15 +35,15 @@ body {
  * @param   $family         font-family (variable)
  * @param   $letter-spacing letter-spacing (from .psd)
  * @type    nested map
- * @author  Jérémy Levron   levronjeremy@19h47.fr
+ * @author  Jérémy Levron   <jeremylevron@19h47.fr>
  */
 $titles: (
     h1: (
-        38, 
+        38,
         58.52,
-        map-get( map-get( $font, weights ), bold ), 
+        map-get( map-get( $font, weights ), bold ),
         map-get( map-get( $font, families ), title ),
-        0 
+        0
     ),
 
     h2: (
@@ -51,7 +51,7 @@ $titles: (
         27,
         map-get( map-get( $font, weights ), semibold ),
         map-get( map-get( $font, families ), body ),
-        0    
+        0
     ),
 
     h3: (
@@ -59,7 +59,7 @@ $titles: (
         19,
         map-get( map-get( $font, weights ), extrablack ),
         map-get( map-get( $font, families ), body ),
-        0    
+        0
     ),
 
     h4: (
@@ -67,7 +67,7 @@ $titles: (
         19,
         map-get( map-get( $font, weights ), extrablack ),
         map-get( map-get( $font, families ), body ),
-        0    
+        0
     ),
 );
 
@@ -111,7 +111,7 @@ $titles: (
         @if $line-height == normal {
             line-height: normal;
         } else {
-        	line-height: $line-height / $font-size; 
+        	line-height: $line-height / $font-size;
     	}
     }
 };

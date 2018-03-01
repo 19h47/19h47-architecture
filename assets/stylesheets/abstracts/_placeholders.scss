@@ -1,8 +1,8 @@
 /**
  * Placeholder position
  *
- * @uses    @extend %Position-{$proprerty}
- * @author  Jérémy Levron levronjeremy@19h47.fr
+ * @uses    @extend %Position-{$property}
+ * @author  Jérémy Levron <jeremylevron@19h47.fr>
  */
 %Position {
 
@@ -36,7 +36,7 @@
  * Placeholder pointer events
  *
  * @uses    @extend %Pointer-events-{ $property }
- * @author  Levron Jérémy <levronjeremy@19h47.fr>
+ * @author  Jérémy Levron <<jeremylevron@19h47.fr>>
  */
 $pointer-events-values: none auto;
 @each $value in $pointer-events-values {
