@@ -37,3 +37,23 @@
      	@extend %font-weight-#{ $weight-name };
  	}
 }
+
+
+/**
+ * Font size
+ *
+ * Constructor class for each font weight found in map-get( $font, sizes )
+ *
+ * @param $weight-name  	name of weight
+ * @param $weight-value     value of weight
+ * @author Jérémy Levron <jeremylevron@19h47.fr>
+ */
+@each $font-size in map-get( $font, sizes ) {
+    %font-size-#{ unquote( $font-size ) } {
+        font-size: #{ unquote( $font-size ) }px;
+    }
+
+    .font-size-#{ unquote( $font-size ) } {
+        @extend %font-size-#{ unquote( $font-size ) };
+    }
+}

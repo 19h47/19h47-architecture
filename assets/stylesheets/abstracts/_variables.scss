@@ -95,6 +95,16 @@ $font: (
 	 */
 	styles: 'italic',
 
+
+	/**
+	 * Font sizes
+	 *
+	 * Each font size used in the theme.
+	 *
+	 * @uses map-get( $font, sizes ) to retrieve font size value
+	 * @type list
+	 */
+	sizes: '15',
 );
 
 
