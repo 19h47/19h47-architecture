@@ -45,7 +45,7 @@
  * Constructor class for each font weight found in map-get( $font, sizes )
  *
  * @param $weight-name  	name of weight
- * @param $weight-value     value of weight
+ * @param $weight-value     	value of weight
  * @author Jérémy Levron <jeremylevron@19h47.fr>
  */
 @each $font-size in map-get( $font, sizes ) {
@@ -55,5 +55,26 @@
 
     .font-size-#{ unquote( $font-size ) } {
         @extend %font-size-#{ unquote( $font-size ) };
+    }
+}
+
+
+/**
+ * Font family
+ *
+ * Constructor class for each font family found in map-get( $font, families )
+ *
+ * @param $font-family-name      name of the family
+ * @param $font-family-value     value of the family
+ * @author Jérémy Levron <jeremylevron@19h47.fr>
+ */
+@each $font-family-name, $font-family-value in map-get( $font, families ) {
+
+    %font-family-#{ $font-family-name } {
+        font-family: #{ $font-family-value };
+    }
+
+    .font-family-#{ $font-family-name } {
+        @extend %font-family-#{ $font-family-name };
     }
 }
