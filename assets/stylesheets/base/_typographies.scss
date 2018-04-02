@@ -110,7 +110,7 @@ $titles: (
 
         @if $line-height == normal {
             line-height: normal;
-        } else {
+        } @else {
         	line-height: $line-height / $font-size;
     	}
     }
