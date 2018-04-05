@@ -4,21 +4,25 @@
  * Construct each float position found in $floats with
  * a placeholder and a utility class
  */
-$floats: 'left' 'right' 'none';
-@each $float in $floats {
+$floats: 'left';
+@each $breakpoint in $slicer-breakpoint-names {
+    @include from( $breakpoint ) {
+		@each $float in $floats {
 
-	// Placeholder
-	%float-#{ unquote( $float ) } {
-		float: #{ unquote( $float ) };
-	}
+			// Placeholder
+			%float-#{ unquote( $breakpoint ) }-#{ unquote( $float ) } {
+				float: #{ unquote( $float ) };
+			}
 
-	// .float-{ $float }
-	.float-#{ unquote( $float ) } {
-		@extend %float-#{ unquote( $float ) };
-	}
+			// .float-{ $float }
+			.float-#{ unquote( $breakpoint ) }-#{ unquote( $float ) } {
+				@extend %float-#{ unquote( $breakpoint ) }-#{ unquote( $float ) };
+			}
 
-	// .{ $float }
-	.#{ unquote( $float ) } {
-		@extend %float-#{ unquote( $float ) };
+			// .{ $float }
+			.#{ unquote( $float ) } {
+				@extend %float-#{ unquote( $breakpoint ) }-#{ unquote( $float ) };
+			}
+		}
 	}
 }
