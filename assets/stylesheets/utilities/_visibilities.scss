@@ -1,0 +1,35 @@
+/**
+ * Visibilities
+ *
+ * @author Jérémy Levron <jeremy@quatre-vingt-deux.fr>
+ */
+$visibilities-displays: 'inline-block' 'block' 'inline';
+@each $breakpoint in $slicer-breakpoint-names {
+
+	// Hidden
+	@include at( $breakpoint ) {
+
+		%hidden-#{ unquote( $breakpoint ) } {
+			display: none!important;
+		}
+
+		.hidden-#{ unquote( $breakpoint ) } {
+			@extend %hidden-#{ unquote( $breakpoint ) };
+		}
+	}
+
+	// Visible
+	@include from( $breakpoint ) {
+
+		@each $display in $visibilities-displays {
+
+			%visible-#{ unquote( $breakpoint ) }-#{ unquote( $display ) } {
+				display: #{ unquote( $display ) }!important;
+			}
+
+			.visible-#{ unquote( $breakpoint ) }-#{ unquote( $display ) } {
+				@extend %visible-#{ unquote( $breakpoint ) }-#{ unquote( $display ) };
+			}
+		}
+	}
+}
