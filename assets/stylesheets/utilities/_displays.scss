@@ -16,7 +16,7 @@ $displays: 'block' 'inline-block' 'inline' 'none';
 				display: #{ unquote( $display ) };
 			}
 
-			// .display-{ $display }
+			// .display-{ $breakpoint }-{ $display }
 			.display-#{ unquote( $breakpoint ) }-#{ unquote( $display ) } {
 				@extend %display-#{ unquote( $breakpoint ) }-#{ unquote( $display ) };
 			}

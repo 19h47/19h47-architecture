@@ -14,7 +14,7 @@ $floats: 'left';
 				float: #{ unquote( $float ) };
 			}
 
-			// .float-{ $float }
+			// .float-{ $breakpoint }-{ $float }
 			.float-#{ unquote( $breakpoint ) }-#{ unquote( $float ) } {
 				@extend %float-#{ unquote( $breakpoint ) }-#{ unquote( $float ) };
 			}
