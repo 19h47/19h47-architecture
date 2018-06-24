@@ -5,11 +5,13 @@
  * @author Julien Vasseur <julien@poigneedemainvirile.com>
  */
 @mixin autoAlpha( $value ) {
-    @if $value == 0 {
-        opacity: 0;
-        visibility: hidden;
-    } @elseif $value == 1 {
-        opacity: 1;
-        visibility: visible;
-    }
+	@if $value == 0 {
+		opacity: 0;
+		visibility: hidden;
+	} 
+
+	@else if $value == 1 {
+		opacity: 1;
+		visibility: visible;
+	}
 }

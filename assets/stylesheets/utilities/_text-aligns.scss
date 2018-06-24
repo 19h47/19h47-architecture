@@ -20,18 +20,18 @@ $text-aligns: 'left' 'right' 'center' 'justify';
 	}
 }
 
-@each $breakpoint in $slicer-breakpoint-names {
-    @include from( $breakpoint ) {
+@each $breakpoint-name, $breakpoint-value in $grid-breakpoints {
+	@include media-breakpoint-up( $breakpoint-name ) {
 		@each $text-align in $text-aligns {
 
 			// Placeholder
-			%text-align-#{ unquote( $breakpoint ) }-#{ unquote( $text-align ) } {
+			%text-align-#{ unquote( $breakpoint-name ) }-#{ unquote( $text-align ) } {
 				text-align: #{ unquote( $text-align ) };
 			}
 
-			// .text-align-{ $breakpoint }-{ $text-align }
-			.text-align-#{ unquote( $breakpoint ) }-#{ unquote( $text-align ) } {
-				@extend %text-align-#{ unquote( $breakpoint ) }-#{ unquote( $text-align ) };
+			// .text-align-{ $breakpoint-name }-{ $text-align }
+			.text-align-#{ unquote( $breakpoint-name ) }-#{ unquote( $text-align ) } {
+				@extend %text-align-#{ unquote( $breakpoint-name ) }-#{ unquote( $text-align ) };
 			}
 		}
 	}

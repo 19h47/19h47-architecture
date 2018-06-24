@@ -7,18 +7,18 @@
  * @author Jérémy Levron <jeremylevron@19h47.fr>
  */
 $displays: 'block' 'inline-block' 'inline' 'none';
-@each $breakpoint in $slicer-breakpoint-names {
-    @include from( $breakpoint ) {
+@each $breakpoint-name, $breakpoint-value in $grid-breakpoints {
+	@include media-breakpoint-up( $breakpoint-name ) {
 		@each $display in $displays {
 
 			// Placeholder
-			%display-#{ unquote( $breakpoint ) }-#{ unquote( $display ) } {
-				display: #{ unquote( $display ) };
+			%display-#{ unquote( $breakpoint-name ) }-#{ unquote( $display ) } {
+				display: #{ unquote ( $display ) };
 			}
 
-			// .display-{ $breakpoint }-{ $display }
-			.display-#{ unquote( $breakpoint ) }-#{ unquote( $display ) } {
-				@extend %display-#{ unquote( $breakpoint ) }-#{ unquote( $display ) };
+			// .display-{ $breakpoint-name }-{ $display }
+			.display-#{ unquote( $breakpoint-name ) }-#{ unquote( $display ) } {
+				@extend %display-#{ unquote( $breakpoint-name ) }-#{ unquote( $display ) };
 			}
 		}
 	}

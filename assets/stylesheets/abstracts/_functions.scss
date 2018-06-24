@@ -6,26 +6,30 @@
  * @access  public
  * @author Jérémy Levron <jeremylevron@19h47.fr>
  */
+
+/* stylelint-disable-line scss/at-function-pattern */
 @function get_the_color( $keys... ) {
 
-    $map: $color-variations;
-    $color-base: map-get( $map, nth( $keys, 1 ) );
-    $result: null;
+	$map: $color-variations;
+	$color-base: map-get( $map, nth( $keys, 1 ) );
+	$result: null;
 
-    @if length( $keys ) == 1 {
+	@if length( $keys ) == 1 {
+		$result: $color-base;
+	}
 
-        $result: $color-base;
-    }
+	@if length( $keys ) == 2 {
+		$color-key: nth( $keys, 1 );
+		$color-value: nth( $keys, 2 );
 
-    @if length( $keys ) == 2 {
+		$result: map-get( $color-base, $color-value );
+	}
 
-        $color-key: nth( $keys, 1 );
-        $color-value: nth( $keys, 2 );
+	@if length ( $keys ) > 2 {
+		@warn '`#{ $keys }` is greater than 2.';
+	}
 
-        $result: map-get( $color-base, $color-value );
-    }
-
-    @return $result;
+	@return $result;
 }
 
 
@@ -37,7 +41,7 @@
  * @author Jérémy Levron <jeremylevron@19h47.fr>
  */
 @function the_color( $keys... ) {
-    @return get_the_color( $keys... );
+	@return get_the_color( $keys... );
 }
 
 
@@ -50,16 +54,15 @@
  * @author Jérémy Levron <jeremylevron@19h47.fr>
  */
 @function get_color_list( $label ) {
-    @each $list in $color-variations {
+	@each $list in $color-variations {
 
-        @if nth( $list, 1 ) == $label {
+		@if nth( $list, 1 ) == $label {
 
-            @return $list;
-        }
-    }
-    @return null;
+			@return $list;
+		}
+	}
+	@return null;
 }
-
 
 
 /**
@@ -72,7 +75,7 @@
  * @return  Color
  */
 @function tint($color, $percentage ) {
-    @return mix( white, $color, $percentage );
+	@return mix( white, $color, $percentage );
 }
 
 
@@ -86,5 +89,5 @@
  * @return  Color
  */
 @function shade($color, $percentage ) {
-    @return mix( black, $color, $percentage );
+	@return mix( black, $color, $percentage );
 }

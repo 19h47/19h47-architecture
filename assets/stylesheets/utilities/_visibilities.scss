@@ -4,31 +4,29 @@
  * @author Jérémy Levron <jeremy@quatre-vingt-deux.fr>
  */
 $visibilities-displays: 'inline-block' 'block' 'inline';
-@each $breakpoint in $slicer-breakpoint-names {
+@each $breakpoint-name, $breakpoint-value in $grid-breakpoints {
 
 	// Hidden
-	@include at( $breakpoint ) {
-
-		%hidden-#{ unquote( $breakpoint ) } {
-			display: none!important;
+	@include media-breakpoint-only( $breakpoint-name ) {
+		%hidden-#{ unquote($breakpoint-name) } {
+			display: none !important;
 		}
 
-		.hidden-#{ unquote( $breakpoint ) } {
-			@extend %hidden-#{ unquote( $breakpoint ) };
+		.hidden-#{ unquote($breakpoint-name) } {
+			@extend %hidden-#{ unquote($breakpoint-name) };
 		}
 	}
 
 	// Visible
-	@include from( $breakpoint ) {
+	@include media-breakpoint-up( $breakpoint-name ) {
 
 		@each $display in $visibilities-displays {
-
-			%visible-#{ unquote( $breakpoint ) }-#{ unquote( $display ) } {
-				display: #{ unquote( $display ) }!important;
+			%visible-#{ unquote( $breakpoint-name ) }-#{ unquote( $display ) } {
+				display: #{ unquote ( $display ) } !important;
 			}
 
-			.visible-#{ unquote( $breakpoint ) }-#{ unquote( $display ) } {
-				@extend %visible-#{ unquote( $breakpoint ) }-#{ unquote( $display ) };
+			.visible-#{ unquote( $breakpoint-name ) }-#{ unquote( $display ) } {
+				@extend %visible-#{ unquote( $breakpoint-name ) }-#{ unquote( $display ) };
 			}
 		}
 	}

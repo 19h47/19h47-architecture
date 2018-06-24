@@ -6,9 +6,8 @@
  *
  * @author Jérémy Levron <jeremylevron@19h47.fr>
  */
-$vertical-aligns: 'middle' 'top';	
+$vertical-aligns: 'middle' 'top';
 @each $vertical-align in $vertical-aligns {
-	
 	// Placeholder
 	%vertical-align-#{ unquote( $vertical-align ) } {
 		vertical-align: #{ unquote( $vertical-align ) };
@@ -20,18 +19,18 @@ $vertical-aligns: 'middle' 'top';
 	}
 }
 
-@each $breakpoint in $slicer-breakpoint-names {
-    @include from( $breakpoint ) {
+@each $breakpoint-name, $breakpoint-value in $grid-breakpoints {
+	@include media-breakpoint-up( $breakpoint-name ) {
 		@each $vertical-align in $vertical-aligns {
 
 			// Placeholder
-			%vertical-align-#{ unquote( $breakpoint ) }-#{ unquote( $vertical-align ) } {
+			%vertical-align-#{ unquote( $breakpoint-name ) }-#{ unquote( $vertical-align ) } {
 				vertical-align: #{ unquote( $vertical-align ) };
 			}
 
-			// .vertical-align-{ $breakpoint }-{ $vertical-align }
-			.vertical-align-#{ unquote( $breakpoint ) }-#{ unquote( $vertical-align ) } {
-				@extend %vertical-align-#{ unquote( $breakpoint ) }-#{ unquote( $vertical-align ) };
+			// .vertical-align-{ $breakpoint-name }-{ $vertical-align }
+			.vertical-align-#{ unquote( $breakpoint-name ) }-#{ unquote( $vertical-align ) } {
+				@extend %vertical-align-#{ unquote( $breakpoint-name ) }-#{ unquote( $vertical-align ) };
 			}
 		}
 	}

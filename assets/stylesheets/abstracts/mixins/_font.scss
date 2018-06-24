@@ -5,12 +5,10 @@
  * @param   int     $line-height Unitless line height   (mostly from .psd)
  */
 @mixin font( $font-size, $line-height, $letter-spacing: '' ) {
-    font: {
-        size: ( $font-size * 1px );
-    }
-    line-height: ( $line-height / $font-size );
+	font: { size: ( $font-size * 1px ); }
+	line-height: ( $line-height / $font-size );
 
-    @if $letter-spacing != '' {
-        @include letter-spacing( $letter-spacing );
-    }
+	@if $letter-spacing != '' {
+		@include letter-spacing( $letter-spacing );
+	}
 }

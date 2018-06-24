@@ -7,6 +7,6 @@
  * @author Hugo Giraudel
  */
 @mixin size($width, $height: $width) {
-    width: $width;
-    height: $height;
+	height: $height;
+	width: $width;
 }

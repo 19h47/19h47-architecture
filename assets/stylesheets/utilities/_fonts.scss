@@ -7,14 +7,13 @@
  * @author Jérémy Levron <jeremylevron@19h47.fr>
  */
 @each $style in map-get( $font, styles ) {
-
 	%font-style-#{ $style } {
 		font-style: unquote( $style );
 	}
 
-    .font-style-#{ $style } {
-        @extend %font-style-#{ $style };
-    }
+	.font-style-#{ $style } {
+		@extend %font-style-#{ $style };
+	}
 }
 
 
@@ -29,13 +28,13 @@
  */
 @each $weight-name, $weight-value in map-get( $font, weights ) {
 
- 	%font-weight-#{ $weight-name } {
-     	font-weight: #{ $weight-value };
- 	}
+	%font-weight-#{ $weight-name } {
+		font-weight: #{ $weight-value };
+	}
 
- 	.font-weight-#{ $weight-name } {
-     	@extend %font-weight-#{ $weight-name };
- 	}
+	.font-weight-#{ $weight-name } {
+		@extend %font-weight-#{ $weight-name };
+	}
 }
 
 
@@ -49,13 +48,13 @@
  * @author Jérémy Levron <jeremylevron@19h47.fr>
  */
 @each $font-size in map-get( $font, sizes ) {
-    %font-size-#{ unquote( $font-size ) } {
-        font-size: #{ unquote( $font-size ) }px;
-    }
+	%font-size-#{ unquote( $font-size ) } {
+		font-size: #{ unquote( $font-size ) }px;
+	}
 
-    .font-size-#{ unquote( $font-size ) } {
-        @extend %font-size-#{ unquote( $font-size ) };
-    }
+	.font-size-#{ unquote( $font-size ) } {
+		@extend %font-size-#{ unquote( $font-size ) };
+	}
 }
 
 
@@ -70,11 +69,11 @@
  */
 @each $font-family-name, $font-family-value in map-get( $font, families ) {
 
-    %font-family-#{ $font-family-name } {
-        font-family: #{ $font-family-value };
-    }
+	%font-family-#{ $font-family-name } {
+		font-family: #{ $font-family-value };
+	}
 
-    .font-family-#{ $font-family-name } {
-        @extend %font-family-#{ $font-family-name };
-    }
+	.font-family-#{ $font-family-name } {
+		@extend %font-family-#{ $font-family-name };
+	}
 }

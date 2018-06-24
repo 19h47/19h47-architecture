@@ -5,23 +5,23 @@
  * a placeholder and a utility class
  */
 $floats: 'left';
-@each $breakpoint in $slicer-breakpoint-names {
-    @include from( $breakpoint ) {
+@each $breakpoint-name, $breakpoint-value in $grid-breakpoints {
+	@include media-breakpoint-up( $breakpoint-name ) {
 		@each $float in $floats {
 
 			// Placeholder
-			%float-#{ unquote( $breakpoint ) }-#{ unquote( $float ) } {
+			%float-#{ unquote( $breakpoint-name ) }-#{ unquote( $float ) } {
 				float: #{ unquote( $float ) };
 			}
 
-			// .float-{ $breakpoint }-{ $float }
-			.float-#{ unquote( $breakpoint ) }-#{ unquote( $float ) } {
-				@extend %float-#{ unquote( $breakpoint ) }-#{ unquote( $float ) };
+			// .float-{ $breakpoint-name }-{ $float }
+			.float-#{ unquote( $breakpoint-name ) }-#{ unquote( $float ) } {
+				@extend %float-#{ unquote( $breakpoint-name ) }-#{ unquote( $float ) };
 			}
 
 			// .{ $float }
 			.#{ unquote( $float ) } {
-				@extend %float-#{ unquote( $breakpoint ) }-#{ unquote( $float ) };
+				@extend %float-#{ unquote( $breakpoint-name ) }-#{ unquote( $float ) };
 			}
 		}
 	}

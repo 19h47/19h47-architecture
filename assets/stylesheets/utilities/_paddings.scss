@@ -7,126 +7,124 @@ $padding-properties: 'top' 'right' 'bottom' 'left';
 $padding-values: '50';
 
 // Loop through each breakpoint
-@each $breakpoint in $slicer-breakpoint-names {
+@each $breakpoint-name, $breakpoint-value in $grid-breakpoints {
+	@include media-breakpoint-up( $breakpoint-name ) {
 
-    // Create breakpoint "from" statement
-    @include from( $breakpoint ) {
+		/**
+		 * padding 0 auto
+		 */
+		%padding-#{ unquote( $breakpoint-name ) }-0-auto { padding: 0 auto; }
 
-        /**
-         * padding 0 auto
-         */
-        %padding-#{ unquote( $breakpoint ) }-0-auto { padding: 0 auto; }
-
-        .padding-#{ unquote( $breakpoint ) }-0-auto {
-            @extend %padding-#{ unquote( $breakpoint ) }-0-auto;
-        }
+		.padding-#{ unquote( $breakpoint-name ) }-0-auto {
+			@extend %padding-#{ unquote( $breakpoint-name ) }-0-auto;
+		}
 
 
-        /**
-         * padding auto
-         */
-        %padding-#{ unquote( $breakpoint ) }-x-auto {
-            padding-right: auto;
-            padding-left: auto;
-        }
+		/**
+		 * padding auto
+		 */
+		%padding-#{ unquote( $breakpoint-name ) }-x-auto {
+			padding-right: auto;
+			padding-left: auto;
+		}
 
-        .padding-#{ unquote( $breakpoint ) }-x-auto {
-            @extend %padding-#{ unquote( $breakpoint ) }-x-auto;
-        }
+		.padding-#{ unquote( $breakpoint-name ) }-x-auto {
+			@extend %padding-#{ unquote( $breakpoint-name ) }-x-auto;
+		}
 
-        %padding-#{ unquote( $breakpoint ) }-y-auto {
-            padding-top: auto;
-            padding-bottom: auto;
-        }
+		%padding-#{ unquote( $breakpoint-name ) }-y-auto {
+			padding-top: auto;
+			padding-bottom: auto;
+		}
 
-        .padding-#{ unquote( $breakpoint ) }-y-auto {
-            @extend %padding-#{ unquote( $breakpoint ) }-y-auto;
-        }
+		.padding-#{ unquote( $breakpoint-name ) }-y-auto {
+			@extend %padding-#{ unquote( $breakpoint-name ) }-y-auto;
+		}
 
-        %padding-#{ unquote( $breakpoint ) }-x-0 {
-            padding-right: 0;
-            padding-left: 0;
-        }
+		%padding-#{ unquote( $breakpoint-name ) }-x-0 {
+			padding-right: 0;
+			padding-left: 0;
+		}
 
-        .padding-#{ unquote( $breakpoint ) }-x-0 {
-            @extend %padding-#{ unquote( $breakpoint ) }-x-0;
-        }
+		.padding-#{ unquote( $breakpoint-name ) }-x-0 {
+			@extend %padding-#{ unquote( $breakpoint-name ) }-x-0;
+		}
 
-        %padding-#{ unquote( $breakpoint ) }-y-0 {
-            padding-top: 0;
-            padding-bottom: 0;
-        }
+		%padding-#{ unquote( $breakpoint-name ) }-y-0 {
+			padding-top: 0;
+			padding-bottom: 0;
+		}
 
-        .padding-#{ unquote( $breakpoint ) }-y-0 {
-            @extend %padding-#{ unquote( $breakpoint ) }-y-0;
-        }
+		.padding-#{ unquote( $breakpoint-name ) }-y-0 {
+			@extend %padding-#{ unquote( $breakpoint-name ) }-y-0;
+		}
 
-        %padding-#{ unquote( $breakpoint ) }-0 {
-            padding: 0;
-        }
+		%padding-#{ unquote( $breakpoint-name ) }-0 {
+			padding: 0;
+		}
 
-        .padding-#{ unquote( $breakpoint ) }-0 {
-            @extend %padding-#{ unquote( $breakpoint ) }-0;
-        }
+		.padding-#{ unquote( $breakpoint-name ) }-0 {
+			@extend %padding-#{ unquote( $breakpoint-name ) }-0;
+		}
 
-        %padding-#{ unquote( $breakpoint ) }-bottom-0 {
-            padding: 0;
-        }
+		%padding-#{ unquote( $breakpoint-name ) }-bottom-0 {
+			padding: 0;
+		}
 
-        .padding-#{ unquote( $breakpoint ) }-bottom-0 {
-            @extend %padding-#{ unquote( $breakpoint ) }-bottom-0;
-        }
+		.padding-#{ unquote( $breakpoint-name ) }-bottom-0 {
+			@extend %padding-#{ unquote( $breakpoint-name ) }-bottom-0;
+		}
 
-        %padding-#{ unquote( $breakpoint ) }-top-0 {
-            padding: 0;
-        }
+		%padding-#{ unquote( $breakpoint-name ) }-top-0 {
+			padding: 0;
+		}
 
-        .padding-#{ unquote( $breakpoint ) }-top-0 {
-            @extend %padding-#{ unquote( $breakpoint ) }-top-0;
-        }
+		.padding-#{ unquote( $breakpoint-name ) }-top-0 {
+			@extend %padding-#{ unquote( $breakpoint-name ) }-top-0;
+		}
 
 
-        // For each property find in $padding-properties
-        @each $padding-property in $padding-properties {
+		// For each property find in $padding-properties
+		@each $padding-property in $padding-properties {
 
-            /**
-             * padding auto
-             */
-            %padding-#{ unquote( $breakpoint ) }-#{ $padding-property }-auto {
-                padding-#{ $padding-property }: auto;
-            }
+			/**
+			 * padding auto
+			 */
+			%padding-#{ unquote( $breakpoint-name ) }-#{ $padding-property }-auto {
+				padding-#{ $padding-property }: auto;
+			}
 
-            .padding-#{ unquote( $breakpoint ) }-#{ $padding-property }-auto {
-                @extend %padding-#{ unquote( $breakpoint ) }-#{ $padding-property }-auto;
-            }
+			.padding-#{ unquote( $breakpoint-name ) }-#{ $padding-property }-auto {
+				@extend %padding-#{ unquote( $breakpoint-name ) }-#{ $padding-property }-auto;
+			}
 
-            @each $padding-value in $padding-values {
-                %padding-#{ unquote( $breakpoint ) }-#{ $padding-property }-#{ unquote( $padding-value ) } {
-                    padding-#{ $padding-property }: #{ $padding-value }px;
-                }
+			@each $padding-value in $padding-values {
+				%padding-#{ unquote( $breakpoint-name ) }-#{ $padding-property }-#{ unquote( $padding-value ) } {
+					padding-#{ $padding-property }: #{ $padding-value }px;
+				}
 
-                .padding-#{ unquote( $breakpoint ) }-#{ $padding-property }-#{ unquote( $padding-value ) } {
-                    @extend %padding-#{ unquote( $breakpoint ) }-#{ $padding-property }-#{ unquote( $padding-value ) };
-                }
+				.padding-#{ unquote( $breakpoint-name ) }-#{ $padding-property }-#{ unquote( $padding-value ) } {
+					@extend %padding-#{ unquote( $breakpoint-name ) }-#{ $padding-property }-#{ unquote( $padding-value ) };
+				}
 
-                %padding-#{ unquote( $breakpoint ) }-x-#{ unquote( $padding-value ) } {
-                    padding-right: #{ $padding-value }px;
-                    padding-left: #{ $padding-value }px;
-                }
+				%padding-#{ unquote( $breakpoint-name ) }-x-#{ unquote( $padding-value ) } {
+					padding-right: #{ $padding-value }px;
+					padding-left: #{ $padding-value }px;
+				}
 
-                .padding-#{ unquote( $breakpoint ) }-x-#{ unquote( $padding-value ) } {
-                    @extend %padding-#{ unquote( $breakpoint ) }-x-#{ unquote( $padding-value ) };
-                }
+				.padding-#{ unquote( $breakpoint-name ) }-x-#{ unquote( $padding-value ) } {
+					@extend %padding-#{ unquote( $breakpoint-name ) }-x-#{ unquote( $padding-value ) };
+				}
 
-                %padding-#{ unquote( $breakpoint ) }-y-#{ unquote( $padding-value ) } {
-                    padding-top: #{ $padding-value }px;
-                    padding-bottom: #{ $padding-value }px;
-                }
+				%padding-#{ unquote( $breakpoint-name ) }-y-#{ unquote( $padding-value ) } {
+					padding-top: #{ $padding-value }px;
+					padding-bottom: #{ $padding-value }px;
+				}
 
-                .padding-#{ unquote( $breakpoint ) }-y-#{ unquote( $padding-value ) } {
-                    @extend %padding-#{ unquote( $breakpoint ) }-y-#{ unquote( $padding-value ) };
-                }
-            }
-        }
-    }
+				.padding-#{ unquote( $breakpoint-name ) }-y-#{ unquote( $padding-value ) } {
+					@extend %padding-#{ unquote( $breakpoint-name ) }-y-#{ unquote( $padding-value ) };
+				}
+			}
+		}
+	}
 }
