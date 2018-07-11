@@ -3,6 +3,7 @@
  * 
  * @param   {Number}     $value
  * @uses    letter-spacing(48)
+ * @see http://sass-lang.com/documentation/file.SASS_REFERENCE.html#if
  */
 @mixin letter-spacing ( $value ) {
 	// if value is unitless, divided it by 1000 and set unit as em to get 
