@@ -25,7 +25,7 @@
 		$result: map-get( $color-base, $color-value );
 	}
 
-	@if length ( $keys ) > 2 {
+	@if length( $keys ) > 2 {
 		@warn '`#{ $keys }` is greater than 2.';
 	}
 
