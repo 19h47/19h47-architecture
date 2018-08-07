@@ -3,7 +3,7 @@
  *
  * Constructor class for each font styles found in map-get( $font, styles )
  *
- * @param 	$style 	name of style font in map map-get( $font, styles )
+ * @param 	$style 			name of style font in map-get( $font, styles )
  * @author Jérémy Levron <jeremylevron@19h47.fr>
  */
 @each $style in map-get( $font, styles ) {
@@ -22,8 +22,8 @@
  *
  * Constructor class for each font weight found in map-get( $font, weights )
  *
- * @param $weight-name    	name of weight
- * @param $weight-value   	value of weight
+ * @param 	$weight-name    	name of weight
+ * @param 	$weight-value   	value of weight
  * @author Jérémy Levron <jeremylevron@19h47.fr>
  */
 @each $weight-name, $weight-value in map-get( $font, weights ) {
@@ -43,8 +43,7 @@
  *
  * Constructor class for each font weight found in map-get( $font, sizes )
  *
- * @param $weight-name  	name of weight
- * @param $weight-value     	value of weight
+ * @param 	$font-size
  * @author Jérémy Levron <jeremylevron@19h47.fr>
  */
 @each $font-size in map-get( $font, sizes ) {
@@ -63,8 +62,8 @@
  *
  * Constructor class for each font family found in map-get( $font, families )
  *
- * @param $font-family-name      name of the family
- * @param $font-family-value     value of the family
+ * @param 	$font-family-name      name of the family
+ * @param 	$font-family-value     value of the family
  * @author Jérémy Levron <jeremylevron@19h47.fr>
  */
 @each $font-family-name, $font-family-value in map-get( $font, families ) {
