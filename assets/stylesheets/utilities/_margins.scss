@@ -13,13 +13,15 @@ $margin-values: '24' '48' '72';
 		/**
 		 * Margin 0 auto
 		 */
-		%margin-#{ unquote( $breakpoint-name ) }-0-auto { margin: 0 auto; }
+		%margin-#{ unquote( $breakpoint-name ) }-0-auto { 
+			margin: 0 auto; 
+		}
 
 		.margin-#{ unquote( $breakpoint-name ) }-0-auto {
 			@extend %margin-#{ unquote( $breakpoint-name ) }-0-auto;
 		}
 
-
+	
 		/**
 		 * Margin auto
 		 */
@@ -66,15 +68,6 @@ $margin-values: '24' '48' '72';
 		.margin-#{ unquote( $breakpoint-name ) }-0 {
 			@extend %margin-#{ unquote( $breakpoint-name ) }-0;
 		}
-
-		%margin-#{ unquote( $breakpoint-name ) }-bottom-0 {
-			margin: 0;
-		}
-
-		.margin-#{ unquote( $breakpoint-name ) }-bottom-0 {
-			@extend %margin-#{ unquote( $breakpoint-name ) }-bottom-0;
-		}
-
 
 		// For each property find in $margin-properties
 		@each $margin-property in $margin-properties {

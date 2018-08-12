@@ -176,16 +176,6 @@ $directories: (
 
 
 /**
- * Breakpoint slicer
- *
- * @see https://github.com/lolmaus/breakpoint-slicer
- */
-$slicer-breakpoints: 0 768px 992px 1200px 1400px;
-$slicer-breakpoint-names: 'xs' 'sm' 'md' 'lg' 'hd';
-$slicer-anti-overlap-corrections: -1px;
-
-
-/**
  * State classes
  *
  * Each state class used in this theme.

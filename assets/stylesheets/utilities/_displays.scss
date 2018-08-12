@@ -13,7 +13,7 @@ $displays: 'block' 'inline-block' 'inline' 'none';
 
 			// Placeholder
 			%display-#{ unquote( $breakpoint-name ) }-#{ unquote( $display ) } {
-				display: #{ unquote ( $display ) };
+				display: #{ unquote( $display ) };
 			}
 
 			// .display-{ $breakpoint-name }-{ $display }

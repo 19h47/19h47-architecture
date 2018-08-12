@@ -11,7 +11,7 @@
 	@each $offset in $offsets {
 		// Doing the magic trick
 		// All this code happens inside the loop
-		$index: index ( $args, $offset );
+		$index: index( $args, $offset );
 
 		// If offset is found in the list
 		@if $index {
@@ -23,7 +23,7 @@
 
 			// If it is followed by a value
 			@else {
-				$next: nth ( $args, $index + 1 );
+				$next: nth( $args, $index + 1 );
 
 				// If the next value is value length
 				@if is-valid-length( $next ) {
