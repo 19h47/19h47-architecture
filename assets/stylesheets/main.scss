@@ -4,7 +4,9 @@
 
 
 // Dependencies
-@import 'vendors/bootstrap-custom';
+@import 'vendors/bootstrap-imports';
+
+@import 'abstracts/easings';
 @import 'abstracts/variables';
 // @import 'base/fonts';
 

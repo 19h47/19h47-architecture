@@ -145,25 +145,15 @@ $container-width: $container-width-without-outer-gutter-unitless * 1px;
 
 
 /**
- * Container width
+ * Container sizes
  *
- * Width keep from prototype (grid + outer gutter * 2 )
+ * Sizes keep from prototype (grid + outer gutter * 2 )
  */
 $container-width-unitless: $container-width-without-outer-gutter-unitless + ( $grid-outer-gutter-width-unitless * 2 );
 $container-width: $container-width-unitless * 1px;
 
-
-/**
- * Transitions
- *
- * @uses map-get( $transitions, $key ) to retrieve directory value from map
- * @type map
- * @see http://easings.net/
- * @author Jérémy Levron <jeremylevron@19h47.fr>
- */
-$transitions: (
-	ease: 0.3s ease,
-);
+$prototype-height-unitless: 832;
+$prototype-height: $prototype-height-unitless * 1px;
 
 
 /**
