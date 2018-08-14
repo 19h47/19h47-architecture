@@ -1,5 +1,8 @@
 # Architecture
 
+[![devDependencies Status](https://david-dm.org/19h47/architecture/dev-status.svg)](https://david-dm.org/19h47/architecture?type=dev)
+[![dependencies Status](https://david-dm.org/19h47/architecture/status.svg)](https://david-dm.org/19h47/architecture)
+
 An opinionated SCSS architecture based on [Hugo Giraudel](https://github.com/HugoGiraudel)'s work.
 
 ![Architecture](architecture.png)
