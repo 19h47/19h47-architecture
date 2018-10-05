@@ -34,4 +34,4 @@ npm run prod
 
 ## Todo
 
-- [ ] Change (margins utility)[assets/stylesheets/utilities] logique (more like Bootstrap)
+- [ ] Change (margins utility)[/assets/stylesheets/utilities] logique (more like Bootstrap)
