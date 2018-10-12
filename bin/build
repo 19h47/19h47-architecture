@@ -1,1 +1,0 @@
-npm-run-all -s build-task:scss-compile build-task:autoprefixer

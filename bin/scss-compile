@@ -1,1 +1,0 @@
-node-sass-chokidar --source-map true assets/stylesheets/ -o public/css

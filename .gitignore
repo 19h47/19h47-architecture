@@ -12,6 +12,7 @@ npm-debug.log
 /src/prototypes/
 /vendor/
 /public/
+/build/
 sftp-config.json.dev
 sftp-config.json.prod
 sftp-config.json

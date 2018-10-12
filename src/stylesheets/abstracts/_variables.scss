@@ -155,6 +155,18 @@ $container-width: $container-width-unitless * 1px;
 $prototype-height-unitless: 832;
 $prototype-height: $prototype-height-unitless * 1px;
 
+/**
+ * Spacers
+ */
+$spacers: (
+	0: 0,
+	1: $grid-gutter-width-unitless * .25,
+	2: $grid-gutter-width-unitless * .5,
+	3: $grid-gutter-width-unitless,
+	4: $grid-gutter-width-unitless * 1.5,
+	5: $grid-gutter-width-unitless * 3
+);
+
 
 /**
  * Directories

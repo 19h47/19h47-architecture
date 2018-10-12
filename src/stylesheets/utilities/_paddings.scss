@@ -1,0 +1,74 @@
+/**
+ * Margins classes
+ *
+ * $breakpoint 	str Breakpoint name
+ *
+ *
+ * @see http://sass-lang.com/documentation/Sass/Script/Functions.html#map_keys-instance_method
+ * @author Jérémy Levron <jeremylevron@19h47.fr>
+ */
+@each $breakpoint in map-keys( $grid-breakpoints ) {
+	@include media-breakpoint-up( $breakpoint )	{
+		$index: index( map-keys( $grid-breakpoints ), $breakpoint );
+
+		@if $index == 1 {
+			$breakpoint: '';
+		}
+
+		@else {
+			$breakpoint: '-#{ $breakpoint }';
+		}
+
+
+		// padding-{ breakpoint name }-x-0
+		%padding#{ $breakpoint }-x-0 {
+			padding-right: 0;
+			padding-left: 0;
+		}
+
+		.padding#{ $breakpoint }-x-0 {
+			@extend %padding#{ $breakpoint }-x-0;
+		}
+
+
+		// padding-{ breakpoint name }-y-0
+		%padding#{ $breakpoint }-y-0 {
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+
+		.padding#{ $breakpoint }-y-0 {
+			@extend %padding#{ $breakpoint }-y-0;
+		}
+
+
+		// padding-{ breakpoint name }-0
+		%padding#{ $breakpoint ) }-0 {
+			margin: 0;
+		}
+
+		.padding#{ $breakpoint }-0 {
+			@extend %padding#{ $breakpoint }-0;
+		}
+
+
+		@each $size, $length in $spacers {
+
+			.padding-x#{ $breakpoint ) }-#{ $size } {
+				padding-right: #{ $length }px;
+				padding-left: #{ $length }px;
+			}
+
+			.padding-y#{ $breakpoint ) }-#{ $size } {
+				padding-top: #{ $length }px;
+				padding-bottom: #{ $length }px;
+			}
+
+			@each $property in ( top, right, bottom, left ) {
+				.padding-#{ $property }#{ $breakpoint ) }-#{ $size } {
+					padding-#{ $property }: #{ $length }px;
+				}
+			}
+		}
+	}
+}
