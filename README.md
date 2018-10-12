@@ -31,7 +31,3 @@ npm run prod
 ## References
 
 - [Sass Guidelines](https://sass-guidelin.es/#architecture)
-
-## Todo
-
-- [ ] Change [margins utility](assets/stylesheets/utilities) logique (more like Bootstrap)
