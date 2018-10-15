@@ -10,17 +10,16 @@
 	 * Site container
 	 *
 	 * The fluid container of the grid
-	 * 
+	 *
 	 * @uses .Site-container
 	 */
 	&-container {
-		@extend %position-xs-relative;
+		@extend %position-relative;
 		@include margin( top 0 right auto bottom 0 left auto );
-		@include padding( 
-			right $grid-gutter-width
-			left $grid-gutter-width
+		@include padding(
+			right $grid-outer-gutter-width
+			left $grid-outer-gutter-width
 		);
-
 		max-width: $container-width;
 	}
 }
