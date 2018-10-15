@@ -3,10 +3,10 @@
  *
  * Constructor class for each sizes and each properties found in
  * $size-dimensions and map-get( $sizes-properties, property )
- *	
+ *
  * @param   $size-properties map
  * @param   $size-dimensions list
- * @author Jérémy Levron <jeremylevron@19h47.fr>
+ * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
 
 $size-properties: (
@@ -14,35 +14,28 @@ $size-properties: (
 	h: height
 );
 $size-dimensions: 50 100;
-@each $size-dimension in $size-dimensions {
-	@each $size-propertie-value, $size-propertie-name in $size-properties {
 
-		%#{ $size-propertie-value }-#{ round( $size-dimension ) }px {
+@each $breakpoint in map-keys( $grid-breakpoints ) {
+	@include media-breakpoint-up( $breakpoint )	{
+		$index: index( map-keys( $grid-breakpoints ), $breakpoint );
 
-			#{ $size-propertie-name }: ( $size-dimension * 1px );
+		@if $index == 1 {
+			$breakpoint: '';
 		}
 
-		.#{ $size-propertie-value }-#{ round( $size-dimension ) }px {
-
-			@extend %#{ $size-propertie-value }-#{ round( $size-dimension ) }px;
+		@else {
+			$breakpoint: '-#{ $breakpoint }';
 		}
-
-	}
-}
-
-@each $breakpoint-name, $breakpoint-value in $grid-breakpoints {
-	@include media-breakpoint-up( $breakpoint-name ) {
 
 		@each $size-propertie-value, $size-propertie-name in $size-properties {
 
-			.#{ $size-propertie-value }-#{ unquote( $breakpoint-name ) }-auto {
+			.#{ $size-propertie-value }#{ $breakpoint }-auto {
 
 				#{ $size-propertie-name }: auto;
 			}
 		}
 
 		@each $size-dimension in $size-dimensions {
-
 			@each $size-propertie-value, $size-propertie-name in $size-properties {
 
 				/**
@@ -53,14 +46,14 @@ $size-dimensions: 50 100;
 				 * @see http://sass-lang.com/documentation/Sass/Script/Functions.html#round-instance_method
 				 */
 
-				%#{ $size-propertie-value }-#{ unquote( $breakpoint-name ) }-#{ round( $size-dimension ) } {
+				%#{ $size-propertie-value }#{ $breakpoint }-#{ round( $size-dimension ) } {
 
 					#{ $size-propertie-name }: ( percentage( $size-dimension / 100 ) );
 				}
 
-				.#{ $size-propertie-value }-#{ unquote( $breakpoint-name ) }-#{ round( $size-dimension ) } {
+				.#{ $size-propertie-value }#{ $breakpoint }-#{ round( $size-dimension ) } {
 
-					@extend %#{ $size-propertie-value }-#{ unquote( $breakpoint-name ) }-#{ round( $size-dimension ) }
+					@extend %#{ $size-propertie-value }#{ $breakpoint }-#{ round( $size-dimension ) }
 				}
 			}
 		}
