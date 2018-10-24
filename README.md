@@ -14,13 +14,13 @@ An opinionated SCSS architecture based on [Hugo Giraudel](https://github.com/Hug
 
 ## Tasks
 
-### Watch
+### Development
 
 ```
-npm run sass:watch
+npm run dev
 ```
 
-### Prod
+### Production
 
 Autoprefixer and compressed
 
