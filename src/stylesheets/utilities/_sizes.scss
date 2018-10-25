@@ -6,7 +6,7 @@
  *
  * @param   $size-properties map
  * @param   $size-dimensions list
- * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
+ * @author Jérémy Levron <jeremylevron@19h47.fr>
  */
 
 $size-properties: (
@@ -29,9 +29,12 @@ $size-dimensions: 50 100;
 
 		@each $size-propertie-value, $size-propertie-name in $size-properties {
 
-			.#{ $size-propertie-value }#{ $breakpoint }-auto {
-
+			%#{ $size-propertie-value }#{ $breakpoint }-auto {
 				#{ $size-propertie-name }: auto;
+			}
+
+			.#{ $size-propertie-value }#{ $breakpoint }-auto {
+				@extend %#{ $size-propertie-value }#{ $breakpoint }-auto;
 			}
 		}
 
