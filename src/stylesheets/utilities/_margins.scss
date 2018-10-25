@@ -85,9 +85,13 @@
 
 		@each $size, $length in $spacers {
 
-			.margin-x#{ $breakpoint ) }-#{ $size } {
+			%margin-x#{ $breakpoint ) }-#{ $size } {
 				margin-right: #{ $length }px;
 				margin-left: #{ $length }px;
+			}
+
+			.margin-x#{ $breakpoint ) }-#{ $size } {
+				@extend %margin-x#{ $breakpoint ) }-#{ $size };
 			}
 
 			.margin-y#{ $breakpoint ) }-#{ $size } {
@@ -96,8 +100,11 @@
 			}
 
 			@each $property in ( top, right, bottom, left ) {
-				.margin-#{ $property }#{ $breakpoint ) }-#{ $size } {
+				%margin-#{ $property }#{ $breakpoint ) }-#{ $size } {
 					margin-#{ $property }: #{ $length }px;
+				}
+				.margin-#{ $property }#{ $breakpoint ) }-#{ $size } {
+					@extend %margin-#{ $property }#{ $breakpoint ) }-#{ $size };
 				}
 			}
 		}
