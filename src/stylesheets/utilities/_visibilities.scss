@@ -1,7 +1,7 @@
 /**
  * Visibilities
  *
- * @author Jérémy Levron <jeremy@quatre-vingt-deux.fr>
+ * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
 $visibilities-displays: 'inline-block' 'block' 'inline';
 @each $breakpoint-name, $breakpoint-value in $grid-breakpoints {
