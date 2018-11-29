@@ -95,8 +95,8 @@
 			}
 
 			%margin-y#{ $breakpoint ) }-#{ $size } {
-				margin-right: #{ $length }px;
-				margin-left: #{ $length }px;
+				margin-top: #{ $length }px;
+				margin-bottom: #{ $length }px;
 			}
 
 			.margin-y#{ $breakpoint ) }-#{ $size } {
