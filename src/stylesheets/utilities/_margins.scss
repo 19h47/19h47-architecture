@@ -94,9 +94,13 @@
 				@extend %margin-x#{ $breakpoint ) }-#{ $size };
 			}
 
+			%margin-y#{ $breakpoint ) }-#{ $size } {
+				margin-right: #{ $length }px;
+				margin-left: #{ $length }px;
+			}
+
 			.margin-y#{ $breakpoint ) }-#{ $size } {
-				margin-top: #{ $length }px;
-				margin-bottom: #{ $length }px;
+				@extend %margin-y#{ $breakpoint ) }-#{ $size };
 			}
 
 			@each $property in ( top, right, bottom, left ) {
