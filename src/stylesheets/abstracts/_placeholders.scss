@@ -2,9 +2,8 @@
  * Placeholder position
  *
  * @uses    @extend %Position-{$property}
- * @author  Jérémy Levron <jeremylevron@19h47.fr>
+ * @author  Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
-/* stylelint-disable-line */
 %Position {
 
 	/**
@@ -12,9 +11,8 @@
 	 *
 	 * Set element to position absolute, top 0, right 0, bottom 0, left 0
 	 *
-	 * @uses @extend %Position-absolute
+	 * @uses @extend %Position-absolute-center
 	 */
-	/* stylelint-disable-line */
 	&-absolute-center {
 		@include absolute( top 0 right 0 bottom 0 left 0 );
 	}
@@ -22,13 +20,12 @@
 
 
 	/**
-	 * Absolute
+	 * Fixed
 	 *
 	 * Set element to position fixed, top 0, right 0, bottom 0, left 0
 	 *
-	 * @uses @extend %Position-fixed
+	 * @uses @extend %Position-fixed-center
 	 */
-	/* stylelint-disable-line */
 	&-fixed-center {
 		@include fixed( top 0 right 0 bottom 0 left 0 );
 	}
@@ -39,11 +36,11 @@
  * Placeholder pointer events
  *
  * @uses    @extend %Pointer-events-{ $property }
- * @author  Jérémy Levron <jeremylevron@19h47.fr>
+ * @author  Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
 $pointer-events-values: none auto;
 @each $value in $pointer-events-values {
-	/* stylelint-disable-line */
+
 	%Pointer-events {
 
 		/**
@@ -54,5 +51,27 @@ $pointer-events-values: none auto;
 		&-#{ $value } {
 			pointer-events: #{ $value };
 		}
+	}
+
+	.Pointer-events-#{ $value } {
+		@extend %Pointer-events-#{ $value };
+	}
+}
+
+
+/**
+ * Placeholder cursor
+ *
+ * @author  Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
+ */
+$cursor-values: auto pointer;
+@each $value in $cursor-values {
+
+	%Cursor-#{ $value } {
+		cursor: #{ $value };
+	}
+
+	.Cursor-#{ $value } {
+		@extend %Cursor-#{ $value };
 	}
 }
