@@ -19,32 +19,21 @@ module.exports = {
 		filename: '[name]/main.js'
 	},
 	devServer: {
-    	contentBase: path.resolve(__dirname, 'dist'),
-    	compress: true,
-    	port: 9000,
+		contentBase: path.resolve(__dirname, 'dist'),
+		compress: true,
+		port: 9000,
 		inline: true,
 	},
 	resolve: {
 		alias: {
 			Utils: path.resolve(__dirname, 'src/utils'),
 			src: path.resolve(__dirname, 'src/'),
-            Stylesheets: path.resolve(__dirname, 'src/stylesheets'),
+			Stylesheets: path.resolve(__dirname, 'src/stylesheets'),
 		}
 	},
 	module: {
 		rules: [
 		{
-			enforce: 'pre',
-			test: /\.js$/,
-			exclude: /node_modules/,
-			loader: 'eslint-loader'
-		},
-		{
-			test: /\.js$/,
-			exclude: /(node_modules)/,
-			loader: 'babel-loader'
-		},
-        {
 			test: /\.scss$/,
 			exclude: /node_modules/,
 			use: [
@@ -77,11 +66,11 @@ module.exports = {
 				exclude: ['.git']
 			}
 		),
-        new HtmlWebpackPlugin({
-            filename: path.resolve(__dirname, 'example/index.html' ),
-            template: path.resolve(__dirname, 'index.html' ),
-            inject: true,
-        }),
+		new HtmlWebpackPlugin({
+			filename: path.resolve(__dirname, 'example/index.html' ),
+			template: path.resolve(__dirname, 'index.html' ),
+			inject: true,
+		}),
 		new MiniCssExtractPlugin({
 			filename: production ? 'build/css/main.[chunkhash:8].css' : 'build/css/main.css',
 		}),
