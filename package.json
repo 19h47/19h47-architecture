@@ -1,6 +1,6 @@
 {
 	"name": "Architecture",
-	"version": "2.0.0",
+	"version": "3.0.0",
 	"description": "Architecture",
 	"main": "index.js",
 	"scripts": {
@@ -31,6 +31,11 @@
 		"node-sass": "^4.11.0",
 		"postcss-loader": "^3.0.0",
 		"sass-loader": "^7.1.0",
+		"stylelint": "^9.9.0",
+		"stylelint-config-airbnb": "0.0.0",
+		"stylelint-order": "^2.0.0",
+		"stylelint-scss": "^3.4.1",
+		"stylelint-webpack-plugin": "^0.10.5",
 		"webpack": "^4.27.1",
 		"webpack-cli": "^3.1.2",
 		"webpack-dev-server": "^3.1.10",

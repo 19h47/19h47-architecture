@@ -5,7 +5,7 @@
  */
 @mixin margin( $args: () ) {
 	$offsets: top right bottom left;
-	
+
 	@each $offset in $offsets {
 
 		// Doing the magic trick
@@ -38,7 +38,7 @@
 
 				// If it is invalid
 				@else {
-					@warn "Invalid value `#{$next}` for offset `margin-#{$offset}`.";
+					@warn 'Invalid value `#{$next}` for offset `margin-#{$offset}`.';
 				}
 			}
 		}

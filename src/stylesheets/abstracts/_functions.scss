@@ -6,8 +6,6 @@
  * @access  public
  * @author Jérémy Levron <jeremylevron@19h47.fr>
  */
-
-/* stylelint-disable-line scss/at-function-pattern */
 @function get_the_color( $keys... ) {
 
 	$map: $color-variations;
@@ -29,6 +27,7 @@
 		@warn '`#{ $keys }` is greater than 2.';
 	}
 
+	/* stylelint-disable-next-line */
 	@return $result;
 }
 
@@ -55,12 +54,12 @@
  */
 @function get_color_list( $label ) {
 	@each $list in $color-variations {
-
 		@if nth( $list, 1 ) == $label {
-
 			@return $list;
 		}
 	}
+
+	/* stylelint-disable-next-line */
 	@return null;
 }
 

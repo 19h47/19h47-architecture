@@ -9,7 +9,7 @@
 $text-decorations: underline;
 
 @each $breakpoint in map-keys( $grid-breakpoints ) {
-	@include media-breakpoint-up( $breakpoint )	{
+	@include media-breakpoint-up( $breakpoint ) {
 		$index: index( map-keys( $grid-breakpoints ), $breakpoint );
 
 		@if $index == 1 {

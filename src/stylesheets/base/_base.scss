@@ -1,7 +1,6 @@
 /**
  * Base
  */
-
 html {
 	overflow-x: hidden;
 }
@@ -28,6 +27,7 @@ p {
 		bottom ( ( ( $base-line-height / $base-font-size ) / 2 ) * 1em )
 	);
 
-	font-size: 1em;
+	/* stylelint-disable-next-line */
 	line-height: ( ( $base-line-height / $base-font-size ) * 1em );
+	font-size: 1em;
 }

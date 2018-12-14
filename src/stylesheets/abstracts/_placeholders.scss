@@ -5,7 +5,6 @@
  * @author  Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
 %Position {
-
 	/**
 	 * Absolute
 	 *
@@ -39,10 +38,10 @@
  * @author  Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
 $pointer-events-values: none auto;
+
 @each $value in $pointer-events-values {
 
 	%Pointer-events {
-
 		/**
 		 * Pointer events #{ $value }
 		 *
@@ -65,6 +64,7 @@ $pointer-events-values: none auto;
  * @author  Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
 $cursor-values: auto pointer;
+
 @each $value in $cursor-values {
 
 	%Cursor-#{ $value } {

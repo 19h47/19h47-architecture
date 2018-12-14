@@ -7,6 +7,7 @@
  * @author Jérémy Levron <jeremylevron@19h47.fr>
  */
 @each $style in map-get( $font, styles ) {
+
 	%font-style-#{ $style } {
 		font-style: unquote( $style );
 	}
@@ -47,6 +48,7 @@
  * @author Jérémy Levron <jeremylevron@19h47.fr>
  */
 @each $font-size in map-get( $font, sizes ) {
+
 	%font-size-#{ unquote( $font-size ) } {
 		font-size: #{ unquote( $font-size ) }px;
 	}

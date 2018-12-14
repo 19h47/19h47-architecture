@@ -5,15 +5,18 @@
  * a placeholder and a utility class
  */
 $overflow-values: 'hidden' 'scroll';
+
 @each $overflow-value in $overflow-values {
 
 	// Placeholder
 	%overflow-#{ unquote( $overflow-value ) } {
 		overflow: #{ unquote( $overflow-value ) };
 	}
+
 	%overflow-x-#{ unquote( $overflow-value ) } {
 		overflow-x: #{ unquote( $overflow-value ) };
 	}
+
 	%overflow-y-#{ unquote( $overflow-value ) } {
 		overflow-y: #{ unquote( $overflow-value ) };
 	}
@@ -22,9 +25,11 @@ $overflow-values: 'hidden' 'scroll';
 	.overflow-#{ unquote( $overflow-value ) } {
 		@extend %overflow-#{ unquote( $overflow-value ) };
 	}
+
 	.overflow-x-#{ unquote( $overflow-value ) } {
 		@extend %overflow-x-#{ unquote( $overflow-value ) };
 	}
+
 	.overflow-y-#{ unquote( $overflow-value ) } {
 		@extend %overflow-y-#{ unquote( $overflow-value ) };
 	}
@@ -33,16 +38,17 @@ $overflow-values: 'hidden' 'scroll';
 // Loop through each breakpoint
 @each $breakpoint-name, $breakpoint-value in $grid-breakpoints {
 	@include media-breakpoint-up( $breakpoint-name ) {
-		
 		@each $overflow-value in $overflow-values {
 
 			// Placeholder
 			%overflow-#{ $breakpoint-name }-#{ unquote( $overflow-value ) } {
 				overflow: #{ unquote( $overflow-value ) };
 			}
+
 			%overflow-x-#{ $breakpoint-name }-#{ unquote( $overflow-value ) } {
 				overflow-x: #{ unquote( $overflow-value ) };
 			}
+
 			%overflow-y-#{ $breakpoint-name }-#{ unquote( $overflow-value ) } {
 				overflow-y: #{ unquote( $overflow-value ) };
 			}
@@ -51,9 +57,11 @@ $overflow-values: 'hidden' 'scroll';
 			.overflow-#{ $breakpoint-name }-#{ unquote( $overflow-value ) } {
 				@extend %overflow-#{ $breakpoint-name }-#{ unquote( $overflow-value ) };
 			}
+
 			.overflow-x-#{ unquote( $overflow-value ) } {
 				@extend %overflow-x-#{ $breakpoint-name }-#{ unquote( $overflow-value ) };
 			}
+
 			.overflow-y-#{ unquote( $overflow-value ) } {
 				@extend %overflow-y-#{ $breakpoint-name }-#{ unquote( $overflow-value ) };
 			}

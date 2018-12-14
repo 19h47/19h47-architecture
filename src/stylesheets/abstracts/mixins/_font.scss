@@ -1,14 +1,19 @@
 /**
  * Font mixin
- * 
+ *
  * @param   int     $font-size      Unitless font size  (mostly from .psd)
  * @param   int     $line-height Unitless line height   (mostly from .psd)
+ * @author 	Jérémy Levron <jeremylevron@19h47> (http://19h47.fr)
  */
 @mixin font( $font-size, $line-height, $letter-spacing: '' ) {
-	font: { size: ( $font-size * 1px ); }
-	line-height: ( $line-height / $font-size );
-
 	@if $letter-spacing != '' {
 		@include letter-spacing( $letter-spacing );
 	}
+
+	font: {
+		size: $font-size * 1px;
+	}
+
+	/* stylelint-disable-next-line */
+	line-height: $line-height / $font-size;
 }

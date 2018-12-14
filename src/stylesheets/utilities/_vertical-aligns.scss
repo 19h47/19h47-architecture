@@ -7,6 +7,7 @@
  * @author Jérémy Levron <jeremylevron@19h47.fr>
  */
 $vertical-aligns: 'middle' 'top';
+
 @each $vertical-align in $vertical-aligns {
 	// Placeholder
 	%vertical-align-#{ unquote( $vertical-align ) } {

@@ -4,10 +4,12 @@
  * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
 $visibilities-displays: 'inline-block' 'block' 'inline';
+
 @each $breakpoint-name, $breakpoint-value in $grid-breakpoints {
 
 	// Hidden
 	@include media-breakpoint-only( $breakpoint-name ) {
+
 		%hidden-#{ unquote($breakpoint-name) } {
 			display: none !important;
 		}
@@ -19,8 +21,8 @@ $visibilities-displays: 'inline-block' 'block' 'inline';
 
 	// Visible
 	@include media-breakpoint-up( $breakpoint-name ) {
-
 		@each $display in $visibilities-displays {
+
 			%visible-#{ unquote( $breakpoint-name ) }-#{ unquote( $display ) } {
 				display: #{ unquote ( $display ) } !important;
 			}

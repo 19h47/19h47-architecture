@@ -1,35 +1,36 @@
 /**
  * Reset placeholder
- * 
+ *
  * Change the default text color for placeholders.
  * @color valid color
  */
 @mixin reset-placeholder( $color: #ccc, $polyfill: false ) {
+	@if $polyfill {
+
+		.placeholder {
+			color: $color;
+		}
+	}
+
 	&::-webkit-input-placeholder {
 		color: $color;
 	}
-	
+
 	&::-moz-placeholder {
 		color: $color;
 		opacity: 1;
 	}
-	
+
 	&:-moz-placeholder {
 		color: $color;
 		opacity: 1;
 	}
-	
+
 	&:-ms-input-placeholder {
 		color: $color;
 	}
 
 	&::placeholder {
 		color: $color;
-	}
-
-	@if $polyfill {
-		.placeholder {
-			color: $color;
-		}
 	}
 }

@@ -16,7 +16,7 @@ $size-properties: (
 $size-dimensions: 50 100;
 
 @each $breakpoint in map-keys( $grid-breakpoints ) {
-	@include media-breakpoint-up( $breakpoint )	{
+	@include media-breakpoint-up( $breakpoint ) {
 		$index: index( map-keys( $grid-breakpoints ), $breakpoint );
 
 		@if $index == 1 {
@@ -40,7 +40,6 @@ $size-dimensions: 50 100;
 
 		@each $size-dimension in $size-dimensions {
 			@each $size-propertie-value, $size-propertie-name in $size-properties {
-
 				/**
 				 * Construct each class for each breakpoint
 				 *
@@ -55,7 +54,6 @@ $size-dimensions: 50 100;
 				}
 
 				.#{ $size-propertie-value }#{ $breakpoint }-#{ round( $size-dimension ) } {
-
 					@extend %#{ $size-propertie-value }#{ $breakpoint }-#{ round( $size-dimension ) }
 				}
 			}

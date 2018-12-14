@@ -5,6 +5,7 @@
  * a placeholder and a utility class
  */
 $floats: 'left';
+
 @each $breakpoint-name, $breakpoint-value in $grid-breakpoints {
 	@include media-breakpoint-up( $breakpoint-name ) {
 		@each $float in $floats {

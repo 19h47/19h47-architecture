@@ -160,8 +160,8 @@ $prototype-height: $prototype-height-unitless * 1px;
  */
 $spacers: (
 	0: 0,
-	1: $grid-gutter-width-unitless * .25,
-	2: $grid-gutter-width-unitless * .5,
+	1: $grid-gutter-width-unitless * 0.25,
+	2: $grid-gutter-width-unitless * 0.5,
 	3: $grid-gutter-width-unitless,
 	4: $grid-gutter-width-unitless * 1.5,
 	5: $grid-gutter-width-unitless * 3

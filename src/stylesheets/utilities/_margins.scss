@@ -8,7 +8,7 @@
  * @author Jérémy Levron <jeremylevron@19h47.fr>
  */
 @each $breakpoint in map-keys( $grid-breakpoints ) {
-	@include media-breakpoint-up( $breakpoint )	{
+	@include media-breakpoint-up( $breakpoint ) {
 		$index: index( map-keys( $grid-breakpoints ), $breakpoint );
 
 		@if $index == 1 {
@@ -19,71 +19,17 @@
 			$breakpoint: '-#{ $breakpoint }';
 		}
 
-		// .margin-{ breakpoint name }-0-auto
-		%margin#{ $breakpoint }-0-auto {
-			margin: 0 auto;
-		}
-
-		.margin#{ $breakpoint }-0-auto {
-			@extend %margin#{ $breakpoint }-0-auto;
-		}
-
-
-		// margin-{ breakpoint name }-x-auto
-		%margin#{ $breakpoint }-x-auto {
-			margin-right: auto;
-			margin-left: auto;
-		}
-
-		.margin#{ $breakpoint }-x-auto {
-			@extend %margin#{ $breakpoint }-x-auto;
-		}
-
-
-		// margin-{ breakpoint name }-y-auto
-		%margin#{ $breakpoint }-y-auto {
-			margin-top: auto;
-			margin-bottom: auto;
-		}
-
-		.margin#{ $breakpoint }-y-auto {
-			@extend %margin#{ $breakpoint }-y-auto;
-		}
-
-
-		// margin-{ breakpoint name }-x-0
-		%margin#{ $breakpoint }-x-0 {
-			margin-right: 0;
-			margin-left: 0;
-		}
-
-		.margin#{ $breakpoint }-x-0 {
-			@extend %margin#{ $breakpoint }-x-0;
-		}
-
-
-		// margin-{ breakpoint name }-y-0
-		%margin#{ $breakpoint }-y-0 {
-			margin-top: 0;
-			margin-bottom: 0;
-		}
-
-		.margin#{ $breakpoint }-y-0 {
-			@extend %margin#{ $breakpoint }-y-0;
-		}
-
-
-		// margin-{ breakpoint name }-0
-		%margin#{ $breakpoint ) }-0 {
-			margin: 0;
-		}
-
-		.margin#{ $breakpoint }-0 {
-			@extend %margin#{ $breakpoint }-0;
-		}
-
-
 		@each $size, $length in $spacers {
+			@each $property in ( top, right, bottom, left ) {
+
+				%margin-#{ $property }#{ $breakpoint ) }-#{ $size } {
+					margin-#{ $property }: #{ $length }px;
+				}
+
+				.margin-#{ $property }#{ $breakpoint ) }-#{ $size } {
+					@extend %margin-#{ $property }#{ $breakpoint ) }-#{ $size };
+				}
+			}
 
 			%margin-x#{ $breakpoint ) }-#{ $size } {
 				margin-right: #{ $length }px;
@@ -102,15 +48,64 @@
 			.margin-y#{ $breakpoint ) }-#{ $size } {
 				@extend %margin-y#{ $breakpoint ) }-#{ $size };
 			}
+		}
 
-			@each $property in ( top, right, bottom, left ) {
-				%margin-#{ $property }#{ $breakpoint ) }-#{ $size } {
-					margin-#{ $property }: #{ $length }px;
-				}
-				.margin-#{ $property }#{ $breakpoint ) }-#{ $size } {
-					@extend %margin-#{ $property }#{ $breakpoint ) }-#{ $size };
-				}
-			}
+		// .margin-{ breakpoint name }-0-auto
+		%margin#{ $breakpoint }-0-auto {
+			margin: 0 auto;
+		}
+
+		.margin#{ $breakpoint }-0-auto {
+			@extend %margin#{ $breakpoint }-0-auto;
+		}
+
+		// margin-{ breakpoint name }-x-auto
+		%margin#{ $breakpoint }-x-auto {
+			margin-right: auto;
+			margin-left: auto;
+		}
+
+		.margin#{ $breakpoint }-x-auto {
+			@extend %margin#{ $breakpoint }-x-auto;
+		}
+
+		// margin-{ breakpoint name }-y-auto
+		%margin#{ $breakpoint }-y-auto {
+			margin-top: auto;
+			margin-bottom: auto;
+		}
+
+		.margin#{ $breakpoint }-y-auto {
+			@extend %margin#{ $breakpoint }-y-auto;
+		}
+
+		// margin-{ breakpoint name }-x-0
+		%margin#{ $breakpoint }-x-0 {
+			margin-right: 0;
+			margin-left: 0;
+		}
+
+		.margin#{ $breakpoint }-x-0 {
+			@extend %margin#{ $breakpoint }-x-0;
+		}
+
+		// margin-{ breakpoint name }-y-0
+		%margin#{ $breakpoint }-y-0 {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+
+		.margin#{ $breakpoint }-y-0 {
+			@extend %margin#{ $breakpoint }-y-0;
+		}
+
+		// margin-{ breakpoint name }-0
+		%margin#{ $breakpoint ) }-0 {
+			margin: 0;
+		}
+
+		.margin#{ $breakpoint }-0 {
+			@extend %margin#{ $breakpoint }-0;
 		}
 	}
 }

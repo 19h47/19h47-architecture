@@ -1,7 +1,9 @@
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const StyleLintPlugin = require('stylelint-webpack-plugin');
 const WebpackNotifier = require('webpack-notifier');
+
 
 const production = process.env.NODE_ENV === 'production';
 const path = require('path');
@@ -74,6 +76,7 @@ module.exports = {
 		new MiniCssExtractPlugin({
 			filename: production ? 'build/css/main.[chunkhash:8].css' : 'build/css/main.css',
 		}),
+		new StyleLintPlugin(),
 		new WebpackNotifier()
 	],
 	devtool: production ? false : 'source-map',
