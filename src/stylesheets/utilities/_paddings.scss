@@ -27,14 +27,33 @@
 				}
 			}
 
-			.padding-x#{ $breakpoint ) }-#{ $size } {
+			%padding-x#{ $breakpoint ) }-#{ $size } {
 				padding-right: #{ $length }px;
 				padding-left: #{ $length }px;
 			}
+	
+			.padding-x#{ $breakpoint ) }-#{ $size } {
+				@extend %padding-x#{ $breakpoint ) }-#{ $size };
+			}
 
-			.padding-y#{ $breakpoint ) }-#{ $size } {
+			%padding-y#{ $breakpoint ) }-#{ $size } {
 				padding-top: #{ $length }px;
 				padding-bottom: #{ $length }px;
+			}
+
+			.padding-y#{ $breakpoint ) }-#{ $size } {
+				@extend %padding-y#{ $breakpoint ) }-#{ $size };
+			}
+
+			%padding#{ $breakpoint ) }-#{ $size } {
+				padding-top: #{ $length }px;
+				padding-right: #{ $length }px;
+				padding-bottom: #{ $length }px;
+				padding-left: #{ $length }px;
+			}
+
+			.padding#{ $breakpoint ) }-#{ $size } {
+				@extend %padding#{ $breakpoint ) }-#{ $size };
 			}
 		}
 
