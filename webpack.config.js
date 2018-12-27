@@ -15,7 +15,7 @@ module.exports = {
 		example: path.resolve(__dirname, 'src/index.js')
 	},
 	output: {
-		library: 'SelectAndReset',
+		library: 'Architecture',
 		libraryTarget: 'umd',
 		path: path.resolve(__dirname),
 		filename: '[name]/main.js'

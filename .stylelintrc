@@ -1,9 +1,9 @@
 {
-	"extends": "stylelint-config-airbnb",
-	"rules": {
-		"indentation": "tab",
-		"string-quotes": "single",
-		"max-nesting-depth": 4,
-		"number-leading-zero": "always"
-	}
+  "extends": "stylelint-config-airbnb",
+  "rules": {
+    "indentation": "tab",
+    "string-quotes": "single",
+    "max-nesting-depth": 4,
+    "number-leading-zero": "always"
+  }
 }
