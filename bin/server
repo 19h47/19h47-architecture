@@ -1,1 +1,1 @@
-NODE_ENV=development webpack-dev-server --hot --mode development
+NODE_ENV=development webpack-dev-server --hot --config config/webpack.development.js
