@@ -6,17 +6,17 @@
  *
  * @author Jérémy Levron <jeremylevron@19h47.fr>
  */
-$vertical-aligns: 'middle' 'top';
+$vertical-aligns: middle;
 
 @each $vertical-align in $vertical-aligns {
 	// Placeholder
-	%vertical-align-#{ unquote( $vertical-align ) } {
-		vertical-align: #{ unquote( $vertical-align ) };
+	%vertical-align-#{ $vertical-align } {
+		vertical-align: #{ $vertical-align };
 	}
 
 	// .vertical-align-{ $vertical-align }
-	.vertical-align-#{ unquote( $vertical-align ) } {
-		@extend %vertical-align-#{ unquote( $vertical-align ) };
+	.vertical-align-#{ $vertical-align } {
+		@extend %vertical-align-#{ $vertical-align };
 	}
 }
 
@@ -25,13 +25,13 @@ $vertical-aligns: 'middle' 'top';
 		@each $vertical-align in $vertical-aligns {
 
 			// Placeholder
-			%vertical-align-#{ unquote( $breakpoint-name ) }-#{ unquote( $vertical-align ) } {
-				vertical-align: #{ unquote( $vertical-align ) };
+			%vertical-align-#{ $breakpoint-name }-#{ $vertical-align } {
+				vertical-align: #{ $vertical-align };
 			}
 
 			// .vertical-align-{ $breakpoint-name }-{ $vertical-align }
-			.vertical-align-#{ unquote( $breakpoint-name ) }-#{ unquote( $vertical-align ) } {
-				@extend %vertical-align-#{ unquote( $breakpoint-name ) }-#{ unquote( $vertical-align ) };
+			.vertical-align-#{ $breakpoint-name }-#{ $vertical-align } {
+				@extend %vertical-align-#{ $breakpoint-name }-#{ $vertical-align };
 			}
 		}
 	}

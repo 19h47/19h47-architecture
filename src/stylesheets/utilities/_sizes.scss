@@ -47,10 +47,9 @@ $size-dimensions: 50 100;
 				 *
 				 * @see http://sass-lang.com/documentation/Sass/Script/Functions.html#round-instance_method
 				 */
-
 				%#{ $size-propertie-value }#{ $breakpoint }-#{ round( $size-dimension ) } {
 
-					#{ $size-propertie-name }: ( percentage( $size-dimension / 100 ) );
+					#{ $size-propertie-name }: percentage( $size-dimension / 100 );
 				}
 
 				.#{ $size-propertie-value }#{ $breakpoint }-#{ round( $size-dimension ) } {

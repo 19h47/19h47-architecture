@@ -1,12 +1,12 @@
 /**
- * Posiitons
+ * Positions
  *
  * Construct each position property found in $positions with
  * a placeholder and a utility class
  *
  * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
-$positions: 'relative' 'absolute';
+$positions: relative;
 
 @each $breakpoint in map-keys( $grid-breakpoints ) {
 	@include media-breakpoint-up( $breakpoint ) {
@@ -23,13 +23,13 @@ $positions: 'relative' 'absolute';
 		@each $position in $positions {
 
 			// Placeholder
-			%position#{ $breakpoint }-#{ unquote( $position ) } {
-				position: #{ unquote( $position ) };
+			%position#{ $breakpoint }-#{ $position } {
+				position: #{ $position };
 			}
 
 			// .position-{ $position }
-			.position#{ $breakpoint }-#{ unquote( $position ) } {
-				@extend %position#{ $breakpoint }-#{ unquote( $position ) };
+			.position#{ $breakpoint }-#{ $position } {
+				@extend %position#{ $breakpoint }-#{ $position };
 			}
 		}
 	}

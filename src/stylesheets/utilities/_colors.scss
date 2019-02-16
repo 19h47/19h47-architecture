@@ -8,8 +8,8 @@
 	color: currentColor;
 }
 
-@include create_classes_color( 
-	color '.color', 
-	background-color '.background', 
-	border-color '.border' 
+@include create_classes_color(
+	color '.color',
+	background-color '.background-color',
+	border-color '.border'
 );

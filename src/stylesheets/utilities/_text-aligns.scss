@@ -6,7 +6,7 @@
  *
  * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
-$text-aligns: left right center justify;
+$text-aligns: center;
 
 @each $breakpoint in map-keys( $grid-breakpoints ) {
 	@include media-breakpoint-up( $breakpoint ) {

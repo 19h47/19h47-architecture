@@ -25,7 +25,7 @@
  *
  * @param 	$weight-name    	name of weight
  * @param 	$weight-value   	value of weight
- * @author Jérémy Levron <jeremylevron@19h47.fr>
+ * @author 	Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
 @each $weight-name, $weight-value in map-get( $font, weights ) {
 
@@ -45,17 +45,28 @@
  * Constructor class for each font weight found in map-get( $font, sizes )
  *
  * @param 	$font-size
- * @author Jérémy Levron <jeremylevron@19h47.fr>
+ * @author  Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
 @each $font-size in map-get( $font, sizes ) {
 
-	%font-size-#{ unquote( $font-size ) } {
-		font-size: #{ unquote( $font-size ) }px;
+	%font-size-#{ $font-size } {
+		font-size: #{ $font-size }px;
 	}
 
-	.font-size-#{ unquote( $font-size ) } {
-		@extend %font-size-#{ unquote( $font-size ) };
+	.font-size-#{ $font-size } {
+		@extend %font-size-#{ $font-size };
 	}
+}
+
+/**
+ *
+ */
+%font-size-inherit {
+	font-size: inherit;
+}
+
+.font-size-inherit {
+	@extend %font-size-inherit;
 }
 
 
@@ -66,7 +77,7 @@
  *
  * @param 	$font-family-name      name of the family
  * @param 	$font-family-value     value of the family
- * @author Jérémy Levron <jeremylevron@19h47.fr>
+ * @author  Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
 @each $font-family-name, $font-family-value in map-get( $font, families ) {
 

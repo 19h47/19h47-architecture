@@ -6,27 +6,27 @@
  *
  * @author Jérémy Levron <jeremylevron@19h47.fr>
  */
-$text-transforms: 'lowercase' 'uppercase' 'capitalize' 'none';
+$text-transforms: uppercase;
 
 @each $text-transform in $text-transforms {
 
 	// Placeholder
-	%text-transform-#{ unquote( $text-transform ) } {
-		text-transform: #{ unquote( $text-transform ) };
+	%text-transform-#{ $text-transform } {
+		text-transform: #{ $text-transform };
 	}
 
 	// .text-transform-{ $text-transform }
-	.text-transform-#{ unquote( $text-transform ) } {
-		@extend %text-transform-#{ unquote( $text-transform ) };
+	.text-transform-#{ $text-transform } {
+		@extend %text-transform-#{ $text-transform };
 	}
 
 	// .text-{ $text-transform }
 	.text-#{ $text-transform } {
-		@extend %text-transform-#{ unquote( $text-transform ) };
+		@extend %text-transform-#{ $text-transform };
 	}
 
 	// .{ $text-transform }
-	.#{ unquote( $text-transform ) } {
-		@extend %text-transform-#{ unquote( $text-transform ) };
+	.#{ $text-transform } {
+		@extend %text-transform-#{ $text-transform };
 	}
 }

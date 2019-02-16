@@ -27,7 +27,7 @@ $text-decorations: underline;
 				text-decoration: #{ $text-decoration };
 			}
 
-			// .text-decoration{ $breakpoint }-{ $text-decoration }
+			// .text-align{ $breakpoint }-{ $text-decoration }
 			.text-decoration#{ $breakpoint }-#{ $text-decoration } {
 				@extend %text-decoration#{ $breakpoint }-#{ $text-decoration };
 			}
