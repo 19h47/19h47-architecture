@@ -4,34 +4,34 @@
  * Construct each overflow found in $overflow-values with
  * a placeholder and a utility class
  */
-$overflow-values: 'hidden' 'scroll';
+$overflow-values: hidden visible;
 
 @each $overflow-value in $overflow-values {
 
 	// Placeholder
-	%overflow-#{ unquote( $overflow-value ) } {
-		overflow: #{ unquote( $overflow-value ) };
+	%overflow-#{ $overflow-value } {
+		overflow: #{ $overflow-value };
 	}
 
-	%overflow-x-#{ unquote( $overflow-value ) } {
-		overflow-x: #{ unquote( $overflow-value ) };
+	%overflow-x-#{ $overflow-value } {
+		overflow-x: #{ $overflow-value };
 	}
 
-	%overflow-y-#{ unquote( $overflow-value ) } {
-		overflow-y: #{ unquote( $overflow-value ) };
+	%overflow-y-#{ $overflow-value } {
+		overflow-y: #{ $overflow-value };
 	}
 
 	// Utility class
-	.overflow-#{ unquote( $overflow-value ) } {
-		@extend %overflow-#{ unquote( $overflow-value ) };
+	.overflow-#{ $overflow-value } {
+		@extend %overflow-#{ $overflow-value };
 	}
 
-	.overflow-x-#{ unquote( $overflow-value ) } {
-		@extend %overflow-x-#{ unquote( $overflow-value ) };
+	.overflow-x-#{ $overflow-value } {
+		@extend %overflow-x-#{ $overflow-value };
 	}
 
-	.overflow-y-#{ unquote( $overflow-value ) } {
-		@extend %overflow-y-#{ unquote( $overflow-value ) };
+	.overflow-y-#{ $overflow-value } {
+		@extend %overflow-y-#{ $overflow-value };
 	}
 }
 
@@ -41,29 +41,29 @@ $overflow-values: 'hidden' 'scroll';
 		@each $overflow-value in $overflow-values {
 
 			// Placeholder
-			%overflow-#{ $breakpoint-name }-#{ unquote( $overflow-value ) } {
-				overflow: #{ unquote( $overflow-value ) };
+			%overflow-#{ $breakpoint-name }-#{ $overflow-value } {
+				overflow: #{ $overflow-value };
 			}
 
-			%overflow-x-#{ $breakpoint-name }-#{ unquote( $overflow-value ) } {
-				overflow-x: #{ unquote( $overflow-value ) };
+			%overflow-x-#{ $breakpoint-name }-#{ $overflow-value } {
+				overflow-x: #{ $overflow-value };
 			}
 
-			%overflow-y-#{ $breakpoint-name }-#{ unquote( $overflow-value ) } {
-				overflow-y: #{ unquote( $overflow-value ) };
+			%overflow-y-#{ $breakpoint-name }-#{ $overflow-value } {
+				overflow-y: #{ $overflow-value };
 			}
 
 			// Utility class
-			.overflow-#{ $breakpoint-name }-#{ unquote( $overflow-value ) } {
-				@extend %overflow-#{ $breakpoint-name }-#{ unquote( $overflow-value ) };
+			.overflow-#{ $breakpoint-name }-#{ $overflow-value } {
+				@extend %overflow-#{ $breakpoint-name }-#{ $overflow-value };
 			}
 
-			.overflow-x-#{ unquote( $overflow-value ) } {
-				@extend %overflow-x-#{ $breakpoint-name }-#{ unquote( $overflow-value ) };
+			.overflow-x-#{ $overflow-value } {
+				@extend %overflow-x-#{ $breakpoint-name }-#{ $overflow-value };
 			}
 
-			.overflow-y-#{ unquote( $overflow-value ) } {
-				@extend %overflow-y-#{ $breakpoint-name }-#{ unquote( $overflow-value ) };
+			.overflow-y-#{ $overflow-value } {
+				@extend %overflow-y-#{ $breakpoint-name }-#{ $overflow-value };
 			}
 		}
 	}
