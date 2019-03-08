@@ -35,9 +35,9 @@ module.exports = {
 		}
 	},
 	plugins: [
-		new CleanWebpackPlugin(['dist', 'example'], {
-			root: resolve(''),
-			exclude: ['.git']
+		new CleanWebpackPlugin({
+			verbose: true,
+			// cleanOnceBeforeBuildPatterns: ['example', '!.git']
 		}),
 		new HtmlWebpackPlugin({
 			filename: resolve('example/index.html' ),
