@@ -4,25 +4,29 @@
  * Construct each float position found in $floats with
  * a placeholder and a utility class
  */
-$floats: 'left';
+$floats: left;
 
-@each $breakpoint-name, $breakpoint-value in $grid-breakpoints {
-	@include media-breakpoint-up( $breakpoint-name ) {
+@each $breakpoint in map-keys( $grid-breakpoints ) {
+	@include media-breakpoint-up( $breakpoint ) {
+		$index: index( map-keys( $grid-breakpoints ), $breakpoint );
+
+		@if $index == 1 {
+			$breakpoint: '';
+		}
+
+		@else {
+			$breakpoint: '-#{ $breakpoint }';
+		}
+
 		@each $float in $floats {
-
 			// Placeholder
-			%float-#{ unquote( $breakpoint-name ) }-#{ unquote( $float ) } {
-				float: #{ unquote( $float ) };
+			%float#{ $breakpoint }-#{ $float } {
+				float: #{ $float };
 			}
 
-			// .float-{ $breakpoint-name }-{ $float }
-			.float-#{ unquote( $breakpoint-name ) }-#{ unquote( $float ) } {
-				@extend %float-#{ unquote( $breakpoint-name ) }-#{ unquote( $float ) };
-			}
-
-			// .{ $float }
-			.#{ unquote( $float ) } {
-				@extend %float-#{ unquote( $breakpoint-name ) }-#{ unquote( $float ) };
+			// .float-{ $breakpoint }-{ $float }
+			.float#{ $breakpoint }-#{ $float } {
+				@extend %float#{ $breakpoint }-#{ $float };
 			}
 		}
 	}
