@@ -4,34 +4,32 @@
  * Construct each vertical alignment found in $vertical-aligns with
  * a placeholder and a utility class
  *
- * @author Jérémy Levron <jeremylevron@19h47.fr>
+ * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
-$vertical-aligns: middle;
+$vertical-aligns: middle bottom;
 
-@each $vertical-align in $vertical-aligns {
-	// Placeholder
-	%vertical-align-#{ $vertical-align } {
-		vertical-align: #{ $vertical-align };
-	}
+@each $breakpoint in map-keys( $grid-breakpoints ) {
+	@include media-breakpoint-up( $breakpoint ) {
+		$index: index( map-keys( $grid-breakpoints ), $breakpoint );
 
-	// .vertical-align-{ $vertical-align }
-	.vertical-align-#{ $vertical-align } {
-		@extend %vertical-align-#{ $vertical-align };
-	}
-}
+		@if $index == 1 {
+			$breakpoint: '';
+		}
 
-@each $breakpoint-name, $breakpoint-value in $grid-breakpoints {
-	@include media-breakpoint-up( $breakpoint-name ) {
+		@else {
+			$breakpoint: '-#{ $breakpoint }';
+		}
+
 		@each $vertical-align in $vertical-aligns {
 
 			// Placeholder
-			%vertical-align-#{ $breakpoint-name }-#{ $vertical-align } {
+			%vertical-align#{ $breakpoint }-#{ $vertical-align } {
 				vertical-align: #{ $vertical-align };
 			}
 
-			// .vertical-align-{ $breakpoint-name }-{ $vertical-align }
-			.vertical-align-#{ $breakpoint-name }-#{ $vertical-align } {
-				@extend %vertical-align-#{ $breakpoint-name }-#{ $vertical-align };
+			// .vertical-align-{ $breakpoint }-{ $vertical-align }
+			.vertical-align#{ $breakpoint }-#{ $vertical-align } {
+				@extend %vertical-align#{ $breakpoint }-#{ $vertical-align };
 			}
 		}
 	}
