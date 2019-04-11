@@ -9,7 +9,6 @@ const path = require('path');
 
 // Plugins
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackNotifierPlugin = require('webpack-notifier');
 
 function resolve (dir) {
@@ -18,8 +17,7 @@ function resolve (dir) {
 
 module.exports = {
 	entry: {
-		dist: resolve('src/index.js'),
-		example: resolve('src/index.js')
+		dist: resolve('src/index.js')
 	},
 	devServer: {
 		contentBase: resolve('/'),
@@ -38,11 +36,6 @@ module.exports = {
 		new CleanWebpackPlugin({
 			verbose: true,
 			// cleanOnceBeforeBuildPatterns: ['example', '!.git']
-		}),
-		new HtmlWebpackPlugin({
-			filename: resolve('example/index.html' ),
-			template: resolve('index.html' ),
-			inject: false,
 		}),
 		new WebpackNotifierPlugin({
 			title: 'Webpack',

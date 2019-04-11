@@ -1,5 +1,5 @@
 {
-	"name": "Architecture",
+	"name": "architecture",
 	"version": "3.2.0",
 	"description": "Architecture",
 	"main": "index.js",
@@ -22,8 +22,8 @@
 	"author": "Jérémy Levron <jeremylevron@19h47.fr> (19h47.fr)",
 	"license": "ISC",
 	"devDependencies": {
-		"autoprefixer": "^9.4.10",
-		"clean-webpack-plugin": "^2.0.0",
+		"autoprefixer": "^9.5.1",
+		"clean-webpack-plugin": "^2.0.1",
 		"css-loader": "^2.1.1",
 		"cssnano": "^4.1.10",
 		"html-webpack-plugin": "^3.2.0",
@@ -33,12 +33,12 @@
 		"sass-loader": "^7.1.0",
 		"stylelint": "^9.10.1",
 		"stylelint-config-airbnb": "0.0.0",
-		"stylelint-order": "^2.1.0",
+		"stylelint-order": "^2.2.1",
 		"stylelint-scss": "^3.5.4",
 		"stylelint-webpack-plugin": "^0.10.5",
 		"webpack": "^4.29.6",
-		"webpack-cli": "^3.2.3",
-		"webpack-dev-server": "^3.2.1",
+		"webpack-cli": "^3.3.0",
+		"webpack-dev-server": "^3.3.1",
 		"webpack-manifest-plugin": "^2.0.4",
 		"webpack-merge": "^4.2.1",
 		"webpack-notifier": "^1.7.0"
