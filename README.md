@@ -14,7 +14,7 @@ An opinionated SCSS architecture based on [Hugo Giraudel](https://github.com/Hug
 
 ## Variables
 
-```
+```scss
 $positions: relative;
 ```
 
