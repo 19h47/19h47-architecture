@@ -4,22 +4,31 @@
  * Construct each cursor property found in $cursors with
  * a placeholder and a utility class
  *
- * @author Jérémy Levron <jeremylevron@19h47.fr>
+ * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
-$cursor: 'none' 'cursor';
 
-@each $breakpoint-name, $breakpoint-value in $grid-breakpoints {
-	@include media-breakpoint-up( $breakpoint-name ) {
+@each $breakpoint in map-keys( $grid-breakpoints ) {
+	@include media-breakpoint-up( $breakpoint ) {
+		$index: index( map-keys( $grid-breakpoints ), $breakpoint );
+
+		@if $index == 1 {
+			$breakpoint: '';
+		}
+
+		@else {
+			$breakpoint: '-#{ $breakpoint }';
+		}
+
 		@each $cursor in $cursor {
 
 			// Placeholder
-			%cursor-#{ unquote( $breakpoint-name ) }-#{ unquote( $cursor ) } {
+			%cursor#{ $breakpoint }-#{ $cursor } {
 				cursor: #{ unquote( $cursor ) };
 			}
 
-			// .cursor-{ $breakpoint-name }-{ $cursor }
-			.cursor-#{ unquote( $breakpoint-name ) }-#{ unquote( $cursor ) } {
-				@extend %cursor-#{ unquote( $breakpoint-name ) }-#{ unquote( $cursor ) };
+			// .cursor-{ $breakpoint }-{ $cursor }
+			.cursor#{ $breakpoint }-#{ $cursor } {
+				@extend %cursor#{ $breakpoint }-#{ $cursor };
 			}
 		}
 	}

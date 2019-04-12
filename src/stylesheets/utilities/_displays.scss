@@ -4,22 +4,31 @@
  * Construct each display property found in $displays with
  * a placeholder and a utility class
  *
- * @author Jérémy Levron <jeremylevron@19h47.fr>
+ * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
-$displays: 'block' 'inline-block' 'inline' 'none';
 
-@each $breakpoint-name, $breakpoint-value in $grid-breakpoints {
-	@include media-breakpoint-up( $breakpoint-name ) {
+@each $breakpoint in map-keys( $grid-breakpoints ) {
+	@include media-breakpoint-up( $breakpoint ) {
+		$index: index( map-keys( $grid-breakpoints ), $breakpoint );
+
+		@if $index == 1 {
+			$breakpoint: '';
+		}
+
+		@else {
+			$breakpoint: '-#{ $breakpoint }';
+		}
+
 		@each $display in $displays {
 
 			// Placeholder
-			%display-#{ unquote( $breakpoint-name ) }-#{ unquote( $display ) } {
-				display: #{ unquote( $display ) };
+			%display#{ $breakpoint }-#{ $display } {
+				display: #{ $display };
 			}
 
-			// .display-{ $breakpoint-name }-{ $display }
-			.display-#{ unquote( $breakpoint-name ) }-#{ unquote( $display ) } {
-				@extend %display-#{ unquote( $breakpoint-name ) }-#{ unquote( $display ) };
+			// .display-{ $breakpoint }-{ $display }
+			.display#{ $breakpoint }-#{ $display } {
+				@extend %display#{ $breakpoint }-#{ $display };
 			}
 		}
 	}

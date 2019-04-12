@@ -4,8 +4,6 @@
  * Construct each overflow found in $overflow-values with
  * a placeholder and a utility class
  */
-$overflow-values: hidden visible;
-
 @each $overflow-value in $overflow-values {
 
 	// Placeholder
@@ -36,34 +34,43 @@ $overflow-values: hidden visible;
 }
 
 // Loop through each breakpoint
-@each $breakpoint-name, $breakpoint-value in $grid-breakpoints {
-	@include media-breakpoint-up( $breakpoint-name ) {
+@each $breakpoint in map-keys( $grid-breakpoints ) {
+	@include media-breakpoint-up( $breakpoint ) {
 		@each $overflow-value in $overflow-values {
+			$index: index( map-keys( $grid-breakpoints ), $breakpoint );
+
+			@if $index == 1 {
+				$breakpoint: '';
+			}
+
+			@else {
+				$breakpoint: '-#{ $breakpoint }';
+			}
 
 			// Placeholder
-			%overflow-#{ $breakpoint-name }-#{ $overflow-value } {
+			%overflow#{ $breakpoint }-#{ $overflow-value } {
 				overflow: #{ $overflow-value };
 			}
 
-			%overflow-x-#{ $breakpoint-name }-#{ $overflow-value } {
+			%overflow-x#{ $breakpoint }-#{ $overflow-value } {
 				overflow-x: #{ $overflow-value };
 			}
 
-			%overflow-y-#{ $breakpoint-name }-#{ $overflow-value } {
+			%overflow-y#{ $breakpoint }-#{ $overflow-value } {
 				overflow-y: #{ $overflow-value };
 			}
 
 			// Utility class
-			.overflow-#{ $breakpoint-name }-#{ $overflow-value } {
-				@extend %overflow-#{ $breakpoint-name }-#{ $overflow-value };
+			.overflow#{ $breakpoint }-#{ $overflow-value } {
+				@extend %overflow#{ $breakpoint }-#{ $overflow-value };
 			}
 
 			.overflow-x-#{ $overflow-value } {
-				@extend %overflow-x-#{ $breakpoint-name }-#{ $overflow-value };
+				@extend %overflow-x#{ $breakpoint }-#{ $overflow-value };
 			}
 
 			.overflow-y-#{ $overflow-value } {
-				@extend %overflow-y-#{ $breakpoint-name }-#{ $overflow-value };
+				@extend %overflow-y#{ $breakpoint }-#{ $overflow-value };
 			}
 		}
 	}

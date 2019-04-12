@@ -4,7 +4,6 @@
  * Construct each float position found in $floats with
  * a placeholder and a utility class
  */
-$floats: left;
 
 @each $breakpoint in map-keys( $grid-breakpoints ) {
 	@include media-breakpoint-up( $breakpoint ) {

@@ -4,9 +4,8 @@
  * Construct each text transformation found in $text-transforms with
  * a placeholder and a utility class
  *
- * @author Jérémy Levron <jeremylevron@19h47.fr>
+ * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
-$text-transforms: uppercase;
 
 @each $text-transform in $text-transforms {
 

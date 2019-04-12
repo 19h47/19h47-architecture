@@ -1,0 +1,21 @@
+%line-height-inherit {
+	line-height: inherit;
+}
+
+.line-height-inherit {
+	@extend %line-height-inherit;
+}
+
+// Variables.
+$cursor: none cursor;
+$text-transforms: uppercase;
+$displays: block inline-block inline none;
+$floats: left;
+$style-types: none;
+$overflow-values: hidden visible;
+$positions: relative;
+$size-dimensions: 50 100;
+$text-aligns: center;
+$vertical-aligns: middle bottom;
+$visibilities-displays: inline-block block inline;
+$white-space-values: nowrap;

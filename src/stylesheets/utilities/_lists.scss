@@ -3,8 +3,9 @@
  *
  * Construct each style types found in $style-types with
  * a placeholder and a utility class
+ *
+ * @author  Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
-$style-types: none;
 
 @each $style-type in $style-types {
     %list-style-type-#{ $style-type } {

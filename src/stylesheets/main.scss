@@ -38,8 +38,26 @@
 
 
 // Pages
-@import 'pages/coming-soon';
+@import 'pages/page';
 
 
 // Utilities
-@import 'utilities/includes';
+@import
+	'utilities/variables', // Always on top
+	'utilities/colors',
+	'utilities/cursors',
+	'utilities/displays',
+	'utilities/floats',
+	'utilities/fonts',
+	'utilities/lists',
+	'utilities/margins',
+	'utilities/overflows',
+	'utilities/paddings',
+	'utilities/positions',
+	'utilities/sizes',
+	'utilities/text-aligns',
+	'utilities/text-decorations',
+	'utilities/text-transforms',
+	'utilities/vertical-aligns',
+	'utilities/visibilities',
+	'utilities/white-spaces';
