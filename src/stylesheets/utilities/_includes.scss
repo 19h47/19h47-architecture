@@ -6,6 +6,8 @@
 	@extend %line-height-inherit;
 }
 
+$positions: relative;
+
 // Utilities
 @import
 	'colors',
