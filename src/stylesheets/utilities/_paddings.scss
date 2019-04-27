@@ -31,9 +31,13 @@
 				}
 			}
 
-			.padding-x#{ $breakpoint ) }-#{ $size } {
+			%padding-x#{ $breakpoint ) }-#{ $size } {
 				padding-right: #{ $length }px;
 				padding-left: #{ $length }px;
+			}
+
+			.padding-x#{ $breakpoint ) }-#{ $size } {
+				@extend %padding-x#{ $breakpoint ) }-#{ $size };
 			}
 
 			%padding-y#{ $breakpoint ) }-#{ $size } {
