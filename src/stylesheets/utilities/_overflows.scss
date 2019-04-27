@@ -65,11 +65,11 @@
 				@extend %overflow#{ $breakpoint }-#{ $overflow-value };
 			}
 
-			.overflow-x-#{ $overflow-value } {
+			.overflow-x#{ $breakpoint }-#{ $overflow-value } {
 				@extend %overflow-x#{ $breakpoint }-#{ $overflow-value };
 			}
 
-			.overflow-y-#{ $overflow-value } {
+			.overflow-y#{ $breakpoint }-#{ $overflow-value } {
 				@extend %overflow-y#{ $breakpoint }-#{ $overflow-value };
 			}
 		}
