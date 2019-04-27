@@ -46,8 +46,6 @@
 			$breakpoint: '-#{ $breakpoint }';
 		}
 
-		@warn $breakpoint;
-
 		@each $overflow-value in $overflow-values {
 
 			// Placeholder
