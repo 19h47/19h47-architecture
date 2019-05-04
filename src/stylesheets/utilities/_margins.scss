@@ -50,6 +50,15 @@
 			}
 		}
 
+		// .margin-{ breakpoint name }-auto
+		%margin#{ $breakpoint }-auto {
+			margin: 0 auto;
+		}
+
+		.margin#{ $breakpoint }-auto {
+			@extend %margin#{ $breakpoint }-auto;
+		}
+
 		// .margin-{ breakpoint name }-0-auto
 		%margin#{ $breakpoint }-0-auto {
 			margin: 0 auto;

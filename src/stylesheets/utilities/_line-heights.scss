@@ -1,0 +1,13 @@
+/**
+ * Line heights utilities
+ *
+ * @author Jérémy Levron <jeremylevron@19h47.fr> (http://10h47.fr)
+ */
+ 
+%line-height-inherit {
+	line-height: inherit;
+}
+ 
+.line-height-inherit {
+	@extend %line-height-inherit;
+}

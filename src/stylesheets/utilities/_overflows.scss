@@ -36,16 +36,17 @@
 // Loop through each breakpoint
 @each $breakpoint in map-keys( $grid-breakpoints ) {
 	@include media-breakpoint-up( $breakpoint ) {
+		$index: index( map-keys( $grid-breakpoints ), $breakpoint );
+
+		@if $index == 1 {
+			$breakpoint: '';
+		}
+
+		@else {
+			$breakpoint: '-#{ $breakpoint }';
+		}
+
 		@each $overflow-value in $overflow-values {
-			$index: index( map-keys( $grid-breakpoints ), $breakpoint );
-
-			@if $index == 1 {
-				$breakpoint: '';
-			}
-
-			@else {
-				$breakpoint: '-#{ $breakpoint }';
-			}
 
 			// Placeholder
 			%overflow#{ $breakpoint }-#{ $overflow-value } {
@@ -65,11 +66,11 @@
 				@extend %overflow#{ $breakpoint }-#{ $overflow-value };
 			}
 
-			.overflow-x-#{ $overflow-value } {
+			.overflow-x#{ $breakpoint }-#{ $overflow-value } {
 				@extend %overflow-x#{ $breakpoint }-#{ $overflow-value };
 			}
 
-			.overflow-y-#{ $overflow-value } {
+			.overflow-y#{ $breakpoint }-#{ $overflow-value } {
 				@extend %overflow-y#{ $breakpoint }-#{ $overflow-value };
 			}
 		}
