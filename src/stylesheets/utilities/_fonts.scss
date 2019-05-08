@@ -76,13 +76,15 @@
  * @param 	$font-family-value     value of the family
  * @author  Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
-@each $font-family-name, $font-family-value in map-get( $font, families ) {
+@if map-has-key( $font, families ) {
+	@each $font-family-name, $font-family-value in map-get( $font, families ) {
 
-	%font-family-#{ $font-family-name } {
-		font-family: #{ $font-family-value };
-	}
+		%font-family-#{ $font-family-name } {
+			font-family: #{ $font-family-value };
+		}
 
-	.font-family-#{ $font-family-name } {
-		@extend %font-family-#{ $font-family-name };
+		.font-family-#{ $font-family-name } {
+			@extend %font-family-#{ $font-family-name };
+		}
 	}
 }
