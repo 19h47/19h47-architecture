@@ -6,14 +6,16 @@
  * @param 	$style 			name of style font in map-get( $font, styles )
  * @author Jérémy Levron <jeremylevron@19h47.fr>
  */
-@each $style in map-get( $font, styles ) {
+@if map-has-key( $font, styles ) {
+	@each $style in map-get( $font, styles ) {
 
-	%font-style-#{ $style } {
-		font-style: unquote( $style );
-	}
+		%font-style-#{ $style } {
+			font-style: unquote( $style );
+		}
 
-	.font-style-#{ $style } {
-		@extend %font-style-#{ $style };
+		.font-style-#{ $style } {
+			@extend %font-style-#{ $style };
+		}
 	}
 }
 
