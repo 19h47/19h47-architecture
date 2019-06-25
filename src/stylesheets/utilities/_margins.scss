@@ -52,7 +52,7 @@
 
 		// .margin-{ breakpoint name }-auto
 		%margin#{ $breakpoint }-auto {
-			margin: 0 auto;
+			margin: auto;
 		}
 
 		.margin#{ $breakpoint }-auto {
