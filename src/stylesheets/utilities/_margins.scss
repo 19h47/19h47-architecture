@@ -19,17 +19,19 @@
 			$breakpoint: '-#{ $breakpoint }';
 		}
 
+		@each $property in ( top, right, bottom, left ) {
+			%margin-#{ $property }#{ $breakpoint ) }-auto {
+				margin-#{ $property }: auto;
+			}
+
+			.margin-#{ $property }#{ $breakpoint ) }-auto {
+				@extend %margin-#{ $property }#{ $breakpoint ) }-auto;
+			}
+		}
+		
 		@each $size, $length in $spacers {
 			@each $property in ( top, right, bottom, left ) {
-				
-				%margin-#{ $property }#{ $breakpoint ) }-auto {
-					margin-#{ $property }: auto;
-				}
-			
-				.margin-#{ $property }#{ $breakpoint ) }-auto {
-					@extend %margin-#{ $property }#{ $breakpoint ) }-auto;
-				}
-
+	
 				%margin-#{ $property }#{ $breakpoint ) }-#{ $size } {
 					margin-#{ $property }: #{ $length }px;
 				}
