@@ -1,0 +1,12 @@
+/**
+ * Letters spacings
+ */
+ @each $letter-spacing in $letters-spacings {
+	%letter-spacing-#{ $letter-spacing } {
+		@include letter-spacing( $letter-spacing );
+	}
+
+	.letter-spacing-#{ $letter-spacing } {
+		@extend %letter-spacing-#{ $letter-spacing };
+	}
+}
