@@ -30,6 +30,7 @@ $text-aligns: center;
 $vertical-aligns: middle bottom;
 $visibilities-displays: inline-block block inline;
 $white-space-values: nowrap;
+$letters-spacings: 50;
 
 ```
 
