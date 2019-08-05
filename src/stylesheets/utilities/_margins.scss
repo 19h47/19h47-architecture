@@ -40,6 +40,17 @@
 					@extend %margin-#{ $property }#{ $breakpoint ) }-#{ $size };
 				}
 			}
+			
+			%margin#{ $breakpoint ) }-#{ $size } {
+				margin-top: #{ $length }px;
+				margin-right: #{ $length }px;
+				margin-bottom: #{ $length }px;
+				margin-left: #{ $length }px;
+			}
+
+			.margin#{ $breakpoint ) }-#{ $size } {
+				@extend %margin#{ $breakpoint ) }-#{ $size };
+			}
 
 			%margin-x#{ $breakpoint ) }-#{ $size } {
 				margin-right: #{ $length }px;
