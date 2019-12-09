@@ -22,23 +22,23 @@
 	"author": "Jérémy Levron <jeremylevron@19h47.fr> (19h47.fr)",
 	"license": "ISC",
 	"devDependencies": {
-		"autoprefixer": "^9.5.1",
-		"clean-webpack-plugin": "^2.0.1",
+		"autoprefixer": "^9.7.3",
+		"clean-webpack-plugin": "^2.0.2",
 		"css-loader": "^2.1.1",
 		"cssnano": "^4.1.10",
 		"mini-css-extract-plugin": "^0.6.0",
-		"node-sass": "^4.12.0",
+		"node-sass": "^4.13.0",
 		"postcss-loader": "^3.0.0",
-		"sass-loader": "^7.1.0",
-		"webpack": "^4.30.0",
-		"webpack-cli": "^3.3.1",
-		"webpack-dev-server": "^3.3.1",
-		"webpack-manifest-plugin": "^2.0.4",
-		"webpack-merge": "^4.2.1",
-		"webpack-notifier": "^1.7.0"
+		"sass-loader": "^7.3.1",
+		"webpack": "^4.41.2",
+		"webpack-cli": "^3.3.10",
+		"webpack-dev-server": "^3.9.0",
+		"webpack-manifest-plugin": "^2.2.0",
+		"webpack-merge": "^4.2.2",
+		"webpack-notifier": "^1.8.0"
 	},
 	"dependencies": {
-		"bootstrap": "^4.3.1",
+		"bootstrap": "^4.4.1",
 		"ress": "^1.2.2"
 	}
 }
