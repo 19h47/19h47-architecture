@@ -4,7 +4,7 @@
  * Constructor class for each font styles found in map-get( $font, styles )
  *
  * @param 	$style 			name of style font in map-get( $font, styles )
- * @author Jérémy Levron <jeremylevron@19h47.fr>
+ * @author Jérémy Levron <jeremylevron@19h47.fr> (https://19h47.fr)
  */
 @if map-has-key( $font, styles ) {
 	@each $style in map-get( $font, styles ) {
@@ -47,18 +47,31 @@
  * Constructor class for each font weight found in map-get( $font, sizes )
  *
  * @param 	$font-size
- * @author  Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
+ * @author  Jérémy Levron <jeremylevron@19h47.fr> (https://19h47.fr)
  */
-@each $font-size in map-get( $font, sizes ) {
+@include media-breakpoint-up( $breakpoint ) {
+	$index: index( map-keys( $grid-breakpoints ), $breakpoint );
 
-	%font-size-#{ $font-size } {
-		font-size: #{ $font-size }px;
+	@if $index == 1 {
+		$breakpoint: '';
 	}
 
-	.font-size-#{ $font-size } {
-		@extend %font-size-#{ $font-size };
+	@else {
+		$breakpoint: '-#{ $breakpoint }';
+	}
+
+	@each $font-size in map-get( $font, sizes ) {
+
+		%font-size#{ $breakpoint }-#{ $font-size } {
+			font-size: #{ $font-size }px;
+		}
+
+		.font-size#{ $breakpoint }-#{ $font-size } {
+			@extend %font-size-#{ $font-size };
+		}
 	}
 }
+
 
 %font-size-inherit {
 	font-size: inherit;
@@ -76,7 +89,7 @@
  *
  * @param 	$font-family-name      name of the family
  * @param 	$font-family-value     value of the family
- * @author  Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
+ * @author  Jérémy Levron <jeremylevron@19h47.fr> (https://19h47.fr)
  */
 @if map-has-key( $font, families ) {
 	@each $font-family-name, $font-family-value in map-get( $font, families ) {
