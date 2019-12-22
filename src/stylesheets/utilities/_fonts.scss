@@ -68,7 +68,7 @@
 			}
 
 			.font-size#{ $breakpoint }-#{ $font-size } {
-				@extend %font-size-#{ $font-size };
+				@extend %font-size#{ $breakpoint }-#{ $font-size };
 			}
 		}
 	}
