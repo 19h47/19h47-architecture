@@ -90,3 +90,13 @@
 @function shade($color, $percentage ) {
 	@return mix( black, $color, $percentage );
 }
+
+
+/**
+ * Get viewport width
+ *
+ *
+ */
+@function get_viewport_width( $size ) {
+	@return #{ ( $size * 100 ) / $prototype-width-unitless }vw;
+}
