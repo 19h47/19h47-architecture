@@ -9,7 +9,7 @@
 
 @each $style-type in $style-types {
     %list-style-type-#{ $style-type } {
-	list-style-type: #{ $style-type };
+		list-style-type: #{ $style-type };
     }
 
     .list-style-type-#{ $style-type } {
