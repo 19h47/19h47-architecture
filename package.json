@@ -1,6 +1,6 @@
 {
-	"name": "architecture",
-	"version": "4.0.4",
+	"name": "@19h47/architecture",
+	"version": "4.0.5",
 	"description": "Architecture",
 	"main": "index.js",
 	"scripts": {
@@ -22,7 +22,7 @@
 	"author": "Jérémy Levron <jeremylevron@19h47.fr> (19h47.fr)",
 	"license": "ISC",
 	"devDependencies": {
-		"autoprefixer": "^9.7.3",
+		"autoprefixer": "9.7.5",
 		"clean-webpack-plugin": "3.0.0",
 		"css-loader": "3.4.2",
 		"cssnano": "^4.1.10",
@@ -30,7 +30,7 @@
 		"node-sass": "^4.13.0",
 		"postcss-loader": "^3.0.0",
 		"sass-loader": "8.0.2",
-		"webpack": "^4.41.2",
+		"webpack": "4.42.1",
 		"webpack-cli": "^3.3.10",
 		"webpack-dev-server": "^3.9.0",
 		"webpack-manifest-plugin": "^2.2.0",
