@@ -96,12 +96,12 @@
 @if map-has-key( $font, families ) {
 	@each $font-family-name, $font-family-value in map-get( $font, families ) {
 
-		%font-family-#{ $font-family-name } {
+		%font-family-#{ unquote( $font-family-name ) } {
 			font-family: #{ $font-family-value };
 		}
 
-		.font-family-#{ $font-family-name } {
-			@extend %font-family-#{ $font-family-name };
+		.font-family-#{ unquote( $font-family-name ) } {
+			@extend %font-family-#{ unquote( $font-family-name ) };
 		}
 	}
 }
