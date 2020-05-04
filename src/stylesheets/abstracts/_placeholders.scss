@@ -37,7 +37,7 @@
  * @uses    @extend %Pointer-events-{ $property }
  * @author  Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
-$pointer-events-values: none auto;
+$pointer-events-values: none auto all;
 
 @each $value in $pointer-events-values {
 
