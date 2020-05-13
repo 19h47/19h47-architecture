@@ -18,7 +18,7 @@ Use is as it or overide it!
 
 ```scss
 
-$cursor: none cursor;
+$cursors: auto pointer grab grabbing none;
 $text-transforms: uppercase;
 $displays: block inline-block inline none;
 $floats: left;
