@@ -56,20 +56,3 @@ $pointer-events-values: none auto all;
 		@extend %Pointer-events-#{ $value };
 	}
 }
-
-
-/**
- * Placeholder cursor
- *
- * @author  Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
- */
-@each $value in $cursors {
-
-	%Cursor-#{ $value } {
-		cursor: #{ $value };
-	}
-
-	.Cursor-#{ $value } {
-		@extend %Cursor-#{ $value };
-	}
-}
