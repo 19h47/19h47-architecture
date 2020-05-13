@@ -19,7 +19,7 @@
 			$breakpoint: '-#{ $breakpoint }';
 		}
 
-		@each $cursor in $cursor {
+		@each $cursor in $cursors {
 
 			// Placeholder
 			%cursor#{ $breakpoint }-#{ $cursor } {
