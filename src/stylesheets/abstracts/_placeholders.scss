@@ -63,9 +63,7 @@ $pointer-events-values: none auto all;
  *
  * @author  Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
-$cursor-values: auto pointer grab grabbing;
-
-@each $value in $cursor-values {
+@each $value in $cursors {
 
 	%Cursor-#{ $value } {
 		cursor: #{ $value };
