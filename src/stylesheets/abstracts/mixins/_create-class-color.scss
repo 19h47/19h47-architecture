@@ -12,7 +12,7 @@
 			@each $subname, $subvalue in $value {
 				@each $property-key, $property-value in $properties {
 					// each item in sub map
-					#{ unquote( $property-value ) }-#{ $key }-#{ $subname } {
+					#{ unquote( $property-value ) }-#{ "" + $key }-#{ $subname } {
 						#{ $property-key }: $subvalue;
 					}
 				}
