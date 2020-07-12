@@ -9,7 +9,6 @@
  */
 $grid-columns: 12;
 
-
 /**
  * Gutter width
  *
@@ -20,8 +19,7 @@ $grid-columns: 12;
  * @see https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_variables.scss#L331
  */
 $grid-gutter-width-unitless: 30;
-$grid-gutter-width: ( $grid-gutter-width-unitless * 1px );
-
+$grid-gutter-width: ($grid-gutter-width-unitless * 1px);
 
 /**
  * Grid breakpoints

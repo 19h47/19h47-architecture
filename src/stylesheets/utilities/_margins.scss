@@ -7,19 +7,17 @@
  * @see http://sass-lang.com/documentation/Sass/Script/Functions.html#map_keys-instance_method
  * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
-@each $breakpoint in map-keys( $grid-breakpoints ) {
-	@include media-breakpoint-up( $breakpoint ) {
-		$index: index( map-keys( $grid-breakpoints ), $breakpoint );
+@each $breakpoint in map-keys($grid-breakpoints) {
+	@include media-breakpoint-up($breakpoint) {
+		$index: index(map-keys($grid-breakpoints), $breakpoint);
 
 		@if $index == 1 {
-			$breakpoint: '';
+			$breakpoint: "";
+		} @else {
+			$breakpoint: "-#{ $breakpoint }";
 		}
 
-		@else {
-			$breakpoint: '-#{ $breakpoint }';
-		}
-
-		@each $property in ( top, right, bottom, left ) {
+		@each $property in (top, right, bottom, left) {
 			%margin-#{ $property }#{ $breakpoint ) }-auto {
 				margin-#{ $property }: auto;
 			}
@@ -28,24 +26,23 @@
 				@extend %margin-#{ $property }#{ $breakpoint ) }-auto;
 			}
 		}
-		
+
 		@each $size, $length in $spacers {
-			@each $property in ( top, right, bottom, left ) {
-	
+			@each $property in (top, right, bottom, left) {
 				%margin-#{ $property }#{ $breakpoint ) }-#{ $size } {
-					margin-#{ $property }: #{ $length }px;
+					margin-#{ $property }: #{$length}px;
 				}
 
 				.margin-#{ $property }#{ $breakpoint ) }-#{ $size } {
 					@extend %margin-#{ $property }#{ $breakpoint ) }-#{ $size };
 				}
 			}
-			
+
 			%margin#{ $breakpoint ) }-#{ $size } {
-				margin-top: #{ $length }px;
-				margin-right: #{ $length }px;
-				margin-bottom: #{ $length }px;
-				margin-left: #{ $length }px;
+				margin-top: #{$length}px;
+				margin-right: #{$length}px;
+				margin-bottom: #{$length}px;
+				margin-left: #{$length}px;
 			}
 
 			.margin#{ $breakpoint ) }-#{ $size } {
@@ -53,8 +50,8 @@
 			}
 
 			%margin-x#{ $breakpoint ) }-#{ $size } {
-				margin-right: #{ $length }px;
-				margin-left: #{ $length }px;
+				margin-right: #{$length}px;
+				margin-left: #{$length}px;
 			}
 
 			.margin-x#{ $breakpoint ) }-#{ $size } {
@@ -62,8 +59,8 @@
 			}
 
 			%margin-y#{ $breakpoint ) }-#{ $size } {
-				margin-top: #{ $length }px;
-				margin-bottom: #{ $length }px;
+				margin-top: #{$length}px;
+				margin-bottom: #{$length}px;
 			}
 
 			.margin-y#{ $breakpoint ) }-#{ $size } {

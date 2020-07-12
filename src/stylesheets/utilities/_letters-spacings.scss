@@ -1,9 +1,9 @@
 /**
  * Letters spacings
  */
- @each $letter-spacing in $letters-spacings {
+@each $letter-spacing in $letters-spacings {
 	%letter-spacing-#{ $letter-spacing } {
-		@include letter-spacing( $letter-spacing );
+		@include letter-spacing($letter-spacing);
 	}
 
 	.letter-spacing-#{ $letter-spacing } {

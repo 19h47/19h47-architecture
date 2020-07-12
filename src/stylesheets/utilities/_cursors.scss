@@ -7,23 +7,20 @@
  * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
 
-@each $breakpoint in map-keys( $grid-breakpoints ) {
-	@include media-breakpoint-up( $breakpoint ) {
-		$index: index( map-keys( $grid-breakpoints ), $breakpoint );
+@each $breakpoint in map-keys($grid-breakpoints) {
+	@include media-breakpoint-up($breakpoint) {
+		$index: index(map-keys($grid-breakpoints), $breakpoint);
 
 		@if $index == 1 {
-			$breakpoint: '';
-		}
-
-		@else {
-			$breakpoint: '-#{ $breakpoint }';
+			$breakpoint: "";
+		} @else {
+			$breakpoint: "-#{ $breakpoint }";
 		}
 
 		@each $cursor in $cursors {
-
 			// Placeholder
 			%cursor#{ $breakpoint }-#{ $cursor } {
-				cursor: #{ unquote( $cursor ) };
+				cursor: #{unquote($cursor)};
 			}
 
 			// .cursor-{ $breakpoint }-{ $cursor }

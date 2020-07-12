@@ -4,9 +4,8 @@
  * Change the default text color for placeholders.
  * @color valid color
  */
-@mixin reset-placeholder( $color: #ccc, $polyfill: false ) {
+@mixin reset-placeholder($color: #ccc, $polyfill: false) {
 	@if $polyfill {
-
 		.placeholder {
 			color: $color;
 		}

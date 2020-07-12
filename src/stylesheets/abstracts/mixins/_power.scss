@@ -5,7 +5,7 @@
  * @param  int $exponent
  * @return $value
  */
-@function power( $number, $exponent ) {
+@function power($number, $exponent) {
 	$value: 1;
 
 	@if $exponent > 0 {

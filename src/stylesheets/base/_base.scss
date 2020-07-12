@@ -6,8 +6,7 @@ html {
 }
 
 body {
-
-	line-height: ( ( $base-line-height / $base-font-size ) * 1em );
+	line-height: (($base-line-height / $base-font-size) * 1em);
 }
 
 a,
@@ -22,12 +21,12 @@ a {
 }
 
 p {
-	@include margin (
-		top ( ( $base-line-height / $base-font-size ) * 1em )
-		bottom ( ( ( $base-line-height / $base-font-size ) / 2 ) * 1em )
+	@include margin(
+		top (($base-line-height / $base-font-size) * 1em) bottom
+			((($base-line-height / $base-font-size) / 2) * 1em)
 	);
 
 	/* stylelint-disable-next-line */
-	line-height: ( ( $base-line-height / $base-font-size ) * 1em );
+	line-height: (($base-line-height / $base-font-size) * 1em);
 	font-size: 1em;
 }

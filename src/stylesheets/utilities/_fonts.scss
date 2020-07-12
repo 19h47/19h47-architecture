@@ -6,11 +6,10 @@
  * @param 	$style 			name of style font in map-get( $font, styles )
  * @author Jérémy Levron <jeremylevron@19h47.fr> (https://19h47.fr)
  */
-@if map-has-key( $font, styles ) {
-	@each $style in map-get( $font, styles ) {
-
+@if map-has-key($font, styles) {
+	@each $style in map-get($font, styles) {
 		%font-style-#{ $style } {
-			font-style: unquote( $style );
+			font-style: unquote($style);
 		}
 
 		.font-style-#{ $style } {
@@ -18,7 +17,6 @@
 		}
 	}
 }
-
 
 /**
  * Font weight
@@ -29,17 +27,15 @@
  * @param 	$weight-value   	value of weight
  * @author 	Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
-@each $weight-name, $weight-value in map-get( $font, weights ) {
-
+@each $weight-name, $weight-value in map-get($font, weights) {
 	%font-weight-#{ $weight-name } {
-		font-weight: #{ $weight-value };
+		font-weight: #{$weight-value};
 	}
 
 	.font-weight-#{ $weight-name } {
 		@extend %font-weight-#{ "" + $weight-name };
 	}
 }
-
 
 /**
  * Font size
@@ -49,22 +45,19 @@
  * @param 	$font-size
  * @author  Jérémy Levron <jeremylevron@19h47.fr> (https://19h47.fr)
  */
-@each $breakpoint in map-keys( $grid-breakpoints ) {
-	@include media-breakpoint-up( $breakpoint ) {
-		$index: index( map-keys( $grid-breakpoints ), $breakpoint );
+@each $breakpoint in map-keys($grid-breakpoints) {
+	@include media-breakpoint-up($breakpoint) {
+		$index: index(map-keys($grid-breakpoints), $breakpoint);
 
 		@if $index == 1 {
-			$breakpoint: '';
+			$breakpoint: "";
+		} @else {
+			$breakpoint: "-#{ $breakpoint }";
 		}
 
-		@else {
-			$breakpoint: '-#{ $breakpoint }';
-		}
-
-		@each $font-size in map-get( $font, sizes ) {
-
+		@each $font-size in map-get($font, sizes) {
 			%font-size#{ $breakpoint }-#{ $font-size } {
-				font-size: #{ $font-size }px;
+				font-size: #{$font-size}px;
 			}
 
 			.font-size#{ $breakpoint }-#{ $font-size } {
@@ -74,7 +67,6 @@
 	}
 }
 
-
 %font-size-inherit {
 	font-size: inherit;
 }
@@ -82,7 +74,6 @@
 .font-size-inherit {
 	@extend %font-size-inherit;
 }
-
 
 /**
  * Font family
@@ -93,11 +84,10 @@
  * @param 	$font-family-value     value of the family
  * @author  Jérémy Levron <jeremylevron@19h47.fr> (https://19h47.fr)
  */
-@if map-has-key( $font, families ) {
-	@each $font-family-name, $font-family-value in map-get( $font, families ) {
-
+@if map-has-key($font, families) {
+	@each $font-family-name, $font-family-value in map-get($font, families) {
 		%font-family-#{ $font-family-name } {
-			font-family: #{ $font-family-value };
+			font-family: #{$font-family-value};
 		}
 
 		.font-family-#{ $font-family-name } {

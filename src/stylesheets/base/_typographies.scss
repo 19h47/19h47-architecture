@@ -12,13 +12,13 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 	font: {
-		family: map-get( map-get( $font, families ), body );
+		family: map-get(map-get($font, families), body);
 		size: $base-font-size-px;
-		weight: map-get( map-get( $font, weights ), regular );
+		weight: map-get(map-get($font, weights), regular);
 	}
 
 	/* stylelint-disable-next-line */
-	line-height: ( $base-line-height / $base-font-size ) * 1em;
+	line-height: ($base-line-height / $base-font-size) * 1em;
 	text-rendering: optimizeLegibility;
 }
 
@@ -41,36 +41,32 @@ $titles: (
 	h1: (
 		38,
 		58.52,
-		map-get( map-get( $font, weights ), bold ),
-		map-get( map-get( $font, families ), title ),
-		0
+		map-get(map-get($font, weights), bold),
+		map-get(map-get($font, families), title),
+		0,
 	),
-
 	h2: (
 		18,
 		27,
-		map-get( map-get( $font, weights ), semibold ),
-		map-get( map-get( $font, families ), body ),
-		0
+		map-get(map-get($font, weights), semibold),
+		map-get(map-get($font, families), body),
+		0,
 	),
-
 	h3: (
 		18,
 		19,
-		map-get( map-get( $font, weights ), extrablack ),
-		map-get( map-get( $font, families ), body ),
-		0
+		map-get(map-get($font, weights), extrablack),
+		map-get(map-get($font, families), body),
+		0,
 	),
-
 	h4: (
 		16,
 		19,
-		map-get( map-get( $font, weights ), extrablack ),
-		map-get( map-get( $font, families ), body ),
-		0
+		map-get(map-get($font, weights), extrablack),
+		map-get(map-get($font, families), body),
+		0,
 	),
 );
-
 
 /**
  * Loop through $titles
@@ -83,36 +79,30 @@ $titles: (
 	 *
 	 * Get and stock all values from each keys in map
 	 */
-	$font-size: nth( $value, 1 );
-	$line-height: nth( $value, 2 );
-	$weight: nth( $value, 3 );
-	$family: nth( $value, 4 );
-	$letter-spacing: nth( $value, 5 );
-
+	$font-size: nth($value, 1);
+	$line-height: nth($value, 2);
+	$weight: nth($value, 3);
+	$family: nth($value, 4);
+	$letter-spacing: nth($value, 5);
 
 	// Generate tag and class selector
 	#{ $title },
 	.#{ $title } {
 		// Include mixin
-		@include letter-spacing( $letter-spacing );
+		@include letter-spacing($letter-spacing);
 
-		@include margin (
-			top 1em
-			bottom 0.5em
-		);
+		@include margin(top 1em bottom 0.5em);
 
 		@if $line-height == normal {
 			line-height: normal;
-		}
-
-		@else {
+		} @else {
 			line-height: $line-height / $font-size;
 		}
 
 		font: {
 			family: $family;
-			size: ( $font-size / 10 ) * 1rem;
+			size: ($font-size / 10) * 1rem;
 			weight: $weight;
 		}
 	}
-};
+}

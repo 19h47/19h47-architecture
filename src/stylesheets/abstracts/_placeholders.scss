@@ -13,10 +13,8 @@
 	 * @uses @extend %Position-absolute-center
 	 */
 	&-absolute-center {
-		@include absolute( top 0 right 0 bottom 0 left 0 );
+		@include absolute(top 0 right 0 bottom 0 left 0);
 	}
-
-
 
 	/**
 	 * Fixed
@@ -26,10 +24,9 @@
 	 * @uses @extend %Position-fixed-center
 	 */
 	&-fixed-center {
-		@include fixed( top 0 right 0 bottom 0 left 0 );
+		@include fixed(top 0 right 0 bottom 0 left 0);
 	}
 }
-
 
 /**
  * Placeholder pointer events
@@ -40,7 +37,6 @@
 $pointer-events-values: none auto all;
 
 @each $value in $pointer-events-values {
-
 	%Pointer-events {
 		/**
 		 * Pointer events #{ $value }
@@ -48,7 +44,7 @@ $pointer-events-values: none auto all;
 		 * @uses %Pointer-events-#{ $value }
 		 */
 		&-#{ $value } {
-			pointer-events: #{ $value };
+			pointer-events: #{$value};
 		}
 	}
 

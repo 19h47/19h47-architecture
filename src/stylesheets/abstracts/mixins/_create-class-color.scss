@@ -4,25 +4,27 @@
  * @param $properties   list of properties ( name of class, property )
  * @uses  @include      create_classes_color( $property1 '$.className', $property2 '$.className2' )
  */
-@mixin create_classes_color( $properties... ) {
+@mixin create_classes_color($properties...) {
 	@each $key, $value in $color-variations {
-
 		// maps require a second loop
-		@if type-of( $value ) == 'map' {
+		@if type-of($value) == "map" {
 			@each $subname, $subvalue in $value {
 				@each $property-key, $property-value in $properties {
 					// each item in sub map
-					#{ unquote( $property-value ) }-#{ "" + $key }-#{ $subname } {
+					#{
+						unquote( $property-value )
+						}-#{
+						""
+						+ $key
+						}-#{
+						$subname
+						} {
 						#{ $property-key }: $subvalue;
 					}
 				}
 			}
-		}
-
-
-		@else {
+		} @else {
 			@each $property-key, $property-value in $properties {
-
 				#{ unquote( $property-value ) }-#{ "" + $key } {
 					#{ $property-key }: $value;
 				}

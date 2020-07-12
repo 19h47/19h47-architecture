@@ -4,18 +4,15 @@
  * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
 
-@each $breakpoint in map-keys( $grid-breakpoints ) {
-
+@each $breakpoint in map-keys($grid-breakpoints) {
 	// Hidden
-	@include media-breakpoint-only( $breakpoint) {
-		$index: index( map-keys( $grid-breakpoints ), $breakpoint );
+	@include media-breakpoint-only($breakpoint) {
+		$index: index(map-keys($grid-breakpoints), $breakpoint);
 
 		@if $index == 1 {
-			$breakpoint: '';
-		}
-
-		@else {
-			$breakpoint: '-#{ $breakpoint }';
+			$breakpoint: "";
+		} @else {
+			$breakpoint: "-#{ $breakpoint }";
 		}
 
 		%hidden#{ $breakpoint } {
@@ -28,11 +25,10 @@
 	}
 
 	// Visible
-	@include media-breakpoint-up( $breakpoint) {
+	@include media-breakpoint-up($breakpoint) {
 		@each $display in $visibilities-displays {
-
 			%visible#{ $breakpoint }-#{ $display } {
-				display: #{ $display } !important;
+				display: #{$display} !important;
 			}
 
 			.visible#{ $breakpoint }-#{ $display } {

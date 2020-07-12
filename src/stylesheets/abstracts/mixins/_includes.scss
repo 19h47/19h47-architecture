@@ -1,12 +1,10 @@
 // Mixins
-@import 
-	'letter-spacing',
-	'margin',
-	'padding',
-	'font',
-	'reset-placeholder',
-	'position',
-	'size',
-	'create-class-color',
-	'auto-alpha',
-	'power';
+@import "letter-spacing";
+@import "margin";
+@import "padding";
+@import "font";
+@import "reset-placeholder", "position";
+@import "size";
+@import "create-class-color";
+@import "auto-alpha";
+@import "power";

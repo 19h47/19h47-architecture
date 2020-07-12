@@ -7,23 +7,20 @@
  * @see http://sass-lang.com/documentation/Sass/Script/Functions.html#map_keys-instance_method
  * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
-@each $breakpoint in map-keys( $grid-breakpoints ) {
-	@include media-breakpoint-up( $breakpoint ) {
-		$index: index( map-keys( $grid-breakpoints ), $breakpoint );
+@each $breakpoint in map-keys($grid-breakpoints) {
+	@include media-breakpoint-up($breakpoint) {
+		$index: index(map-keys($grid-breakpoints), $breakpoint);
 
 		@if $index == 1 {
-			$breakpoint: '';
-		}
-
-		@else {
-			$breakpoint: '-#{ $breakpoint }';
+			$breakpoint: "";
+		} @else {
+			$breakpoint: "-#{ $breakpoint }";
 		}
 
 		@each $size, $length in $spacers {
-			@each $property in ( top, right, bottom, left ) {
-
+			@each $property in (top, right, bottom, left) {
 				%padding-#{ $property }#{ $breakpoint ) }-#{ $size } {
-					padding-#{ $property }: #{ $length }px;
+					padding-#{ $property }: #{$length}px;
 				}
 
 				.padding-#{ $property }#{ $breakpoint ) }-#{ $size } {
@@ -32,8 +29,8 @@
 			}
 
 			%padding-x#{ $breakpoint ) }-#{ $size } {
-				padding-right: #{ $length }px;
-				padding-left: #{ $length }px;
+				padding-right: #{$length}px;
+				padding-left: #{$length}px;
 			}
 
 			.padding-x#{ $breakpoint ) }-#{ $size } {
@@ -41,8 +38,8 @@
 			}
 
 			%padding-y#{ $breakpoint ) }-#{ $size } {
-				padding-top: #{ $length }px;
-				padding-bottom: #{ $length }px;
+				padding-top: #{$length}px;
+				padding-bottom: #{$length}px;
 			}
 
 			.padding-y#{ $breakpoint ) }-#{ $size } {
@@ -50,17 +47,16 @@
 			}
 
 			%padding#{ $breakpoint ) }-#{ $size } {
-				padding-top: #{ $length }px;
-				padding-right: #{ $length }px;
-				padding-bottom: #{ $length }px;
-				padding-left: #{ $length }px;
+				padding-top: #{$length}px;
+				padding-right: #{$length}px;
+				padding-bottom: #{$length}px;
+				padding-left: #{$length}px;
 			}
 
 			.padding#{ $breakpoint ) }-#{ $size } {
 				@extend %padding#{ $breakpoint ) }-#{ $size };
 			}
 		}
-
 
 		// padding-{ breakpoint name }-x-0
 		%padding#{ $breakpoint }-x-0 {
@@ -72,7 +68,6 @@
 			@extend %padding#{ $breakpoint }-x-0;
 		}
 
-
 		// padding-{ breakpoint name }-y-0
 		%padding#{ $breakpoint }-y-0 {
 			padding-top: 0;
@@ -82,7 +77,6 @@
 		.padding#{ $breakpoint }-y-0 {
 			@extend %padding#{ $breakpoint }-y-0;
 		}
-
 
 		// padding-{ breakpoint name }-0
 		%padding#{ $breakpoint ) }-0 {

@@ -6,31 +6,29 @@
  * @access  public
  * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
-@function get_the_color( $keys... ) {
-
+@function get_the_color($keys...) {
 	$map: $color-variations;
-	$color-base: map-get( $map, nth( $keys, 1 ) );
+	$color-base: map-get($map, nth($keys, 1));
 	$result: null;
 
-	@if length( $keys ) == 1 {
+	@if length($keys) == 1 {
 		$result: $color-base;
 	}
 
-	@if length( $keys ) == 2 {
-		$color-key: nth( $keys, 1 );
-		$color-value: nth( $keys, 2 );
+	@if length($keys) == 2 {
+		$color-key: nth($keys, 1);
+		$color-value: nth($keys, 2);
 
-		$result: map-get( $color-base, $color-value );
+		$result: map-get($color-base, $color-value);
 	}
 
-	@if length( $keys ) > 2 {
+	@if length($keys) > 2 {
 		@warn '`#{ $keys }` is greater than 2.';
 	}
 
 	/* stylelint-disable-next-line */
 	@return $result;
 }
-
 
 /**
  * The color
@@ -39,10 +37,9 @@
  * @return function     get_the_color()
  * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
-@function the_color( $keys... ) {
-	@return get_the_color( $keys... );
+@function the_color($keys...) {
+	@return get_the_color($keys...);
 }
-
 
 /**
  * Get color list
@@ -52,9 +49,9 @@
  * @return  $list
  * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
-@function get_color_list( $label ) {
+@function get_color_list($label) {
 	@each $list in $color-variations {
-		@if nth( $list, 1 ) == $label {
+		@if nth($list, 1) == $label {
 			@return $list;
 		}
 	}
@@ -62,7 +59,6 @@
 	/* stylelint-disable-next-line */
 	@return null;
 }
-
 
 /**
  * Slightly lighten a color
@@ -73,10 +69,9 @@
  * @see     https://css-tricks.com/snippets/sass/tint-shade-functions/
  * @return  Color
  */
-@function tint($color, $percentage ) {
-	@return mix( white, $color, $percentage );
+@function tint($color, $percentage) {
+	@return mix(white, $color, $percentage);
 }
-
 
 /**
  * Slightly darken a color
@@ -87,16 +82,15 @@
  * @see     https://css-tricks.com/snippets/sass/tint-shade-functions/
  * @return  Color
  */
-@function shade($color, $percentage ) {
-	@return mix( black, $color, $percentage );
+@function shade($color, $percentage) {
+	@return mix(black, $color, $percentage);
 }
-
 
 /**
  * Get viewport width
  *
  *
  */
-@function get_viewport_width( $size ) {
-	@return #{ ( $size * 100 ) / $prototype-width-unitless }vw;
+@function get_viewport_width($size) {
+	@return #{($size * 100) / $prototype-width-unitless}vw;
 }

@@ -3,36 +3,32 @@
  *
  * @author Jérémy Levron <jeremylevron@19h47.fr>
  */
-@mixin margin( $args: () ) {
+@mixin margin($args: ()) {
 	$offsets: top right bottom left;
 
 	@each $offset in $offsets {
-
 		// Doing the magic trick
 		// All this code happens inside the loop
-		$index: index( $args, $offset );
+		$index: index($args, $offset);
 
 		// If offset is found in the list
 		@if $index {
-
 			// If it is found at last position
-			@if $index == length( $args ) {
-
+			@if $index == length($args) {
 				margin-#{$offset}: 0;
 			}
 
 			// If it is followed by a value
 			@else {
-
-				$next: nth( $args, $index + 1 );
+				$next: nth($args, $index + 1);
 
 				// If the next value is value length
-				@if is-valid-length( $next ) {
+				@if is-valid-length($next) {
 					margin-#{$offset}: $next;
 				}
 
 				// If the next value is another offset
-				@else if index( $offsets, $next ) {
+				@else if index($offsets, $next) {
 					margin-#{$offset}: 0;
 				}
 

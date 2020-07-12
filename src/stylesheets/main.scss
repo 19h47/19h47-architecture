@@ -2,62 +2,52 @@
  * Main
  */
 
-
 // Dependencies
-@import 'vendors/bootstrap-imports';
+@import "vendors/bootstrap-imports";
 
-@import 'abstracts/easings';
+@import "abstracts/easings";
 
-@import 'abstracts/variables';
+@import "abstracts/variables";
 // @import 'base/fonts';
 
-
 // Vendors
-@import '../../node_modules/ress/ress';
-
+@import "../../node_modules/ress/ress";
 
 // Abstracts
-@import
-	'abstracts/functions',
-	'abstracts/mixins/includes',
-	'abstracts/placeholders';
-
+@import "abstracts/functions";
+@import "abstracts/mixins/includes";
+@import "abstracts/placeholders";
 
 // Base stuff
-@import
-	'base/base',
-	'base/typographies';
-
+@import "base/base";
+@import "base/typographies";
 
 // Layout
-@import 'layout/site';
-
+@import "layout/site";
 
 // Components
-@import 'components/form';
-
+@import "components/form";
 
 // Pages
-@import 'pages/page';
-
+@import "pages/page";
 
 // Utilities
-@import
-	'utilities/variables', // Always on top
-	'utilities/colors',
-	'utilities/cursors',
-	'utilities/displays',
-	'utilities/floats',
-	'utilities/fonts',
-	'utilities/lists',
-	'utilities/margins',
-	'utilities/overflows',
-	'utilities/paddings',
-	'utilities/positions',
-	'utilities/sizes',
-	'utilities/text-aligns',
-	'utilities/text-decorations',
-	'utilities/text-transforms',
-	'utilities/vertical-aligns',
-	'utilities/visibilities',
-	'utilities/white-spaces';
+@import "utilities/variables";
+// Always on top
+@import "utilities/colors";
+@import "utilities/cursors";
+@import "utilities/displays";
+@import "utilities/floats";
+@import "utilities/fonts";
+@import "utilities/lists";
+@import "utilities/margins";
+@import "utilities/overflows";
+@import "utilities/paddings";
+@import "utilities/positions";
+@import "utilities/sizes";
+@import "utilities/text-aligns";
+@import "utilities/text-decorations";
+@import "utilities/text-transforms";
+@import "utilities/vertical-aligns";
+@import "utilities/visibilities";
+@import "utilities/white-spaces";

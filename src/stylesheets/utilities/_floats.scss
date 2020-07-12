@@ -5,22 +5,20 @@
  * a placeholder and a utility class
  */
 
-@each $breakpoint in map-keys( $grid-breakpoints ) {
-	@include media-breakpoint-up( $breakpoint ) {
-		$index: index( map-keys( $grid-breakpoints ), $breakpoint );
+@each $breakpoint in map-keys($grid-breakpoints) {
+	@include media-breakpoint-up($breakpoint) {
+		$index: index(map-keys($grid-breakpoints), $breakpoint);
 
 		@if $index == 1 {
-			$breakpoint: '';
-		}
-
-		@else {
-			$breakpoint: '-#{ $breakpoint }';
+			$breakpoint: "";
+		} @else {
+			$breakpoint: "-#{ $breakpoint }";
 		}
 
 		@each $float in $floats {
 			// Placeholder
 			%float#{ $breakpoint }-#{ $float } {
-				float: #{ $float };
+				float: #{$float};
 			}
 
 			// .float-{ $breakpoint }-{ $float }

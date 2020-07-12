@@ -5,7 +5,6 @@
  * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
 .Site {
-
 	/**
 	 * Site container
 	 *
@@ -18,11 +17,10 @@
 
 		@extend %position-relative;
 
-		@include margin( top 0 right auto bottom 0 left auto );
+		@include margin(top 0 right auto bottom 0 left auto);
 
 		@include padding(
-			right $grid-outer-gutter-width
-			left $grid-outer-gutter-width
+			right $grid-outer-gutter-width left $grid-outer-gutter-width
 		);
 	}
 }

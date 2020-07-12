@@ -15,30 +15,26 @@
 $color-variations: (
 	black: #000,
 	white: #fff,
-
 	gray: (
 		very-dark: #242424,
 	),
-
 	orange: (
 		very-dark: #1c1b19,
 		light-grayish: #f5f3ee,
 	),
-
 	/**
 	 * Brand colors
 	 *
 	 * @see https://brandcolors.net/
-	 */
-	social: (
-		facebook: #3b5998,
-		twitter: #1da1f2,
-		google-plus: #dd4b39,
-		linkedin: #0077b5,
-		mail: #000,
-	)
+	 */ social:
+		(
+			facebook: #3b5998,
+			twitter: #1da1f2,
+			google-plus: #dd4b39,
+			linkedin: #0077b5,
+			mail: #000,
+		),
 );
-
 
 /**
  * Font
@@ -48,8 +44,6 @@ $color-variations: (
  * @type map
  */
 $font: (
-
-
 	/**
 	 * Font
 	 *
@@ -58,12 +52,17 @@ $font: (
 	 * @uses map-get( $font, $key ) to retrieve font value from map
 	 * @type map
 	 */
-	families: (
-		body: ( 'Source Code Pro', sans-serif ),
-		title: ( 'Minion', serif ),
-	),
-
-
+		families:
+		(
+			body: (
+				"Source Code Pro",
+				sans-serif,
+			),
+			title: (
+				"Minion",
+				serif,
+			),
+		),
 	/**
 	 * Font weights
 	 *
@@ -72,19 +71,18 @@ $font: (
 	 * @uses map-get( $font, weights ) to retrieve font weight value
 	 * @type map
 	 */
-	weights: (
-		extralight: 100,
-		light: 200,
-		book: 300,
-		regular: 400,
-		medium: 500,
-		semibold: 600,
-		bold: 700,
-		extrabold: 800,
-		extrablack: 900
-	),
-
-
+		weights:
+		(
+			extralight: 100,
+			light: 200,
+			book: 300,
+			regular: 400,
+			medium: 500,
+			semibold: 600,
+			bold: 700,
+			extrabold: 800,
+			extrablack: 900,
+		),
 	/**
 	 * Font styles
 	 *
@@ -93,9 +91,7 @@ $font: (
 	 * @uses map-get( $font, styles ) to retrieve font style value
 	 * @type list
 	 */
-	styles: 'italic',
-
-
+		styles: "italic",
 	/**
 	 * Font sizes
 	 *
@@ -104,9 +100,8 @@ $font: (
 	 * @uses map-get( $font, sizes ) to retrieve font size value
 	 * @type list
 	 */
-	sizes: '15',
+		sizes: "15"
 );
-
 
 /**
  * Base
@@ -114,7 +109,6 @@ $font: (
 $base-font-size: 15;
 $base-font-size-px: $base-font-size * 1px;
 $base-line-height: 19;
-
 
 /**
  * Outer gutter width
@@ -125,7 +119,6 @@ $base-line-height: 19;
 $grid-outer-gutter-width-unitless: 100;
 $grid-outer-gutter-width: $grid-outer-gutter-width-unitless * 1px;
 
-
 /**
  * Prototype width
  *
@@ -133,7 +126,6 @@ $grid-outer-gutter-width: $grid-outer-gutter-width-unitless * 1px;
  */
 $prototype-width-unitless: 1440;
 $prototype-width: $prototype-width-unitless * 1px;
-
 
 /**
  * Container width without grid outer gutter width
@@ -143,13 +135,13 @@ $prototype-width: $prototype-width-unitless * 1px;
 $container-width-without-outer-gutter-unitless: 1200;
 $container-width: $container-width-without-outer-gutter-unitless * 1px;
 
-
 /**
  * Container sizes
  *
  * Sizes keep from prototype (grid + outer gutter * 2 )
  */
-$container-width-unitless: $container-width-without-outer-gutter-unitless + ( $grid-outer-gutter-width-unitless * 2 );
+$container-width-unitless: $container-width-without-outer-gutter-unitless +
+	($grid-outer-gutter-width-unitless * 2);
 $container-width: $container-width-unitless * 1px;
 
 $prototype-height-unitless: 832;
@@ -164,9 +156,8 @@ $spacers: (
 	2: $grid-gutter-width-unitless * 0.5,
 	3: $grid-gutter-width-unitless,
 	4: $grid-gutter-width-unitless * 1.5,
-	5: $grid-gutter-width-unitless * 3
+	5: $grid-gutter-width-unitless * 3,
 );
-
 
 /**
  * Directories
@@ -178,14 +169,13 @@ $spacers: (
  * @author 	Jérémy Levron <jeremylevron@19h47.fr>
  */
 $directories: (
-	fonts: '../../fonts/',
-	img: '../../img/',
-	svg: '../../public/img/svg/',
-	jpg: '../../img/jpg/',
-	png: '../../public/img/png/',
-	gif: '../../img/gif/',
+	fonts: "../../fonts/",
+	img: "../../img/",
+	svg: "../../public/img/svg/",
+	jpg: "../../img/jpg/",
+	png: "../../public/img/png/",
+	gif: "../../img/gif/",
 );
-
 
 /**
  * State classes
