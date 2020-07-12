@@ -32,7 +32,7 @@
 		font-weight: #{$weight-value};
 	}
 
-	.font-weight-#{ $weight-name } {
+	.font-weight-#{ "" + $weight-name } {
 		@extend %font-weight-#{ "" + $weight-name };
 	}
 }
