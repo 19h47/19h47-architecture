@@ -23,7 +23,7 @@
 		@else {
 			@each $property-key, $property-value in $properties {
 
-				#{ unquote( $property-value ) }-#{ $key } {
+				#{ unquote( $property-value ) }-#{ "" + $key } {
 					#{ $property-key }: $value;
 				}
 			}
