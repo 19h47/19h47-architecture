@@ -19,42 +19,42 @@
 
 		@each $size, $length in $spacers {
 			@each $property in (top, right, bottom, left) {
-				%padding-#{ $property }#{ $breakpoint ) }-#{ $size } {
+				%padding-#{ $property }#{ $breakpoint }-#{ $size } {
 					padding-#{ $property }: #{$length}px;
 				}
 
-				.padding-#{ $property }#{ $breakpoint ) }-#{ $size } {
-					@extend %padding-#{ $property }#{ $breakpoint ) }-#{ $size };
+				.padding-#{ $property }#{ $breakpoint }-#{ $size } {
+					@extend %padding-#{ $property }#{ $breakpoint }-#{ $size };
 				}
 			}
 
-			%padding-x#{ $breakpoint ) }-#{ $size } {
+			%padding-x#{ $breakpoint }-#{ $size } {
 				padding-right: #{$length}px;
 				padding-left: #{$length}px;
 			}
 
-			.padding-x#{ $breakpoint ) }-#{ $size } {
-				@extend %padding-x#{ $breakpoint ) }-#{ $size };
+			.padding-x#{ $breakpoint }-#{ $size } {
+				@extend %padding-x#{ $breakpoint }-#{ $size };
 			}
 
-			%padding-y#{ $breakpoint ) }-#{ $size } {
+			%padding-y#{ $breakpoint }-#{ $size } {
 				padding-top: #{$length}px;
 				padding-bottom: #{$length}px;
 			}
 
-			.padding-y#{ $breakpoint ) }-#{ $size } {
-				@extend %padding-y#{ $breakpoint ) }-#{ $size };
+			.padding-y#{ $breakpoint }-#{ $size } {
+				@extend %padding-y#{ $breakpoint }-#{ $size };
 			}
 
-			%padding#{ $breakpoint ) }-#{ $size } {
+			%padding#{ $breakpoint }-#{ $size } {
 				padding-top: #{$length}px;
 				padding-right: #{$length}px;
 				padding-bottom: #{$length}px;
 				padding-left: #{$length}px;
 			}
 
-			.padding#{ $breakpoint ) }-#{ $size } {
-				@extend %padding#{ $breakpoint ) }-#{ $size };
+			.padding#{ $breakpoint }-#{ $size } {
+				@extend %padding#{ $breakpoint }-#{ $size };
 			}
 		}
 
@@ -79,7 +79,7 @@
 		}
 
 		// padding-{ breakpoint name }-0
-		%padding#{ $breakpoint ) }-0 {
+		%padding#{ $breakpoint }-0 {
 			padding: 0;
 		}
 
