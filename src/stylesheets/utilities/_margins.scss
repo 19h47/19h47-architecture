@@ -22,49 +22,49 @@
 				margin-#{ $property }: auto;
 			}
 
-			.margin-#{ $property }#{ $breakpoint ) }-auto {
-				@extend %margin-#{ $property }#{ $breakpoint ) }-auto;
+			.margin-#{ $property }#{ $breakpoint }-auto {
+				@extend %margin-#{ $property }#{ $breakpoint }-auto;
 			}
 		}
 
 		@each $size, $length in $spacers {
 			@each $property in (top, right, bottom, left) {
-				%margin-#{ $property }#{ $breakpoint ) }-#{ $size } {
+				%margin-#{ $property }#{ $breakpoint }-#{ $size } {
 					margin-#{ $property }: #{$length}px;
 				}
 
-				.margin-#{ $property }#{ $breakpoint ) }-#{ $size } {
-					@extend %margin-#{ $property }#{ $breakpoint ) }-#{ $size };
+				.margin-#{ $property }#{ $breakpoint }-#{ $size } {
+					@extend %margin-#{ $property }#{ $breakpoint }-#{ $size };
 				}
 			}
 
-			%margin#{ $breakpoint ) }-#{ $size } {
+			%margin#{ $breakpoint }-#{ $size } {
 				margin-top: #{$length}px;
 				margin-right: #{$length}px;
 				margin-bottom: #{$length}px;
 				margin-left: #{$length}px;
 			}
 
-			.margin#{ $breakpoint ) }-#{ $size } {
-				@extend %margin#{ $breakpoint ) }-#{ $size };
+			.margin#{ $breakpoint }-#{ $size } {
+				@extend %margin#{ $breakpoint }-#{ $size };
 			}
 
-			%margin-x#{ $breakpoint ) }-#{ $size } {
+			%margin-x#{ $breakpoint }-#{ $size } {
 				margin-right: #{$length}px;
 				margin-left: #{$length}px;
 			}
 
-			.margin-x#{ $breakpoint ) }-#{ $size } {
-				@extend %margin-x#{ $breakpoint ) }-#{ $size };
+			.margin-x#{ $breakpoint }-#{ $size } {
+				@extend %margin-x#{ $breakpoint }-#{ $size };
 			}
 
-			%margin-y#{ $breakpoint ) }-#{ $size } {
+			%margin-y#{ $breakpoint }-#{ $size } {
 				margin-top: #{$length}px;
 				margin-bottom: #{$length}px;
 			}
 
-			.margin-y#{ $breakpoint ) }-#{ $size } {
-				@extend %margin-y#{ $breakpoint ) }-#{ $size };
+			.margin-y#{ $breakpoint }-#{ $size } {
+				@extend %margin-y#{ $breakpoint }-#{ $size };
 			}
 		}
 
@@ -127,7 +127,7 @@
 		}
 
 		// margin-{ breakpoint name }-0
-		%margin#{ $breakpoint ) }-0 {
+		%margin#{ $breakpoint }-0 {
 			margin: 0;
 		}
 
