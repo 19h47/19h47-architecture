@@ -9,7 +9,7 @@
 }
 
 @include create_classes_color(
-	color ".color",
-	background-color ".background-color",
-	border-color ".border"
+	color '.color',
+	background-color '.background-color',
+	border-color '.border'
 );

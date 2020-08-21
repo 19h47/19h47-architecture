@@ -12,9 +12,9 @@
 		$index: index(map-keys($grid-breakpoints), $breakpoint);
 
 		@if $index == 1 {
-			$breakpoint: "";
+			$breakpoint: '';
 		} @else {
-			$breakpoint: "-#{ $breakpoint }";
+			$breakpoint: '-#{ $breakpoint }';
 		}
 
 		@each $vertical-align in $vertical-aligns {

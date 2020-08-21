@@ -28,12 +28,12 @@
  * @author 	Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
 @each $weight-name, $weight-value in map-get($font, weights) {
-	%font-weight-#{ "" + $weight-name } {
+	%font-weight-#{ '' + $weight-name } {
 		font-weight: #{$weight-value};
 	}
 
-	.font-weight-#{ "" + $weight-name } {
-		@extend %font-weight-#{ "" + $weight-name };
+	.font-weight-#{ '' + $weight-name } {
+		@extend %font-weight-#{ '' + $weight-name };
 	}
 }
 
@@ -50,9 +50,9 @@
 		$index: index(map-keys($grid-breakpoints), $breakpoint);
 
 		@if $index == 1 {
-			$breakpoint: "";
+			$breakpoint: '';
 		} @else {
-			$breakpoint: "-#{ $breakpoint }";
+			$breakpoint: '-#{ $breakpoint }';
 		}
 
 		@each $font-size in map-get($font, sizes) {

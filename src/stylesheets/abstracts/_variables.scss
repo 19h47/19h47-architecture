@@ -55,11 +55,11 @@ $font: (
 		families:
 		(
 			body: (
-				"Source Code Pro",
+				'Source Code Pro',
 				sans-serif,
 			),
 			title: (
-				"Minion",
+				'Minion',
 				serif,
 			),
 		),
@@ -91,7 +91,7 @@ $font: (
 	 * @uses map-get( $font, styles ) to retrieve font style value
 	 * @type list
 	 */
-		styles: "italic",
+		styles: 'italic',
 	/**
 	 * Font sizes
 	 *
@@ -100,7 +100,7 @@ $font: (
 	 * @uses map-get( $font, sizes ) to retrieve font size value
 	 * @type list
 	 */
-		sizes: "15"
+		sizes: '15'
 );
 
 /**
@@ -169,12 +169,12 @@ $spacers: (
  * @author 	Jérémy Levron <jeremylevron@19h47.fr>
  */
 $directories: (
-	fonts: "../../fonts/",
-	img: "../../img/",
-	svg: "../../public/img/svg/",
-	jpg: "../../img/jpg/",
-	png: "../../public/img/png/",
-	gif: "../../img/gif/",
+	fonts: '../../fonts/',
+	img: '../../img/',
+	svg: '../../public/img/svg/',
+	jpg: '../../img/jpg/',
+	png: '../../public/img/png/',
+	gif: '../../img/gif/',
 );
 
 /**

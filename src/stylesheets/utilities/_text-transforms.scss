@@ -8,10 +8,9 @@
  */
 
 @each $text-transform in $text-transforms {
-
 	// Placeholder
 	%text-transform-#{ $text-transform } {
-		text-transform: #{ $text-transform };
+		text-transform: #{$text-transform};
 	}
 
 	// .text-transform-{ $text-transform }

@@ -3,7 +3,7 @@ module.exports = {
 	plugins: {
 		// 'postcss-import': {},
 		// 'postcss-cssnext': {},
-		'autoprefixer': {},
-		'cssnano': process.env.NODE_ENV === 'production' ? true : false
-	}
-}
+		autoprefixer: {},
+		cssnano: process.env.NODE_ENV === 'production' ? true : false,
+	},
+};

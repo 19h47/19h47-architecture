@@ -3,51 +3,51 @@
  */
 
 // Dependencies
-@import "vendors/bootstrap-imports";
+@import 'vendors/bootstrap-imports';
 
-@import "abstracts/easings";
+@import 'abstracts/easings';
 
-@import "abstracts/variables";
+@import 'abstracts/variables';
 // @import 'base/fonts';
 
 // Vendors
-@import "../../node_modules/ress/ress";
+@import '../../node_modules/ress/ress';
 
 // Abstracts
-@import "abstracts/functions";
-@import "abstracts/mixins/includes";
-@import "abstracts/placeholders";
+@import 'abstracts/functions';
+@import 'abstracts/mixins/includes';
+@import 'abstracts/placeholders';
 
 // Base stuff
-@import "base/base";
-@import "base/typographies";
+@import 'base/base';
+@import 'base/typographies';
 
 // Layout
-@import "layout/site";
+@import 'layout/site';
 
 // Components
-@import "components/form";
+@import 'components/form';
 
 // Pages
-@import "pages/page";
+@import 'pages/page';
 
 // Utilities
-@import "utilities/variables";
+@import 'utilities/variables';
 // Always on top
-@import "utilities/colors";
-@import "utilities/cursors";
-@import "utilities/displays";
-@import "utilities/floats";
-@import "utilities/fonts";
-@import "utilities/lists";
-@import "utilities/margins";
-@import "utilities/overflows";
-@import "utilities/paddings";
-@import "utilities/positions";
-@import "utilities/sizes";
-@import "utilities/text-aligns";
-@import "utilities/text-decorations";
-@import "utilities/text-transforms";
-@import "utilities/vertical-aligns";
-@import "utilities/visibilities";
-@import "utilities/white-spaces";
+@import 'utilities/colors';
+@import 'utilities/cursors';
+@import 'utilities/displays';
+@import 'utilities/floats';
+@import 'utilities/fonts';
+@import 'utilities/lists';
+@import 'utilities/margins';
+@import 'utilities/overflows';
+@import 'utilities/paddings';
+@import 'utilities/positions';
+@import 'utilities/sizes';
+@import 'utilities/text-aligns';
+@import 'utilities/text-decorations';
+@import 'utilities/text-transforms';
+@import 'utilities/vertical-aligns';
+@import 'utilities/visibilities';
+@import 'utilities/white-spaces';

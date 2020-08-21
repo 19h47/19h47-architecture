@@ -19,8 +19,6 @@
 
 		@include margin(top 0 right auto bottom 0 left auto);
 
-		@include padding(
-			right $grid-outer-gutter-width left $grid-outer-gutter-width
-		);
+		@include padding(right $grid-outer-gutter-width left $grid-outer-gutter-width);
 	}
 }

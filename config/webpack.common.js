@@ -11,26 +11,26 @@ const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const WebpackNotifierPlugin = require('webpack-notifier');
 
-function resolve (dir) {
-	return path.join(__dirname, '..', dir)
+function resolve(dir) {
+	return path.join(__dirname, '..', dir);
 }
 
 module.exports = {
 	entry: {
-		dist: resolve('src/index.js')
+		dist: resolve('src/index.js'),
 	},
 	devServer: {
 		contentBase: resolve('/'),
 		compress: true,
 		port: 9000,
 		inline: true,
-		disableHostCheck: true
+		disableHostCheck: true,
 	},
 	resolve: {
 		alias: {
 			'@': resolve('src'),
 			Stylesheets: resolve('src/stylesheets'),
-		}
+		},
 	},
 	plugins: [
 		new CleanWebpackPlugin({
@@ -40,7 +40,7 @@ module.exports = {
 		new WebpackNotifierPlugin({
 			title: 'Webpack',
 			excludeWarnings: true,
-			alwaysNotify: true
+			alwaysNotify: true,
 		}),
 	],
 };

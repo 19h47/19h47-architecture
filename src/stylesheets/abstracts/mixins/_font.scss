@@ -5,8 +5,8 @@
  * @param   int     $line-height Unitless line height   (mostly from .psd)
  * @author 	Jérémy Levron <jeremylevron@19h47> (http://19h47.fr)
  */
-@mixin font($font-size, $line-height, $letter-spacing: "") {
-	@if $letter-spacing != "" {
+@mixin font($font-size, $line-height, $letter-spacing: '') {
+	@if $letter-spacing != '' {
 		@include letter-spacing($letter-spacing);
 	}
 

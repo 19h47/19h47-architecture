@@ -4,16 +4,16 @@
  * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
 
-const { merge } = require("webpack-merge");
-const common = require("./webpack.common.js");
+const { merge } = require('webpack-merge');
+const common = require('./webpack.common.js');
 
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = merge(common, {
 	output: {
-		filename: "../[name]/js/main.js",
+		filename: '../[name]/js/main.js',
 	},
-	mode: "production",
+	mode: 'production',
 	devtool: false,
 	watch: false,
 	module: {
@@ -25,23 +25,23 @@ module.exports = merge(common, {
 					{
 						loader: MiniCssExtractPlugin.loader,
 						options: {
-							publicPath: "../",
+							publicPath: '../',
 						},
 					},
 					{
-						loader: "css-loader",
+						loader: 'css-loader',
 						options: {
 							sourceMap: false,
 						},
 					},
 					{
-						loader: "postcss-loader",
+						loader: 'postcss-loader',
 						options: {
 							sourceMap: false,
 						},
 					},
 					{
-						loader: "sass-loader",
+						loader: 'sass-loader',
 						options: {
 							sourceMap: false,
 						},
@@ -52,7 +52,7 @@ module.exports = merge(common, {
 	},
 	plugins: [
 		new MiniCssExtractPlugin({
-			filename: "../[name]/css/main.css",
+			filename: '../[name]/css/main.css',
 		}),
 	],
 });

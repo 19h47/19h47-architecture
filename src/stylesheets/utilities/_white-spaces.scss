@@ -9,9 +9,9 @@
 		$index: index(map-keys($grid-breakpoints), $breakpoint);
 
 		@if $index == 1 {
-			$breakpoint: "";
+			$breakpoint: '';
 		} @else {
-			$breakpoint: "-#{ $breakpoint }";
+			$breakpoint: '-#{ $breakpoint }';
 		}
 
 		@each $value in $white-space-values {

@@ -10,9 +10,9 @@
 		$index: index(map-keys($grid-breakpoints), $breakpoint);
 
 		@if $index == 1 {
-			$breakpoint: "";
+			$breakpoint: '';
 		} @else {
-			$breakpoint: "-#{ $breakpoint }";
+			$breakpoint: '-#{ $breakpoint }';
 		}
 
 		%hidden#{ $breakpoint } {

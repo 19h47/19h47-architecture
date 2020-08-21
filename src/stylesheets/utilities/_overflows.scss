@@ -38,9 +38,9 @@
 		$index: index(map-keys($grid-breakpoints), $breakpoint);
 
 		@if $index == 1 {
-			$breakpoint: "";
+			$breakpoint: '';
 		} @else {
-			$breakpoint: "-#{ $breakpoint }";
+			$breakpoint: '-#{ $breakpoint }';
 		}
 
 		@each $overflow-value in $overflow-values {
