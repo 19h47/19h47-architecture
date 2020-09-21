@@ -58,27 +58,27 @@
 			}
 		}
 
-		// padding-{ breakpoint name }-x-0
-		%padding#{ $breakpoint }-x-0 {
+		// padding-x-{ breakpoint }-0
+		%padding-x#{ $breakpoint }-0 {
 			padding-right: 0;
 			padding-left: 0;
 		}
 
-		.padding#{ $breakpoint }-x-0 {
-			@extend %padding#{ $breakpoint }-x-0;
+		.padding-x#{ $breakpoint }-0 {
+			@extend %padding-x#{ $breakpoint }-0;
 		}
 
-		// padding-{ breakpoint name }-y-0
-		%padding#{ $breakpoint }-y-0 {
+		// padding-y-{ breakpoint }-0
+		%padding-y#{ $breakpoint }-0 {
 			padding-top: 0;
 			padding-bottom: 0;
 		}
 
-		.padding#{ $breakpoint }-y-0 {
-			@extend %padding#{ $breakpoint }-y-0;
+		.padding-y#{ $breakpoint }-0 {
+			@extend %padding-y#{ $breakpoint }-0;
 		}
 
-		// padding-{ breakpoint name }-0
+		// padding-{ breakpoint }-0
 		%padding#{ $breakpoint }-0 {
 			padding: 0;
 		}
