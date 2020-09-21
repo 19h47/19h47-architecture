@@ -1,6 +1,6 @@
 {
 	"name": "@19h47/architecture",
-	"version": "4.0.13",
+	"version": "4.1.0",
 	"description": "Architecture",
 	"main": "index.js",
 	"scripts": {
@@ -22,15 +22,17 @@
 	"author": "Jérémy Levron <jeremylevron@19h47.fr> (19h47.fr)",
 	"license": "ISC",
 	"devDependencies": {
-		"autoprefixer": "10.0.0",
+		"@19h47/prettier-config": "^1.0.0",
+		"autoprefixer": "^9.8.6",
 		"clean-webpack-plugin": "3.0.0",
 		"css-loader": "4.3.0",
 		"cssnano": "^4.1.10",
 		"mini-css-extract-plugin": "0.11.2",
 		"node-sass": "^4.14.1",
 		"postcss-loader": "^4.0.2",
+		"postcss-object-fit-images": "^1.1.2",
 		"sass-loader": "10.0.2",
-		"webpack": "4.44.1",
+		"webpack": "4.44.2",
 		"webpack-cli": "^3.3.12",
 		"webpack-dev-server": "^3.11.0",
 		"webpack-manifest-plugin": "^2.2.0",
@@ -38,7 +40,6 @@
 		"webpack-notifier": "^1.8.0"
 	},
 	"dependencies": {
-		"@19h47/prettier-config": "^1.0.0",
 		"bootstrap": "^4.5.2",
 		"ress": "3.0.0"
 	}

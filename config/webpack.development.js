@@ -43,7 +43,10 @@ module.exports = merge(common, {
 					{
 						loader: 'sass-loader',
 						options: {
-							sourceMap: true,
+							sassOptions: Object.assign({
+								sourceMap: true,
+								precision: 10,
+							}),
 						},
 					},
 				],
