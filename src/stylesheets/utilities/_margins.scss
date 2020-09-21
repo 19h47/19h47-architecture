@@ -86,47 +86,47 @@
 			@extend %margin#{ $breakpoint }-0-auto;
 		}
 
-		// margin-{ breakpoint name }-x-auto
-		%margin#{ $breakpoint }-x-auto {
+		// margin-x-{ breakpoint }-auto
+		%margin-x#{ $breakpoint }-auto {
 			margin-right: auto;
 			margin-left: auto;
 		}
 
-		.margin#{ $breakpoint }-x-auto {
-			@extend %margin#{ $breakpoint }-x-auto;
+		.margin-x#{ $breakpoint }-auto {
+			@extend %margin-x#{ $breakpoint }-auto;
 		}
 
-		// margin-{ breakpoint name }-y-auto
-		%margin#{ $breakpoint }-y-auto {
+		// margin-y-{ breakpoint }-auto
+		%margin-y#{ $breakpoint }-auto {
 			margin-top: auto;
 			margin-bottom: auto;
 		}
 
-		.margin#{ $breakpoint }-y-auto {
-			@extend %margin#{ $breakpoint }-y-auto;
+		.margin-y#{ $breakpoint }-auto {
+			@extend %margin-y#{ $breakpoint }-auto;
 		}
 
-		// margin-{ breakpoint name }-x-0
-		%margin#{ $breakpoint }-x-0 {
+		// margin-x-{ breakpoint }-0
+		%margin-x#{ $breakpoint }-0 {
 			margin-right: 0;
 			margin-left: 0;
 		}
 
-		.margin#{ $breakpoint }-x-0 {
-			@extend %margin#{ $breakpoint }-x-0;
+		.margin-x#{ $breakpoint }-0 {
+			@extend %margin-x#{ $breakpoint }-0;
 		}
 
-		// margin-{ breakpoint name }-y-0
-		%margin#{ $breakpoint }-y-0 {
+		// margin-y-{ breakpoint }-0
+		%margin-y#{ $breakpoint }-0 {
 			margin-top: 0;
 			margin-bottom: 0;
 		}
 
-		.margin#{ $breakpoint }-y-0 {
-			@extend %margin#{ $breakpoint }-y-0;
+		.margin-y#{ $breakpoint }-0 {
+			@extend %margin-y#{ $breakpoint }-0;
 		}
 
-		// margin-{ breakpoint name }-0
+		// margin-{ breakpoint }-0
 		%margin#{ $breakpoint }-0 {
 			margin: 0;
 		}
