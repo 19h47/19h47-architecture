@@ -1,0 +1,8 @@
+/**
+ * Get Font Weight
+ *
+ * @author Jérémy Levron <jeremylevron@19h47.fr> (https://19h47.fr)
+ */
+@function get_font_weight($weight) {
+	@return map_deep_get(font, $weight);
+}

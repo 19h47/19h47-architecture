@@ -95,19 +95,5 @@
 	@return #{($size * 100) / $prototype-width-unitless}vw;
 }
 
-/**
- * Map deep get
- *
- * @author Hugo Giraudel
- * @access public
- * @param {Map} $map - Map
- * @param {Arglist} $keys - Key chain
- * @return {*} - Desired value
- */
-@function map_deep_get($map, $keys...) {
-    @each $key in $keys {
-        $map: map-get($map, $key);
-    }
-	
-    @return $map;
-}
+@import 'functions/map-deep-get';
+@import 'functions/get-font-weight';
