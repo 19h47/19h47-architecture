@@ -1,25 +1,19 @@
 {
 	"name": "@19h47/architecture",
 	"version": "4.1.0",
-	"description": "Architecture",
-	"main": "index.js",
+	"description": "19h47 Sass boilerplate",
+	"main": "src/index.js",
 	"scripts": {
 		"deploy": "./bin/deploy",
 		"dev": "./bin/development",
 		"prod": "./bin/production",
 		"start": "./bin/server"
 	},
-	"keywords": [
-		"node",
-		"sass",
-		"scss",
-		"npm"
-	],
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/19h47/architecture.git"
+		"url": "https://github.com/19h47/19h47-architecture.git"
 	},
-	"author": "Jérémy Levron <jeremylevron@19h47.fr> (19h47.fr)",
+	"author": "Jérémy Levron <jeremylevron@19h47.fr> (https://19h47.fr)",
 	"license": "ISC",
 	"devDependencies": {
 		"@19h47/prettier-config": "^1.0.0",
