@@ -1,0 +1,19 @@
+/**
+ * Get Font Weight
+ *
+ * @param {String} $weight - Font weight name
+ * @author Jérémy Levron <jeremylevron@19h47.fr> (https://19h47.fr)
+ */
+@function get_font_weight($weight) {
+	@return map_deep_get($font, weights, $weight);
+}
+
+/**
+ * Get Font Family
+ *
+ * @param {String} $family - Font family name
+ * @author Jérémy Levron <jeremylevron@19h47.fr> (https://19h47.fr)
+ */
+@function get_font_family($family) {
+	@return map_deep_get($font, families, $family);
+}
