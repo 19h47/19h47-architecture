@@ -1,0 +1,33 @@
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+/**
+ * Fluid properties
+ * 
+ * @see https://css-tricks.com/snippets/css/fluid-typography/
+ */
+@mixin fluid-properties($properties, $min-vw, $max-vw, $min-value, $max-value) {
+	$u1: unit($min-vw);
+	$u2: unit($max-vw);
+	$u3: unit($min-value);
+	$u4: unit($max-value);
+
+  	@if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    	& {
+ 			@each $property in $properties {
+				#{$property}: $min-value;
+			}
+		
+			@media screen and (min-width: $min-vw) {
+				@each $property in $properties {
+					#{$property}: calc(#{$min-value} + #{strip-unit($max-value - $min-value)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+				}
+			}
+			
+			// @media screen and (min-width: $max-vw) {
+			//	font-size: $max-value;
+ 			// }
+		}
+	}
+}
