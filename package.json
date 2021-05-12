@@ -35,7 +35,7 @@
 	},
 	"dependencies": {
 		"bootstrap": "^4.5.3",
-		"postcss": "^8.2.1",
+		"postcss": "^8.2.10",
 		"ress": "3.0.0"
 	}
 }
