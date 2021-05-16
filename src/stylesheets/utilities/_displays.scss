@@ -24,7 +24,9 @@
 			}
 
 			// .display-{ $breakpoint }-{ $display }
-			.display#{ $breakpoint }-#{ $display } {
+			// .d-{ $breakpoint }-{ $display }
+			.display#{ $breakpoint }-#{ $display },
+			.d#{ $breakpoint }-#{ $display } {
 				@extend %display#{ $breakpoint }-#{ $display };
 			}
 		}
