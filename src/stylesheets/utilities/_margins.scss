@@ -29,6 +29,8 @@
 		@each $size, $length in $spacers {
 			@if ($base-unit == em) {
 				$length: em($length, $base-font-size);
+			} @else if ($base-unit == rem) {
+				$length: rem($length);
 			} @else {
 				$length: #{$length}px;
 			}
