@@ -109,7 +109,8 @@ $font: (
 $base-font-size: 15;
 $base-font-size-px: $base-font-size * 1px;
 $base-line-height: 19;
-$base-unit: 'em';
+$scale-factor: 8;
+$base-unit: em;
 
 /**
  * Outer gutter width
@@ -151,14 +152,11 @@ $prototype-height: $prototype-height-unitless * 1px;
 /**
  * Spacers
  */
-$spacers: (
-	0: 0,
-	1: $grid-gutter-width-unitless * 0.25,
-	2: $grid-gutter-width-unitless * 0.5,
-	3: $grid-gutter-width-unitless,
-	4: $grid-gutter-width-unitless * 1.5,
-	5: $grid-gutter-width-unitless * 3,
-);
+$spacers: ();
+
+@for $i from 0 to 16 {
+	$spacers: map-merge($spacers, (#{($i * ($scale-factor / 2))}: $i * ($scale-factor / 2)));
+}
 
 /**
  * Directories
