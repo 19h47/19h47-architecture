@@ -18,9 +18,15 @@
 		}
 
 		@each $size, $length in $spacers {
+			@if ($base-unit == 'em') {
+				$length: em($length, $base-font-size);
+			} @else {
+				$length: #{$length}px;
+			}
+
 			@each $property in (top, right, bottom, left) {
 				%padding-#{ $property }#{ $breakpoint }-#{ $size } {
-					padding-#{ $property }: #{$length}px;
+					padding-#{ $property }: $length;
 				}
 
 				.padding-#{ $property }#{ $breakpoint }-#{ $size } {
@@ -29,8 +35,8 @@
 			}
 
 			%padding-x#{ $breakpoint }-#{ $size } {
-				padding-right: #{$length}px;
-				padding-left: #{$length}px;
+				padding-right: $length;
+				padding-left: $length;
 			}
 
 			.padding-x#{ $breakpoint }-#{ $size } {
@@ -38,8 +44,8 @@
 			}
 
 			%padding-y#{ $breakpoint }-#{ $size } {
-				padding-top: #{$length}px;
-				padding-bottom: #{$length}px;
+				padding-top: $length;
+				padding-bottom: $length;
 			}
 
 			.padding-y#{ $breakpoint }-#{ $size } {
@@ -47,10 +53,10 @@
 			}
 
 			%padding#{ $breakpoint }-#{ $size } {
-				padding-top: #{$length}px;
-				padding-right: #{$length}px;
-				padding-bottom: #{$length}px;
-				padding-left: #{$length}px;
+				padding-top: $length;
+				padding-right: $length;
+				padding-bottom: $length;
+				padding-left: $length;
 			}
 
 			.padding#{ $breakpoint }-#{ $size } {

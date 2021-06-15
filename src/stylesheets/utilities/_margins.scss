@@ -1,11 +1,10 @@
 /**
  * Margins classes
  *
- * $breakpoint 	str Breakpoint name
- *
+ * $breakpoint string Breakpoint name
  *
  * @see http://sass-lang.com/documentation/Sass/Script/Functions.html#map_keys-instance_method
- * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
+ * @author Jérémy Levron <jeremylevron@19h47.fr> (https://19h47.fr)
  */
 @each $breakpoint in map-keys($grid-breakpoints) {
 	@include media-breakpoint-up($breakpoint) {
@@ -28,9 +27,15 @@
 		}
 
 		@each $size, $length in $spacers {
+			@if ($base-unit == em) {
+				$length: em($length, $base-font-size);
+			} @else {
+				$length: #{$length}px;
+			}
+
 			@each $property in (top, right, bottom, left) {
 				%margin-#{ $property }#{ $breakpoint }-#{ $size } {
-					margin-#{ $property }: #{$length}px;
+					margin-#{ $property }: $length;
 				}
 
 				.margin-#{ $property }#{ $breakpoint }-#{ $size } {
@@ -39,10 +44,10 @@
 			}
 
 			%margin#{ $breakpoint }-#{ $size } {
-				margin-top: #{$length}px;
-				margin-right: #{$length}px;
-				margin-bottom: #{$length}px;
-				margin-left: #{$length}px;
+				margin-top: $length;
+				margin-right: $length;
+				margin-bottom: $length;
+				margin-left: $length;
 			}
 
 			.margin#{ $breakpoint }-#{ $size } {
@@ -50,8 +55,8 @@
 			}
 
 			%margin-x#{ $breakpoint }-#{ $size } {
-				margin-right: #{$length}px;
-				margin-left: #{$length}px;
+				margin-right: $length;
+				margin-left: $length;
 			}
 
 			.margin-x#{ $breakpoint }-#{ $size } {
@@ -59,8 +64,8 @@
 			}
 
 			%margin-y#{ $breakpoint }-#{ $size } {
-				margin-top: #{$length}px;
-				margin-bottom: #{$length}px;
+				margin-top: $length;
+				margin-bottom: $length;
 			}
 
 			.margin-y#{ $breakpoint }-#{ $size } {

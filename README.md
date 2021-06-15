@@ -9,14 +9,15 @@ An opinionated SCSS architecture based on [Hugo Giraudel](https://github.com/Hug
 
 ## Dependencies
 
-- [Bootstrap 4.5.3](https://github.com/twbs/bootstrap), we only load the grid for convenience (see the [bootstrap-custom](https://github.com/19h47/architecture/blob/master/assets/stylesheets/vendors/_bootstrap-custom.scss) and the [bootstrap-custom-variables](https://github.com/19h47/architecture/blob/master/assets/stylesheets/vendors/_bootstrap-custom-variables.scss) files)
-- [Ress](https://github.com/filipelinhares/ress), a modern CSS reset
+-   [Bootstrap 4.5.3](https://github.com/twbs/bootstrap), we only load the grid for convenience (see the [bootstrap-custom](https://github.com/19h47/architecture/blob/master/assets/stylesheets/vendors/_bootstrap-custom.scss) and the [bootstrap-custom-variables](https://github.com/19h47/architecture/blob/master/assets/stylesheets/vendors/_bootstrap-custom-variables.scss) files)
+-   [Ress](https://github.com/filipelinhares/ress), a modern CSS reset
 
 ## [Utilities variables](https://github.com/19h47/architecture/blob/master/src/stylesheets/utilities/_variables.scss)
 
 Use is as it or overide it!
 
 ```scss
+$base-unit: px;
 
 $cursors: auto pointer grab grabbing none;
 $text-transforms: uppercase;
@@ -31,7 +32,6 @@ $vertical-aligns: middle bottom;
 $visibilities-displays: inline-block block inline;
 $white-space-values: nowrap;
 $letters-spacings: 50;
-
 ```
 
 ## Tasks
@@ -58,4 +58,4 @@ npm run start
 
 ## References
 
-- [Sass Guidelines](https://sass-guidelin.es/#architecture)
+-   [Sass Guidelines](https://sass-guidelin.es/#architecture)
