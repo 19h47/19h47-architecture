@@ -4,33 +4,6 @@
  * Construct each overflow found in $overflow-values with
  * a placeholder and a utility class
  */
-@each $overflow-value in $overflow-values {
-	// Placeholder
-	%overflow-#{ $overflow-value } {
-		overflow: #{$overflow-value};
-	}
-
-	%overflow-x-#{ $overflow-value } {
-		overflow-x: #{$overflow-value};
-	}
-
-	%overflow-y-#{ $overflow-value } {
-		overflow-y: #{$overflow-value};
-	}
-
-	// Utility class
-	.overflow-#{ $overflow-value } {
-		@extend %overflow-#{ $overflow-value };
-	}
-
-	.overflow-x-#{ $overflow-value } {
-		@extend %overflow-x-#{ $overflow-value };
-	}
-
-	.overflow-y-#{ $overflow-value } {
-		@extend %overflow-y-#{ $overflow-value };
-	}
-}
 
 // Loop through each breakpoint
 @each $breakpoint in map-keys($grid-breakpoints) {
