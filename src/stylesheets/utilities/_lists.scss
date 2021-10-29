@@ -13,6 +13,6 @@
 	}
 
 	.list-style-type-#{ $style-type } {
-		list-style-type: none;
+		@extend %list-style-type-#{ $style-type };
 	}
 }
