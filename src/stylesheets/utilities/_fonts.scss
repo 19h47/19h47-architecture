@@ -27,13 +27,15 @@
  * @param 	$weight-value   	value of weight
  * @author 	Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
-@each $weight-name, $weight-value in map-get($font, weights) {
-	%font-weight-#{ '' + $weight-name } {
-		font-weight: #{$weight-value};
-	}
+@if map-has-key($font, weights) {
+	@each $weight-name, $weight-value in map-get($font, weights) {
+		%font-weight-#{ '' + $weight-name } {
+			font-weight: #{$weight-value};
+		}
 
-	.font-weight-#{ '' + $weight-name } {
-		@extend %font-weight-#{ '' + $weight-name };
+		.font-weight-#{ '' + $weight-name } {
+			@extend %font-weight-#{ '' + $weight-name };
+		}
 	}
 }
 
