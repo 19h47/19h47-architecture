@@ -3,6 +3,8 @@
  *
  * @see https://css-tricks.com/snippets/sass/px-to-em-functions/
  */
+@use "sass:math";
+
 @function em($pixels, $context: $base-font-size) {
 	@if (unitless($pixels)) {
 		$pixels: $pixels * 1px;
@@ -12,5 +14,5 @@
 		$context: $context * 1px;
 	}
 
-	@return $pixels / $context * 1em;
+	@return math.div($pixels, $context) * 1em;
 }

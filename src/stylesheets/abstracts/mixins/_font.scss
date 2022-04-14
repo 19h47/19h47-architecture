@@ -5,6 +5,8 @@
  * @param   int     $line-height Unitless line height   (mostly from .psd)
  * @author 	Jérémy Levron <jeremylevron@19h47> (http://19h47.fr)
  */
+@use "sass:math";
+
 @mixin font($font-size, $line-height, $letter-spacing: '') {
 	@if $letter-spacing != '' {
 		@include letter-spacing($letter-spacing);
@@ -15,5 +17,5 @@
 	}
 
 	/* stylelint-disable-next-line */
-	line-height: $line-height / $font-size;
+	line-height: math.div($line-height, $font-size);
 }

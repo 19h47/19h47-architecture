@@ -9,5 +9,5 @@
 	// if value is unitless, divided it by 1000 and set unit as em to get
 	// Photoshop equivalent
 	// Ternary
-	letter-spacing: if(unitless($value), ($value / 1000 * 1em), $value);
+	letter-spacing: if(unitless($value), ($value * 0.001 * 1em), $value);
 }

@@ -3,9 +3,11 @@
  *
  * @see https://css-tricks.com/snippets/sass/px-to-em-functions/
  */
+@use "sass:math";
+
 @function rem($pixels) {
 	@if variable-exists('base-font-size') {
-		@return $pixels / $base-font-size * 1rem;
+		@return math.div($pixels, $base-font-size) * 1rem;
 	}
 
 	@error '`$base-font-size` variable needs to be defined';

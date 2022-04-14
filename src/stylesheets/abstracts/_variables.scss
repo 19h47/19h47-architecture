@@ -155,7 +155,7 @@ $prototype-height: $prototype-height-unitless * 1px;
 $spacers: ();
 
 @for $i from 0 to 16 {
-	$spacers: map-merge($spacers, (#{($i * ($scale-factor / 2))}: $i * ($scale-factor / 2)));
+	$spacers: map-merge($spacers, (#{($i * ($scale-factor * 0.5))}: $i * ($scale-factor * 0.5)));
 }
 
 /**

@@ -6,6 +6,8 @@
  * @access  public
  * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
+@use "sass:math";
+
 @function get_the_color($keys...) {
 	$map: $color-variations;
 	$color-base: map-get($map, nth($keys, 1));
@@ -92,7 +94,7 @@
  *
  */
 @function get_viewport_width($size) {
-	@return #{($size * 100) / $prototype-width-unitless}vw;
+	@return #{math.div($size * 100, $prototype-width-unitless)}vw;
 }
 
 @import 'functions/map-deep-get';

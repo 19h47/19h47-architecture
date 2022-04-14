@@ -2,6 +2,8 @@
  * Basic typography style for copy text
  */
 
+@use "sass:math";
+
 html {
 	font: {
 		size: 62.5%;
@@ -18,7 +20,7 @@ body {
 	}
 
 	/* stylelint-disable-next-line */
-	line-height: ($base-line-height / $base-font-size) * 1em;
+	line-height: math.div($base-line-height, $base-font-size) * 1em;
 	text-rendering: optimizeLegibility;
 }
 
@@ -96,12 +98,12 @@ $titles: (
 		@if $line-height == normal {
 			line-height: normal;
 		} @else {
-			line-height: $line-height / $font-size;
+			line-height: math.div($line-height, $font-size);
 		}
 
 		font: {
 			family: $family;
-			size: ($font-size / 10) * 1rem;
+			size: ($font-size * 0.1) * 1rem;
 			weight: $weight;
 		}
 	}

@@ -1,12 +1,14 @@
 /**
  * Base
  */
+@use "sass:math";
+
 html {
 	overflow-x: hidden;
 }
 
 body {
-	line-height: (($base-line-height / $base-font-size) * 1em);
+	line-height: (math.div($base-line-height, $base-font-size) * 1em);
 }
 
 a,
@@ -22,11 +24,11 @@ a {
 
 p {
 	@include margin(
-		top (($base-line-height / $base-font-size) * 1em) bottom
-			((($base-line-height / $base-font-size) / 2) * 1em)
+		top (math.div($base-line-height, $base-font-size) * 1em) bottom
+			((math.div($base-line-height, $base-font-size) * 0.5) * 1em)
 	);
 
 	/* stylelint-disable-next-line */
-	line-height: (($base-line-height / $base-font-size) * 1em);
+	line-height: (math.div($base-line-height, $base-font-size) * 1em);
 	font-size: 1em;
 }
