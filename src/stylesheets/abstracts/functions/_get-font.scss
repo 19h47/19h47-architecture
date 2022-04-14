@@ -14,6 +14,17 @@
  * @param {String} $family - Font family name
  * @author Jérémy Levron <jeremylevron@19h47.fr> (https://19h47.fr)
  */
-@function get_font_family($family) {
-	@return map_deep_get($font, families, $family);
+@function get_font_family( $family ) {
+	@return unquote( #{ map_deep_get( $font, families,  $family ) } );
+}
+
+
+/**
+ * Get Font style
+ *
+ * @param {String} $style - Font style name
+ * @author Jérémy Levron <jeremylevron@19h47.fr> (https://19h47.fr)
+ */
+@function get_font_style( $style ) {
+	@return map_deep_get( $font, styles,  $style );
 }

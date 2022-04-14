@@ -1,0 +1,17 @@
+/**
+ * Change the default color for selection.
+ * 
+ * @param   $color              valid color
+ * @param   $background-color    
+ */
+@mixin reset-selection($color, $background-color) {
+  ::selection {
+    background-color: $background-color;
+    color: $color;
+  }
+
+  ::-moz-selection {
+    background-color: $background-color;
+    color: $color;
+  }
+}
