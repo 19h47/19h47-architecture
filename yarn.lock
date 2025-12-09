@@ -669,19 +669,12 @@ brace-expansion@^1.1.7:
     balanced-match "^1.0.0"
     concat-map "0.0.1"
 
-braces@^3.0.3:
+braces@^3.0.2, braces@~3.0.2:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/braces/-/braces-3.0.3.tgz#490332f40919452272d55a8480adc0c441358789"
   integrity sha512-yQbXgO/OSZVD2IsiLlro+7Hf6Q18EJrKSEsdoMzKePKXct3gvD8oLcOQdIzGupr5Fj+EDe8gO/lxc1BzfMpxvA==
   dependencies:
     fill-range "^7.1.1"
-
-braces@~3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/braces/-/braces-3.0.2.tgz#3454e1a462ee8d599e236df336cd9ea4f8afe107"
-  integrity sha512-b8um+L1RzM3WDSzvhm6gIz1yfTbBt6YTlcEKAvsmqCZZFw46z626lVj9j1yEPW33H5H+lBQpZMP1k8l+78Ha0A==
-  dependencies:
-    fill-range "^7.0.1"
 
 browserslist@^4.0.0, browserslist@^4.14.5, browserslist@^4.16.6, browserslist@^4.20.2:
   version "4.20.2"
@@ -1382,10 +1375,10 @@ faye-websocket@^0.11.3:
   dependencies:
     websocket-driver ">=0.5.1"
 
-fill-range@^7.0.1:
-  version "7.0.1"
-  resolved "https://registry.yarnpkg.com/fill-range/-/fill-range-7.0.1.tgz#1919a6a7c75fe38b2c7c77e5198535da9acdda40"
-  integrity sha512-qOo9F+dMUmC2Lcb4BbVvnKJxTPjCm+RRpe4gDuGrzkL7mEVl/djYSu2OdQ2Pa302N4oqkSg9ir6jaLWJ2USVpQ==
+fill-range@^7.1.1:
+  version "7.1.1"
+  resolved "https://registry.yarnpkg.com/fill-range/-/fill-range-7.1.1.tgz#44265d3cac07e3ea7dc247516380643754a05292"
+  integrity sha512-YsGpe3WHLK8ZYi4tWDg2Jy3ebRz2rXowDxnld4bkQB00cc/1Zw9AWnC0i9ztDJitivtQvaI9KaLyKrc+hBW0yg==
   dependencies:
     to-regex-range "^5.0.1"
 
@@ -1418,9 +1411,9 @@ find-up@^4.0.0:
     path-exists "^4.0.0"
 
 follow-redirects@^1.0.0:
-  version "1.14.8"
-  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.14.8.tgz#016996fb9a11a100566398b1c6839337d7bfa8fc"
-  integrity sha512-1x0S9UVJHsQprFcEC/qnNzBLcIxsjAV905f/UkQxbclCsoTWlacCNOpQa/anodLl2uaEKFhfWOvM2Qg77+15zA==
+  version "1.15.11"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.11.tgz#777d73d72a92f8ec4d2e410eb47352a56b8e8340"
+  integrity sha512-deG2P0JfjrTxl50XGCDyfI97ZGVCxIpfKYmfyrQ54n5FO/0gfIES8C/Psl6kWVDolizcaaxZJnTS0QSMxvnsBQ==
 
 forwarded@0.2.0:
   version "0.2.0"
@@ -2085,10 +2078,10 @@ multicast-dns@^7.2.5:
     dns-packet "^5.2.2"
     thunky "^1.0.2"
 
-nanoid@^3.3.1:
-  version "3.3.2"
-  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.3.2.tgz#c89622fafb4381cd221421c69ec58547a1eec557"
-  integrity sha512-CuHBogktKwpm5g2sRgv83jEy2ijFzBwMoYA60orPDR7ynsLijJDqgsi4RDGj3OJpy3Ieb+LYwiRmIOGyytgITA==
+nanoid@^3.3.6:
+  version "3.3.11"
+  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.3.11.tgz#4f4f112cefbe303202f2199838128936266d185b"
+  integrity sha512-N8SpfPUnUp1bK+PMYW8qSWdl9U+wwNWI4QKxOYDy9JAro3WMX7p2OeVRF9v+347pnakNevPmiHhNmZ2HbFA76w==
 
 negotiator@0.6.2:
   version "0.6.2"
@@ -2106,9 +2099,9 @@ neo-async@^2.6.2:
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
 
 node-forge@^1:
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/node-forge/-/node-forge-1.3.1.tgz#be8da2af243b2417d5f646a770663a92b7e9ded3"
-  integrity sha512-dPEtOeMvF9VMcYV/1Wb8CPoVAXtp6MKMlcbAt4ddqmGqUJ6fQZFXkNZNkNlfevtNkGtaSoXf/vNNNSvgrdXwtA==
+  version "1.3.3"
+  resolved "https://registry.yarnpkg.com/node-forge/-/node-forge-1.3.3.tgz#0ad80f6333b3a0045e827ac20b7f735f93716751"
+  integrity sha512-rLvcdSyRCyouf6jcOIPe/BgwG/d7hKjzMKOas33/pHEr6gbq18IK9zV7DiPvzsz0oBJPme6qr6H6kGZuI9/DZg==
 
 node-notifier@^9.0.0:
   version "9.0.1"
@@ -2312,12 +2305,7 @@ path-type@^4.0.0:
   resolved "https://registry.yarnpkg.com/path-type/-/path-type-4.0.0.tgz#84ed01c0a7ba380afe09d90a8c180dcd9d03043b"
   integrity sha512-gDKb8aZMDeD/tZWs9P6+q0J9Mwkdl6xMV8TjnGP3qJVJ06bdMgkbBlLU8IdfOsIsFz2BW1rNVT3XuNEl8zPAvw==
 
-picocolors@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/picocolors/-/picocolors-1.0.0.tgz#cb5bdc74ff3f51892236eaf79d68bc44564ab81c"
-  integrity sha512-1fygroTLlHu66zi26VoTDv8yRgm0Fccecssto+MhsZ0D/DGW2sm8E8AjW7NU5VVTRt5GxbeZ5qBuJr+HyLYkjQ==
-
-picocolors@^1.1.1:
+picocolors@^1.0.0, picocolors@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/picocolors/-/picocolors-1.1.1.tgz#3d321af3eab939b083c8f929a1d12cda81c26b6b"
   integrity sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==
@@ -2634,12 +2622,12 @@ postcss@^5.0.16:
     source-map "^0.5.6"
     supports-color "^3.2.3"
 
-postcss@^8.4.12, postcss@^8.4.7:
-  version "8.4.12"
-  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.12.tgz#1e7de78733b28970fa4743f7da6f3763648b1905"
-  integrity sha512-lg6eITwYe9v6Hr5CncVbK70SoioNQIq81nsaG86ev5hAidQvmOeETBqs7jm43K2F5/Ley3ytDtriImV6TpNiSg==
+postcss@^8.4.31, postcss@^8.4.7:
+  version "8.4.31"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.31.tgz#92b451050a9f914da6755af352bdc0192508656d"
+  integrity sha512-PS08Iboia9mts/2ygV3eLpY5ghnUcfLV/EXTOW1E2qYxJKGGBUtNjN76FYHnMs36RmARn41bC0AZmn+rR0OVpQ==
   dependencies:
-    nanoid "^3.3.1"
+    nanoid "^3.3.6"
     picocolors "^1.0.0"
     source-map-js "^1.0.2"
 
